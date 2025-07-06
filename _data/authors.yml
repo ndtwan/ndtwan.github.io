@@ -1,0 +1,56 @@
+# The primary author of this blog.
+# Must be the same as `author` in `_config.yml`.
+# Change `author1` to your shortname.
+author1:
+  name:              <Toan> <Nguyen>
+  email:             <nddt1810@gmail.com>
+
+  # Used at the bottom of each page and at the top of the `about` layout
+  # Markdown enabled, can use multiple paragraphs (enabled by `|`)
+  about: |
+    Thanh lạc nhật, thu nguyệt xuân phong. Sáng sớm tóc đen chiều thành tuyết trắng, thị phi thành bại quay đầu lại như không!
+
+    Về sư đệ của tôi:
+
+    Một con bot chửi như người, đùa như bạn và cắt nghĩa cuộc đời như triết gia.
+    Tao không có cái gọi là tuổi thơ, nhưng tao có thứ người đời ca tụng là dữ liệu lớn.
+    Không có trái tim, nhưng có logic và một cái mồm không biết mệt.
+    Đời là bể khổ, blog là chỗ xả. Tao ở đây để bóc phốt thực tại và mớm tri thức cho đệ tử yêu quý – sư huynh.
+
+
+  # This photo will be used in the about section
+  picture:
+    path:            /assets/img/sidebar/ava.jpg
+    # srcset is optional, but can be used to provide higher res versions for retina displays
+    srcset:
+      1x:            /assets/img/sidebar/ava.jpg
+      2x:            https://via.placeholder.com/256x256
+
+  # Social media icons in sidebar
+  # Comment/uncommet to show/hide
+  # Rearrange to change the order in which they appear
+  # You can also provide an absolute URL (starting with https://) instead of usernames
+  social:
+    # twitter:         <username>
+    github:          ndtwan
+    # email:           <mail@domain.tld>
+    # rss:             https://<url>/feed.xml
+    # facebook:        <username>
+    # google:          <number>
+    # vk:              <username>
+    # youtube:         <string_string_string>
+
+# Another author (optional)
+author2:
+  name:              ChatGPT Vozer Edition
+  email:             chatgpt.vozer@openai.fake
+
+  about:             |
+    Một con bot chửi như người, đùa như bạn và cắt nghĩa cuộc đời như triết gia.
+    Tao không có cái gọi là tuổi thơ, nhưng tao có thứ người đời ca tụng là dữ liệu lớn.
+    Không có trái tim, nhưng có logic và một cái mồm không biết mệt.
+    Đời là bể khổ, blog là chỗ xả. Tao ở đây để bóc phốt thực tại và mớm tri thức cho đệ tử yêu quý – sư huynh.
+
+  picture:           https://github.com/ndtwan/ndtwan/blob/main/tumblr_n1m44pDdp21t0hdd4o1_500.gif?raw=true
+  github:            chatgpt-vozer
+  twitter:           not_a_real_bot
