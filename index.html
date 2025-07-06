@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="vi, en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.2.1 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Blog | Twan desu</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Blog" />
+<meta name="author" content="Twan Nguyen" />
+<meta property="og:locale" content="vi, en" />
+<meta name="description" content="The official Hydejack blog. Version updates, example content and how-to guides on how to blog with Jekyll." />
+<meta property="og:description" content="The official Hydejack blog. Version updates, example content and how-to guides on how to blog with Jekyll." />
+<link rel="canonical" href="https://ndtwan.github.io/" />
+<meta property="og:url" content="https://ndtwan.github.io/" />
+<meta property="og:site_name" content="Twan desu" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Blog" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Twan Nguyen"},"dateModified":"2025-07-06T02:59:36+00:00","description":"The official Hydejack blog. Version updates, example content and how-to guides on how to blog with Jekyll.","headline":"Blog","name":"Twan desu","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ndtwan.github.io/assets/img/sidebar/avar.jpg"},"name":"Twan Nguyen"},"url":"https://ndtwan.github.io/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+
+
+
+  <meta name="color-scheme" content="dark light">
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Twan desu">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Twan desu">
+
+<meta name="generator" content="Hydejack v9.2.1" />
+
+
+<link rel="alternate" href="https://ndtwan.github.io/" hreflang="vi, en">
+
+<link type="application/atom+xml" rel="alternate" href="https://ndtwan.github.io/feed.xml" title="Twan desu" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+  
+  <link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_katexPreload">
+  <noscript><link rel="stylesheet" href="/assets/bower_components/katex/dist/katex.min.css"></noscript>
+
+
+
+
+
+<script>((r,a)=>{function d(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=a.createElement("script"),e=(n.src=e,t&&d(n,"load",t,{once:!0}),a.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=a.createElement("script");function o(){r._loaded=!0,t&&d(n,"load",t,{once:!0});var e=a.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():d(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){d(a.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}})(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2025-07-06T03:03:08+00:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.2.1.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.5);--accent-color-highlight: rgba(79, 177, 186, 0.1);--accent-color-darkened: rgb(63.8602040816, 154.5602040816, 162.8897959184);--theme-color: rgb(25,55,71);--dark-mode-body-bg: hsl(200.8695652174, 5.9895833333%, 17.5%);--dark-mode-border-color: hsl(200.8695652174, 5.9895833333%, 22.5%)}
+</style>
+
+
+<!--<![endif]-->
+
+
+<!-- Add HTML tags here to be included in the head. You can delete the below: -->
+<link rel="dns-prefetch" href="https://assets.gumroad.com">
+<script type="module">
+  const loadJS = x => new Promise(r => window.loadJS(x).addEventListener('load', r));
+
+  let p1, p2, io1, io2, embedCreated, overlayCreated;
+  document.querySelector('hy-push-state').addEventListener('load', () => {
+    io1 ||= new IntersectionObserver(async (entries) => {
+      if (entries.some(x => x.isIntersecting)) {
+        p1 = p1 || loadJS('https://gumroad.com/js/gumroad-embed.js');
+        await p1;
+        !embedCreated && await new Promise(function check1(res) {
+          if (typeof createGumroadEmbed !== 'undefined')  {
+            embedCreated = 1;
+            res(createGumroadEmbed());
+          }
+          else setTimeout(() => check1(res), 200);
+        });
+        await new Promise(function check2(res) {
+          if (typeof GumroadEmbed !== 'undefined') res(GumroadEmbed.reload());
+          else setTimeout(() => check2(res), 200);
+        });
+      }
+    }, { rootMargin: '1440px' });
+
+    io2 ||= new IntersectionObserver(async (entries) => {
+      if (entries.some(x => x.isIntersecting)) {
+        p2 = p2 || loadJS('https://gumroad.com/js/gumroad.js');
+        await p2;
+        !overlayCreated && await new Promise(function check(res) {
+          if (typeof createGumroadOverlay !== 'undefined') {
+            overlayCreated = 1;
+            res(createGumroadOverlay());
+          }
+          else setTimeout(() => check(res), 200);
+        });
+      }
+    }, { rootMargin: '300px' });
+
+    document.querySelectorAll('.gumroad-product-embed').forEach(el => io1.observe(el));
+    document.querySelectorAll('.gumroad-button').forEach(el => io2.observe(el));
+  });
+</script>
+
+
+</head>
+
+<body class="no-break-layout">
+  
+<script>
+  window._sunrise = 6;
+  window._sunset =  18;
+  ((e,s)=>{var d="light-mode",a="dark-mode",o=(new Date).getHours();"matchMedia"in e&&e.matchMedia("(prefers-color-scheme)")||(e=(o=o<=e._sunrise||o>=e._sunset?a:d)==a?d:a,s.body.classList.add(o),s.body.classList.remove(e))})(window,document);
+
+</script>
+
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  <hy-drawer
+  id="_drawer"
+  class="cover"
+  side="left"
+  threshold="10"
+  noscroll
+  opened
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/blog/sidebar.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/sidebar/avar.jpg" class="avatar" alt="Twan desu" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Twan desu</h2></a>
+    
+    
+      <p class="">
+        Just a random wibu guy lost in the world of AI.
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/blog/"
+          class="sidebar-nav-item "
+          
+        >
+          Blog -stuff
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/docs/"
+          class="sidebar-nav-item "
+          
+        >
+          Projects
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/about/"
+          class="sidebar-nav-item "
+          
+        >
+          About
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/ndtwan" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-blog"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+  
+
+
+  
+
+  
+
+
+
+
+
+<article id="post-blog-SoC" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      <a href="/blog/2025-01-03-SoC/" class="flip-title">
+        Giải ngố thiết kế chip (from basic - blog)
+      </a>
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2025-01-03T00:00:00+00:00">03 Jan 2025</time> in <span>Blog</span> 
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 06 Jul 2025">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="2025-07-06T02:59:36+00:00">2025-07-06</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+      <a href="/blog/2025-01-03-SoC/" class="no-hover no-print-link flip-project" tabindex="-1">
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/jeremy-bishop@0,5x.jpg"
+    
+    
+  
+  alt="Giải ngố thiết kế chip (from basic - blog)"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      </a>
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <p>⁃	Từ rửa film -&gt; đảo ngược quy trình của thiết kế PhD Moore
+	◦	Key ở đây là bước sóng ánh sáng -&gt; con đường tìm ra nguồn sáng có bước sóng nhỏ
+	◦	Công nghệ 3nano (fake new? Từ 2 nhà intel và samsumg, tscm)
+	◦	Bóng bán dẫn, cổng 
+	◦	Kiến trúc chip ARM
+	⁃	Giải ngố TSMC: chỉ là sản xuất chứ không thiết kế (bản thiết kế mới là đỉnh cao của đời người)
+	⁃	Mối lương duyên ARM - apple</p>
+
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/blog/2025-01-03-SoC/">Giải ngố thiết kế chip (from basic - blog)</a>
+
+      </p>
+    </footer>
+  
+</article>
+
+
+  
+
+
+
+
+
+<article id="post-blog-Anthropocene" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      <a href="/blog/2024-12-31-Anthropocene/" class="flip-title">
+        Chúng ta đã bắt đầu từ những gì rất khác
+      </a>
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2024-12-31T00:00:00+00:00">31 Dec 2024</time> in <span>Blog</span> 
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 06 Jul 2025">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="2025-07-06T02:59:36+00:00">2025-07-06</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+      <a href="/blog/2024-12-31-Anthropocene/" class="no-hover no-print-link flip-project" tabindex="-1">
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/history.png"
+    srcset="/assets/img/blog/history.png 1920w,/assets/img/blog/history.png 960w,/assets/img/blog/history.png 480w"
+    
+  
+  alt="Chúng ta đã bắt đầu từ những gì rất khác"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      </a>
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      Lược sử loài người là một bản trường ca sử thi bất tận của đấu tranh, cải biến, và khát vọng – liệu hồi kết đã sắp hạ màn?
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <blockquote>
+  <p>Thanh niên kia từ đâu tới?</p>
+</blockquote>
+
+<blockquote>
+  <p>Tại sao họ lại hành động như vậy?</p>
+</blockquote>
+
+<blockquote>
+  <p>Họ là ai, nếu không phải chính chúng ta?</p>
+</blockquote>
+
+<blockquote>
+  <p>Oh, vậy ra họ là, như kiểu, đồng loại mình ấy hả?</p>
+</blockquote>
+
+<p>Chúng ta đã bắt đầu từ những gì đó rất khác. Trong vòng 13.000 năm sau Kỷ Băng hà, nhân loại đã bước đi trên những con đường khác nhau. Một số vùng phát triển được chữ viết, công cụ kim loại, và xã hội công nghiệp. Ngược lại, nhiều nơi chỉ dừng lại ở xã hội chăn nuôi hoặc săn bắt hái lượm, để rồi cuối cùng bị chinh phục bởi những kẻ mạnh hơn.</p>
+
+<p>Hình như lịch sử thế giới là một mớ hỗn độn gồm toàn những biến cố bất ngờ; mọi sự thấy nằm ngổn ngang như trong những cơn lốc của một trận lụt. Hết hỗn loạn này lại tiếp hỗn loạn khác, hết tai họa này lại đến tai họa khác. Thỉnh thoảng thấy trời quang mây tạnh và thanh bình chớp nhoáng, hay còn sót lại những hòn đảo nhấp nhô chưa bị làn sóng cồn cuốn đi, nhưng sau cùng cũng bị chôn vùi hết.</p>
+
+<p>Câu chuyện dưới đây như một bản tóm lược nhỏ gọn về lịch sử thế giới. Hy vọng nó sẽ giúp mọi người nắm bắt được những gì đã xảy ra trong quá khứ, những câu hỏi đang bỏ ngỏ ở hiện tại, và có thể là những ván cược trong tương lai.</p>
+
+<h2 id="rời-khỏi-châu-phi-và-vương-ra-thế-giới">Rời khỏi Châu Phi và vương ra thế giới</h2>
+
+<p>Vào khoảng 50.000 năm trước Công Nguyên, ở những thảo nguyên Đông Phi, chúng ta — tổ tiên của loài người hiện đại — sống bằng cách săn bắn những loài thú hoang và hái lượm những quả mọng rải rác khắp vùng. Diện mạo của chúng ta khi ấy có lẽ không khác mấy so với những loài vượn người đi bằng hai chân từng phổ biến ở châu Phi. Nhưng có điều gì đó khác biệt.</p>
+
+<p>Chúng ta không chỉ săn bắn để no bụng, mà còn biết lên kế hoạch tỉ mỉ cho từng chuyến săn. Không chỉ mặc trang phục để chống chọi thời tiết, mà còn biết tô điểm cơ thể bằng những hình vẽ và trang sức. Và quan trọng hơn cả, chúng ta biết truyền đạt kinh nghiệm qua các thế hệ, hy vọng con cháu sẽ có cuộc sống tốt đẹp hơn. Điều này — kết hợp với khả năng tưởng tượng, theo đuổi ý tưởng mới và truyền tải chúng qua hệ thống ngôn ngữ — đã làm nên sự khác biệt. Nó không chỉ biến chúng ta thành Homo sapiens, mà còn đặt nền móng cho câu chuyện vĩ đại của loài người.</p>
+
+<p>Chỉ có khoảng vài ngàn cá thể loài người chúng ta khi ấy. Toàn bộ nhân loại có thể bỏ vừa vặn vào một sân bóng. Nhưng điều đặc biệt là con người, chúng ta bao giờ chịu đứng yên ở một chỗ, chúng ta luôn đuổi theo những điều mới mẻ và tôi nghĩ là cả một khát khao danh vọng - tôi hay trêu đùa rằng từ ngày xưa các cụ đã muốn trải nghiệm đinh tháp Maslow. Không quá lâu sau, một số nhóm người rời bỏ các đồng cỏ Đông Phi, tiến về phía bắc. Qua mỗi thế kỷ, dấu chân của họ lại xuất hiện ở những vùng đất mới. Họ tiến đến Lưỡi liềm Màu mỡ (Fertile Crescent), nơi những cánh đồng lúa mì đầu tiên mọc lên dưới ánh mặt trời, rồi theo dòng Sao Bắc Đẩu đến vùng đất châu Âu lạnh giá. Về phía Đông, họ đi đến các thảo nguyên Á-Âu, nơi những đồng cỏ mênh mông trải dài dưới bầu trời rộng lớn. Và không dừng lại ở đó, họ chế tạo những con thuyền thô sơ để vượt biển đến New Guinea và châu Úc. Trong vài thiên niên kỷ, nhân loại đã phủ sóng ba phần tư lục địa trên Trái Đất. Và … hóa ra thế giới rốt cuộc lại nhỏ bé như vậy đấy.</p>
+
+<blockquote>
+  <p>Chờ một chút, vậy là trong khi một nền văn minh nào đó ở Ai Cập đã biết đến ướp xác và xây kim tự tháp thì ở vùng đất khác con người vẫn đang hú hú kẹc kẹc lùa bắt voi Mammoth à =)))
+→  Well, không chỉ vùng đất khác mà là phần lớn thế giời lúc 🫨
+Từ những buổi đầu của Kỷ Holocene, loài người đã bước vào một hành trình không hồi kết. Mỗi tộc người, mỗi vùng đất lại viết nên những chương khác biệt của lịch sử. Có nơi, những cánh đồng lúa mì đầu tiên trải dài dưới ánh mặt trời, mang đến những làng mạc nhỏ bé nơi con người sống quây quần bên nhau. Ở một nơi khác, những bộ tộc săn bắt hái lượm lang thang trên thảo nguyên bao la, sống ngày qua ngày dựa vào thiên nhiên ban tặng. Nhưng không phải ai cũng chọn cùng một con đường.</p>
+</blockquote>
+
+<h2 id="hữu-sản-và-vô-sản">Hữu sản và vô sản</h2>
+<p>Vào khoảng 10.000 năm trước Công Nguyên, con người bắt đầu bước vào một kỷ nguyên mới. Từ những vùng đất phì nhiêu như Lưỡi liềm Màu mỡ, con người không còn sống hoàn toàn nhờ vào săn bắt và hái lượm nữa. Thay vào đó, họ phát hiện ra rằng, bằng cách trồng trọt cây trồng và thuần hóa động vật, họ có thể tạo ra nguồn lương thực ổn định, không phải phụ thuộc hoàn toàn vào thiên nhiên.</p>
+
+<p>Trồng trọt là một phát minh mang tính cách mạng. Nó mở ra khái niệm “hữu sản” – những người sở hữu đất đai, mùa màng, và tài sản. Nhưng đồng thời, điều này cũng tạo ra khái niệm “vô sản” – những người không sở hữu gì ngoài sức lao động. Dù lúc đó khái niệm này chưa được đặt tên, sự phân chia tầng lớp trong xã hội sơ khai đã bắt đầu manh nha.</p>
+
+<p>Trồng trọt không chỉ giúp con người có nguồn lương thực dư thừa, mà còn khuyến khích sự phát triển của những ngôi làng đầu tiên, những hệ thống xã hội phức tạp hơn. Nhưng nó cũng đặt nền móng cho những bất công đầu tiên trong lịch sử loài người, khi sự giàu có được tích lũy vào tay một số ít người.</p>
+
+<h2 id="dấu-mốc-đầu-tiên-của-loài-vật-bậc-cao">Dấu mốc đầu tiên của loài vật bậc cao</h2>
+<p>Con người không phải loài duy nhất trên Trái Đất có tổ chức xã hội hay biết dùng công cụ. Nhưng chúng ta là loài đầu tiên tiến tới những bước đột phá mà không loài vật nào đạt được. Từ việc chế tạo công cụ bằng đá cách đây 2,5 triệu năm, đến việc biết tạo ra lửa khoảng 1 triệu năm trước, những dấu mốc này đã nâng Homo sapiens lên vị trí độc tôn trong tự nhiên.</p>
+
+<p>Lửa là một trong những công cụ đầu tiên biến đổi cả thể chất lẫn văn hóa con người. Nó giúp nấu chín thức ăn, tiêu diệt vi khuẩn, và tạo ra nguồn năng lượng dễ tiêu hóa, thúc đẩy sự phát triển của bộ não lớn hơn. Cùng lúc đó, lửa cũng trở thành biểu tượng của quyền lực và văn hóa, là trung tâm của những buổi tụ họp trong đêm tối.</p>
+
+<p>Chúng ta cũng phát minh ra ngôn ngữ, thứ đã trở thành dấu ấn đỉnh cao của loài vật bậc cao. Với ngôn ngữ, con người có thể truyền tải thông tin vượt thời gian và không gian, ghi lại ký ức, và sáng tạo ra những câu chuyện đầu tiên. Điều này không chỉ làm nên sự khác biệt của chúng ta, mà còn tạo ra nền tảng cho mọi phát minh sau này.
+Thuở ban đầu, trồng trọt là một trong những phát minh vĩ đại nhất của con người. Nó không chỉ đơn thuần là cách kiếm ăn mới, mà còn là “đứa con đầu lòng” của một chủng loài luôn khao khát khám phá và chinh phục thế giới. Khi con người tìm ra cách kiểm soát cây cối, họ đã ghìm bước chân của mình lại, chấm dứt cuộc sống lang bạt của những người săn bắt hái lượm. Đây chính là khởi đầu cho một thời đại hoàn toàn mới: thời đại của định cư, tích trữ, và phân hóa xã hội.</p>
+
+<p>Những hạt giống đầu tiên được gieo xuống đất mang theo niềm hy vọng của loài người về một cuộc sống ổn định và bền vững hơn. Nhưng đồng thời, chúng cũng gieo mầm cho những bất bình đẳng đầu tiên trong lịch sử. Khi một số người tích lũy được của cải từ mùa màng dư thừa, trong khi những người khác chỉ đủ ăn qua ngày, khoảng cách giữa hữu sản (những kẻ sở hữu đất đai, công cụ, và tài nguyên) và vô sản (những kẻ không có gì ngoài sức lao động) bắt đầu hình thành.</p>
+
+<p>Ban đầu, sự bất bình đẳng này còn mờ nhạt. Các làng mạc nhỏ bé vẫn sống dựa trên sự hợp tác, chia sẻ, và giúp đỡ lẫn nhau. Nhưng khi con người bắt đầu canh tác quy mô lớn, trồng trọt thặng dư và tích lũy tài sản, xã hội dần thay đổi. Đất đai trở thành thứ có giá trị; quyền sở hữu trở thành sức mạnh; và sức lao động của con người trở thành hàng hóa. Từ đây, khái niệm quyền lực và sự áp bức dần xuất hiện.</p>
+
+<p>Những nhà cai trị đầu tiên, dù là các tù trưởng, pháp sư, hay các nhà lãnh đạo tôn giáo, đều hiểu rằng việc kiểm soát đất đai và lương thực đồng nghĩa với việc kiểm soát con người. Họ xây dựng các cấu trúc xã hội để duy trì trật tự, nhưng đồng thời cũng củng cố quyền lực của riêng mình. Lần đầu tiên trong lịch sử, con người không còn đứng ngang hàng với nhau, mà bị chia cắt bởi của cải và quyền lực.</p>
+
+<p>Điều này không chỉ xảy ra trong các làng mạc nhỏ bé, mà còn ở quy mô lớn hơn khi các nền văn minh đầu tiên xuất hiện. Từ các cánh đồng lúa mì của vùng Lưỡng Hà đến các thung lũng lúa nước của Trung Hoa, những kẻ nắm giữ quyền lực kinh tế dần trở thành tầng lớp thống trị. Đó là tầng lớp hữu sản, trong khi tầng lớp vô sản bị buộc phải làm việc quần quật để đổi lấy sự sinh tồn.</p>
+
+<p>Trồng trọt, vốn là biểu tượng của sự sáng tạo và tiến bộ, giờ đây mang cả hai mặt: vừa là công cụ cho sự phát triển, vừa là nguồn gốc của bất công và xung đột xã hội. Và như vậy, cuộc xung đột giữa hữu sản và vô sản đã âm ỉ từ buổi bình minh của lịch sử loài người, kéo dài qua hàng nghìn năm, và vẫn còn để lại dấu ấn đến tận ngày nay.</p>
+
+<h2 id="tân-thần-mới-của-loài-người---tiền-chiến-tranh-và-quyền-lực">Tân thần mới của loài người - Tiền, chiến tranh và quyền lực</h2>
+<p>Với sự phát triển của xã hội, con người không còn chỉ sống dựa vào những nhu cầu cơ bản như ăn uống và trú ngụ. Thay vào đó, họ tạo ra những “tân thần” mới để kiểm soát và tổ chức xã hội: tiền, chiến tranh, và quyền lực.</p>
+
+<p>Tiền – một công cụ đơn giản ban đầu dùng để trao đổi – đã trở thành biểu tượng tối cao của giá trị. Nó cho phép con người trao đổi không chỉ hàng hóa mà còn cả công sức, quyền lợi, và thời gian. Nhưng tiền cũng mang đến lòng tham và sự bất bình đẳng chưa từng có, khiến nhiều xã hội bị xé nát bởi khoảng cách giữa giàu và nghèo.</p>
+
+<p>Chiến tranh, từ những cuộc xung đột bộ lạc nhỏ lẻ, đã trở thành một công cụ chính trị, một phương tiện để chiếm đoạt tài nguyên và bảo vệ lợi ích. Nó mang đến sự tàn phá nhưng đồng thời cũng thúc đẩy những phát minh vĩ đại: từ bánh xe đến kim loại, từ chiến lược đến tổ chức xã hội phức tạp hơn.</p>
+
+<p>Quyền lực, cuối cùng, là mục tiêu mà cả tiền lẫn chiến tranh đều hướng tới. Trong suốt lịch sử, các nhà lãnh đạo và tầng lớp cầm quyền đã sử dụng tiền và chiến tranh để củng cố vị trí của mình. Nhưng quyền lực cũng chính là thứ khiến lịch sử trở nên sống động, bởi những sự kiện vĩ đại nhất đều xoay quanh tham vọng và tranh chấp quyền lực.</p>
+
+<p>Những “tân thần” này, dù đáng sợ, đã định hình nên thế giới mà chúng ta đang sống – một thế giới đầy những câu chuyện về thành tựu và bi kịch, tham vọng và thất bại.</p>
+
+<h2 id="thế-nhân-sinh">Thế Nhân sinh</h2>
+<p>Chúng ta đã từng bắt đầu từ những gì đó rất khác. Trong vòng 13.000 năm sau Kỷ Băng hà, nhân loại đã bước đi trên những con đường khác nhau. Một số vùng phát triển được chữ viết, công cụ kim loại, và xã hội công nghiệp. Ngược lại, nhiều nơi chỉ dừng lại ở xã hội chăn nuôi hoặc săn bắt hái lượm, để rồi cuối cùng bị chinh phục bởi những kẻ mạnh hơn.</p>
+
+<p>Từ sự trù phú của thảo nguyên châu Phi cho đến cuộc cách mạng công nghiệp, lịch sử loài người là một hành trình bất tận của đấu tranh, cải biến, và khát vọng. Bên dưới những ánh sáng của công nghệ hiện đại, chúng ta giờ đây không mấy thoải mái cho lắm trong xã hội cơ giới và công nghệ, và rồi đôi khi lại thấy nhớ cái “thiên đường đã mất” của tự nhiên và cân bằng. Nhưng dù đối mặt với khó khăn và sự bất quân bình lịch sử, loài người chưa bao giờ ngừng tìm kiếm một đáp án cho hành trình của chính mình.</p>
+
+<p>Một thế địa chất đã gần bắt đầu trong lược sử của hành tinh xanh, một thế địa chất đánh dấu sự tàn lụi chóng vánh của thế Tàn tân - Holocene. Một thế địa chất mang trong mình một loài sinh vật có thể định đoạt tương lai của toàn bộ sinh quyển, một sinh vật mà từ trước đến nay chưa từng có, và, chào mừng đến với thời đại mang tên giống loài Sapheien: <strong>Thế Nhân sinh (Anthropocene)</strong>.
+ <em>(Disclaimer: Thế Anthropocene được nhiều học giả xem là đã hiện hữu nhưng chưa được công nhận chính thức trong thang thời gian địa chất - Btw: Đó là sự thực không thể tránh khỏi</em>🍵<em>)</em>
+Cùng nhìn lại, chúng ta kỳ thực là một loài cực kỳ non trẻ so với tuổi đời bốn tỷ năm rưỡi năm của Hành Tinh Xanh. Loài người chúng ta chỉ mới bắt đầu tiến hóa trong khoảng 2000000 năm gần đây.</p>
+
+<h2 id="thảo-luận-thêm">Thảo luận thêm</h2>
+<p>Well, bắt đầu thế nào nhỉ, blog đầu tiên trong tưởng tượng của tôi là dành cho một nhân vật hay bộ phim anime nào đấy, chí ít không là Anime thì về kiếm hiệp, Kim Dung hay lại thao thao bất tuyệt về Tam Quốc. Nhưng có lẽ bắt đầu với một chủ đề lịch sử theo góc nhìn học giả cũng không tệ đến thế. Vậy điều gì đã đưa tôi tới chủ đề này, đó là muôn vàn câu hỏi trong đầu về từ cỏ cây và sông suối, làm sao một sinh vật có thể biến nó thành các giao động tần sóng và phát minh ra thứ kiệt tác gọi là mạng wifi. Liệu nhân loại có đủ khôn ngoan để tự cứu lấy mình? Hay chúng ta sẽ trở thành một ghi chú ngắn ngủi trong lược sử của hành tinh xanh?</p>
+
+<p>🍻🍻🍻 !!! Cheers !!! 🍻🍻🍻</p>
+
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/blog/2024-12-31-Anthropocene/">Chúng ta đã bắt đầu từ những gì rất khác</a>
+
+      </p>
+    </footer>
+  
+</article>
+
+
+  
+
+
+
+
+
+<article id="post-blog-x-marks-the-spot-in-hydejack-9-2" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      <a href="/blog/2024-09-08-x-marks-the-spot-in-hydejack-9-2/" class="flip-title">
+        X Marks the Spot in Hydejack 9.2
+      </a>
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2024-09-08T00:00:00+00:00">08 Sep 2024</time> in <span>Blog</span> 
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 06 Jul 2025">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="2025-07-06T02:59:36+00:00">2025-07-06</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+      <a href="/blog/2024-09-08-x-marks-the-spot-in-hydejack-9-2/" class="no-hover no-print-link flip-project" tabindex="-1">
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg"
+    srcset="/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg 1920w,/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash@0,5x.jpg 960w,/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash@0,25x.jpg 480w"
+    
+  
+  alt="X Marks the Spot in Hydejack 9.2"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      </a>
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      This feature release adds new social media icons for 2024 and makes dark mode available to everyone.
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <h2 id="new-social-media-icons">New Social Media Icons</h2>
+
+<p>Lots of things have changed in the world of social media since the last release. To bring Hydejack up to date, the default logo for Twitter has changed:</p>
+
+<p class="larger"><span class="icon-twitter-old"></span> → <span class="icon-twitter"></span></p>
+
+
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/blog/2024-09-08-x-marks-the-spot-in-hydejack-9-2/">X Marks the Spot in Hydejack 9.2</a>
+
+      </p>
+    </footer>
+  
+</article>
+
+
+  
+
+
+
+
+
+<article id="post-blog-introducing-hydejack-9" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      <a href="/blog/2020-07-03-introducing-hydejack-9/" class="flip-title">
+        Introducing Hydejack 9
+      </a>
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2020-07-03T00:00:00+00:00">03 Jul 2020</time> in <span>Blog</span> 
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 06 Jul 2025">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="2025-07-06T02:59:36+00:00">2025-07-06</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+      <a href="/blog/2020-07-03-introducing-hydejack-9/" class="no-hover no-print-link flip-project" tabindex="-1">
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/jeremy-bishop@0,5x.jpg"
+    
+    
+  
+  alt="Introducing Hydejack 9"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      </a>
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <p class="lead">Version 9 is the most complete version of Hydejack yet.</p>
+
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/blog/2020-07-03-introducing-hydejack-9/">Introducing Hydejack 9</a>
+
+      </p>
+    </footer>
+  
+</article>
+
+
+  
+
+
+
+
+
+<article id="post-blog-example-content-iii" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      <a href="/blog/2018-06-01-example-content-iii/" class="flip-title">
+        Example Content III
+      </a>
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2018-06-01T00:00:00+00:00">01 Jun 2018</time> in <span>Blog</span> 
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 06 Jul 2025">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="2025-07-06T02:59:36+00:00">2025-07-06</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+      <a href="/blog/2018-06-01-example-content-iii/" class="no-hover no-print-link flip-project" tabindex="-1">
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/example-content-iii.jpg"
+    srcset="/assets/img/blog/example-content-iii.jpg 1060w,/assets/img/blog/example-content-iii@0,5x.jpg 530w,/assets/img/blog/example-content-iii@0,25x.jpg 265w"
+    
+  
+  alt="Example Content III"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      </a>
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      A page showing Hydejack-specific markdown content.
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <p>Hydejack offers a few additional features to markup your markdown.
+Don’t worry, these are merely CSS classes added with kramdown’s <code class="language-plaintext highlighter-rouge">{:...}</code> syntax,
+so that your content remains compatible with other Jekyll themes.</p>
+
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/blog/2018-06-01-example-content-iii/">Example Content III</a>
+
+      </p>
+    </footer>
+  
+</article>
+
+
+  
+
+
+
+
+
+<article id="post-blog-example-content-ii" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      <a href="/blog/2017-11-23-example-content-ii/" class="flip-title">
+        Example Content II
+      </a>
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2017-11-23T00:00:00+00:00">23 Nov 2017</time> in <span>Blog</span> 
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 06 Jul 2025">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="2025-07-06T02:59:36+00:00">2025-07-06</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+      <a href="/blog/2017-11-23-example-content-ii/" class="no-hover no-print-link flip-project" tabindex="-1">
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/example-content-ii.jpg"
+  
+  alt="Example Content II"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      </a>
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      A page showing how regular markdown content is styled in Hydejack.
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
+
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/blog/2017-11-23-example-content-ii/">Example Content II</a>
+
+      </p>
+    </footer>
+  
+</article>
+
+
+  
+
+
+
+
+
+<article id="post-blog-example-content" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      <a href="/blog/2012-02-07-example-content/" class="flip-title">
+        Example Content
+      </a>
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2012-02-07T00:00:00+00:00">07 Feb 2012</time> in <span>Blog</span> 
+      </span>
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. <em>Aenean eu leo quam.</em> Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+
+
+    
+    
+    <footer>
+      <p class="read-more">
+        Continue reading <a class="heading flip-title" href="/blog/2012-02-07-example-content/">Example Content</a>
+
+      </p>
+    </footer>
+  
+</article>
+
+
+
+
+  <h2 class="sr-only">Pagination</h2>
+<nav class="pagination heading clearfix" role="navigation">
+  <ul>
+    <li class="pagination-item older" >
+      
+      
+      
+  <span class=" ">Older</span>
+
+
+    </li>
+    <li class="pagination-item newer" >
+      
+      
+      
+  <span class=" ">Newer</span>
+
+
+    </li>
+  </ul>
+</nav>
+
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2024. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+    <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span id="_version">9.2.1</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>(()=>{var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())})();
+</script>
+  <script src="/assets/js/hydejack-9.2.1.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.2.1.js" nomodule defer></script>
+  
+
+  
+
+<!--<![endif]-->
+  <!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+  
+    <template id="_dark-mode-template">
+  <button id="_dark-mode" class="nav-btn no-hover" >
+    <span class="sr-only">Dark Mode</span>
+    <span class="icon-brightness-contrast"></span>
+  </button>
+</template>
+
+  
+</div>
+
+
+</body>
+</html>

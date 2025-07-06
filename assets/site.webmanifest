@@ -1,0 +1,62 @@
+{
+  "lang": "vi, en",
+  "name": "Twan desu",
+  "short_name": "Twan desu",
+  "description": "Được truyền cảm hứng từ 2 người bạn Q và V, có bạn K nữa thì ta lại có công thức Attention khuấy đảo giang hồ 10 năm qua :». Không như những người bạn kia thì tôi không quá tự tin về kỹ năng chuyên môn sâu của mình, nên tôi sẽ viết đơn giản về những chủ đề tôi quan tâm. Những thứ đời thường hơn một chút. Hì",
+  "start_url": "/?utm_source=homescreen",
+  "theme_color": "rgb(25,55,71)",
+  "background_color": "#fff",
+  "orientation": "portrait",
+  "display": "minimal-ui",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable" 
+    },
+    {
+      "src": "/assets/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable" 
+    },
+    {
+      "src": "/assets/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable" 
+    },
+    {
+      "src": "/assets/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable" 
+    },
+    {
+      "src": "/assets/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable" 
+    },
+    {
+      "src": "/assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable" 
+    },
+    {
+      "src": "/assets/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable" 
+    },
+    {
+      "src": "/assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable" 
+    }
+  ]
+}

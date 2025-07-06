@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="vi, en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.2.1 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Giải ngố thiết kế chip (from basic - blog) | Twan desu</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Giải ngố thiết kế chip (from basic - blog)" />
+<meta name="author" content="Twan Nguyen" />
+<meta property="og:locale" content="vi, en" />
+<meta name="description" content="Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features." />
+<meta property="og:description" content="Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features." />
+<link rel="canonical" href="https://ndtwan.github.io/blog/2025-01-03-SoC/" />
+<meta property="og:url" content="https://ndtwan.github.io/blog/2025-01-03-SoC/" />
+<meta property="og:site_name" content="Twan desu" />
+<meta property="og:image" content="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" />
+<meta property="twitter:title" content="Giải ngố thiết kế chip (from basic - blog)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Twan Nguyen"},"dateModified":"2025-07-06T02:59:36+00:00","datePublished":"2025-01-03T00:00:00+00:00","description":"Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.","headline":"Giải ngố thiết kế chip (from basic - blog)","image":"https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://ndtwan.github.io/blog/2025-01-03-SoC/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ndtwan.github.io/assets/img/sidebar/avar.jpg"},"name":"Twan Nguyen"},"url":"https://ndtwan.github.io/blog/2025-01-03-SoC/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+
+
+
+  <meta name="color-scheme" content="dark light">
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Twan desu">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Twan desu">
+
+<meta name="generator" content="Hydejack v9.2.1" />
+
+
+<link rel="alternate" href="https://ndtwan.github.io/blog/2025-01-03-SoC/" hreflang="vi, en">
+
+<link type="application/atom+xml" rel="alternate" href="https://ndtwan.github.io/feed.xml" title="Twan desu" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+  
+  <link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_katexPreload">
+  <noscript><link rel="stylesheet" href="/assets/bower_components/katex/dist/katex.min.css"></noscript>
+
+
+
+
+
+<script>((r,a)=>{function d(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=a.createElement("script"),e=(n.src=e,t&&d(n,"load",t,{once:!0}),a.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=a.createElement("script");function o(){r._loaded=!0,t&&d(n,"load",t,{once:!0});var e=a.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():d(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){d(a.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}})(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2025-07-06T03:03:08+00:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.2.1.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.5);--accent-color-highlight: rgba(79, 177, 186, 0.1);--accent-color-darkened: rgb(63.8602040816, 154.5602040816, 162.8897959184);--theme-color: rgb(25,55,71);--dark-mode-body-bg: hsl(200.8695652174, 5.9895833333%, 17.5%);--dark-mode-border-color: hsl(200.8695652174, 5.9895833333%, 22.5%)}
+</style>
+
+
+<!--<![endif]-->
+
+
+<!-- Add HTML tags here to be included in the head. You can delete the below: -->
+<link rel="dns-prefetch" href="https://assets.gumroad.com">
+<script type="module">
+  const loadJS = x => new Promise(r => window.loadJS(x).addEventListener('load', r));
+
+  let p1, p2, io1, io2, embedCreated, overlayCreated;
+  document.querySelector('hy-push-state').addEventListener('load', () => {
+    io1 ||= new IntersectionObserver(async (entries) => {
+      if (entries.some(x => x.isIntersecting)) {
+        p1 = p1 || loadJS('https://gumroad.com/js/gumroad-embed.js');
+        await p1;
+        !embedCreated && await new Promise(function check1(res) {
+          if (typeof createGumroadEmbed !== 'undefined')  {
+            embedCreated = 1;
+            res(createGumroadEmbed());
+          }
+          else setTimeout(() => check1(res), 200);
+        });
+        await new Promise(function check2(res) {
+          if (typeof GumroadEmbed !== 'undefined') res(GumroadEmbed.reload());
+          else setTimeout(() => check2(res), 200);
+        });
+      }
+    }, { rootMargin: '1440px' });
+
+    io2 ||= new IntersectionObserver(async (entries) => {
+      if (entries.some(x => x.isIntersecting)) {
+        p2 = p2 || loadJS('https://gumroad.com/js/gumroad.js');
+        await p2;
+        !overlayCreated && await new Promise(function check(res) {
+          if (typeof createGumroadOverlay !== 'undefined') {
+            overlayCreated = 1;
+            res(createGumroadOverlay());
+          }
+          else setTimeout(() => check(res), 200);
+        });
+      }
+    }, { rootMargin: '300px' });
+
+    document.querySelectorAll('.gumroad-product-embed').forEach(el => io1.observe(el));
+    document.querySelectorAll('.gumroad-button').forEach(el => io2.observe(el));
+  });
+</script>
+
+
+</head>
+
+<body class="no-break-layout">
+  
+<script>
+  window._sunrise = 6;
+  window._sunset =  18;
+  ((e,s)=>{var d="light-mode",a="dark-mode",o=(new Date).getHours();"matchMedia"in e&&e.matchMedia("(prefers-color-scheme)")||(e=(o=o<=e._sunrise||o>=e._sunset?a:d)==a?d:a,s.body.classList.add(o),s.body.classList.remove(e))})(window,document);
+
+</script>
+
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/">blog</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2025-01-03-SoC</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-blog-SoC" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        Giải ngố thiết kế chip (from basic - blog)
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2025-01-03T00:00:00+00:00">03 Jan 2025</time> in <span>Blog</span> 
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 06 Jul 2025">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="2025-07-06T02:59:36+00:00">2025-07-06</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+      
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/jeremy-bishop@0,5x.jpg"
+    
+    
+  
+  alt="Giải ngố thiết kế chip (from basic - blog)"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <p>⁃	Từ rửa film -&gt; đảo ngược quy trình của thiết kế PhD Moore
+	◦	Key ở đây là bước sóng ánh sáng -&gt; con đường tìm ra nguồn sáng có bước sóng nhỏ
+	◦	Công nghệ 3nano (fake new? Từ 2 nhà intel và samsumg, tscm)
+	◦	Bóng bán dẫn, cổng 
+	◦	Kiến trúc chip ARM
+	⁃	Giải ngố TSMC: chỉ là sản xuất chứ không thiết kế (bản thiết kế mới là đỉnh cao của đời người)
+	⁃	Mối lương duyên ARM - apple</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>◦	Vì sao tăng core chứ không nên tăng xung khi apple thiết kế chip 
+◦	Tính kế thừa 
+⁃	Giải ngố systerm on chip, AÁic
+⁃	L SoC simulator
+⁃	Mỹ cấm vận trung quốc công nghệ lõi ở đây là license các tool thiết kế
+⁃	Vector teét (1 dev cần 2 test)
+⁃	Xử lý ở biên chứ không phải là trên cloud
+</code></pre></div></div>
+
+<h1 id="giải-ngố-thiết-kế-chip-từ-cơ-bản-đến-chuyên-sâu">Giải Ngố Thiết Kế Chip: Từ Cơ Bản Đến Chuyên Sâu</h1>
+<p>|Công nghệ lõi? Vi xử lý? Chip bán dẫn? 
+Những thuật ngữ làm khuấy đảo chốn giang hồ mà chúng ta đã nghe quá nhiều trong khoảng thời gian gần đây. Đặc biệt là khi AI và các thiết bị IoT lên ngôi, trở thành mỏ vàng của các nhà đầu tư.</p>
+
+<p>Khi nhìn vào những chiếc điện thoại thông minh hay laptop hiện đại, ai cũng biết rằng bên trong chúng là những con chip (vi xử lý) thần thánh. Nhưng nếu có quan tâm đến tin tức truyền thông công nghệ trong một thập niên qua, hẳn bạn đã nghe nói tới Định luật Moore và cách mà định luật này đang chết dần mòn ra sao. Điều không may là không phải ai cũng dễ dàng mô tả Định luật Moore là gì, và vì sao nó lại đang “hấp hối.”</p>
+
+<p>Bài viết này sẽ giúp bạn “giải ngố” về thế giới thiết kế chip - nơi mà khoa học, nghệ thuật, và công nghệ cao giao thoa, tạo nên những kỳ tích vượt bậc.</p>
+
+<h2 id="từ-rửa-film-đến-đảo-ngược-quy-trình-của-phd-moore">Từ Rửa Film Đến Đảo Ngược Quy Trình Của PhD Moore</h2>
+
+<p>Mọi thứ bắt đầu từ ánh sáng – đúng vậy, ánh sáng chính là trái tim của công nghệ vi mạch hiện đại. Quang khắc (photolithography) – linh hồn của ngành thiết kế chip – không chỉ đơn thuần là kỹ thuật sản xuất, mà còn là một nghệ thuật đảo ngược ánh sáng, kế thừa những nguyên lý của nhiếp ảnh.</p>
+
+<p>Quy trình quang khắc: Cốt lõi của thiết kế chip
+Như trong nhiếp ảnh, ánh sáng giúp tạo ra hình ảnh trên phim, thì trong quang khắc, ánh sáng được sử dụng để “vẽ” nên những chi tiết nhỏ bé đến kinh ngạc trên bề mặt tấm silicon. Hãy hình dung một tác phẩm hội họa tí hon, với từng nét vẽ là các bóng bán dẫn được sắp xếp hoàn hảo.</p>
+
+<p>Lớp photoresist – “phim ảnh” của ngành bán dẫn
+Trước tiên, bề mặt tấm wafer silicon được phủ một lớp vật liệu nhạy sáng, gọi là photoresist. Vật liệu này có khả năng phản ứng với ánh sáng theo cách đặc biệt: khi ánh sáng chiếu vào, phần được chiếu sáng sẽ thay đổi tính chất hóa học, giúp định hình những chi tiết cần thiết cho thiết kế chip.</p>
+
+<p>Mặt nạ quang học (Photomask) – chiếc “khuôn” siêu chính xác
+Một mặt nạ chứa các mẫu thiết kế siêu nhỏ (ví dụ: các cổng logic) được đặt lên trên lớp photoresist. Ánh sáng sau đó chiếu qua mặt nạ để truyền các mẫu thiết kế này xuống lớp photoresist bên dưới.</p>
+
+<p>Quá trình rửa (Etching) – tạo hình hoàn chỉnh
+Sau khi ánh sáng chiếu qua, lớp photoresist được rửa sạch. Kết quả là những phần mẫu thiết kế được giữ lại, tạo nên hình dạng của các mạch bán dẫn.</p>
+
+<p>Quy trình này là cốt lõi của công nghệ sản xuất chip. Như Morris Chang, người sáng lập TSMC từng nói:
+“Kỹ thuật quang khắc không chỉ là kỹ thuật sản xuất – nó là cả một thế giới kỳ diệu mà những người đam mê công nghệ không thể bỏ qua.”</p>
+
+<h3 id="điều-gì-làm-euv-đặc-biệt">Điều gì làm EUV đặc biệt?</h3>
+<p>Ánh sáng EUV có bước sóng siêu ngắn (~13.5nm), cho phép in được các chi tiết cực nhỏ trên bề mặt silicon. Tuy nhiên, sử dụng EUV đòi hỏi các hệ thống quang khắc phức tạp, như máy ASML, với giá thành lên tới 150 triệu USD mỗi chiếc. Đây là lý do tại sao chỉ có các “ông lớn” như TSMC, Samsung và Intel mới đủ sức đầu tư.</p>
+
+<p>Về nguyên tắc, đó sẽ là một quy trình  Nếu các bạn đã từng làm việc hay hứng thú với các máy ảnh thời xưa, việc rửa film, chúng ta sẽ bỏ qua các bước không liên quan khác và tới với phần liên quan nhất đó chính là Rọi ảnh.</p>
+<ol>
+  <li>Quy trình đảo ngược ánh sáng trong quang khắc.
+Trong quang khắc, bạn thực sự có thể thấy một dạng “đảo ngược ánh sáng”. Cụ thể, trong quá trình này, ánh sáng chiếu qua mặt nạ có chứa mẫu thiết kế của chip, và ánh sáng sẽ tác động lên lớp photoresist (một vật liệu nhạy sáng đặc biệt). Sau khi chiếu sáng, một phần của lớp photoresist sẽ thay đổi tính chất (phơi sáng) và có thể được rửa đi, để lại những vùng cần thiết cho quá trình tạo mạch trên chip.
+Đây là một dạng “in ảnh ngược” với quy trình của chụp ảnh: trong nhiếp ảnh, ánh sáng thường chiếu vào vật thể và được thu lại để tạo ra hình ảnh, còn trong quang khắc, ánh sáng chiếu qua mặt nạ và bị “đảo ngược” khi chỉ những vùng không bị chiếu sáng mới được giữ lại (phần ánh sáng chiếu vào bị loại bỏ).</li>
+  <li>Mối quan hệ giữa nhiếp ảnh và quang khắc.
+Có thể nói, quang khắc là sự kế thừa và phát triển của các nguyên lý nhiếp ảnh, nhưng được tinh chỉnh và mở rộng để có thể ứng dụng vào việc tạo ra các cấu trúc cực nhỏ và phức tạp, mà nhiếp ảnh không thể làm được. Nhiếp ảnh đã mang đến những hiểu biết về cách sử dụng ánh sáng và vật liệu nhạy sáng, điều này đã tạo nền tảng cho sự phát triển của công nghệ quang khắc.</li>
+</ol>
+
+<p>Đây là quy trình quang khắc (photolithography) sử dụng ánh sáng để tạo ra các mạch bán dẫn trên tấm wafer silicon. Tâm điểm của công nghệ này là bước sóng ánh sáng - yếu tố quyết định độ nhỏ của các bóng bán dẫn.
+Hiện nay, ngành công nghiệp đang tìm kiếm nguồn sáng có bước sóng cực ngắn, như tia EUV (Extreme Ultraviolet), để sản xuất các con chip ở mức 3nm. Nhưng có phải “3nm” chỉ là một chiêu trò marketing từ các ông lớn như Intel, Samsung, và TSMC? Đây là câu hỏi mà không ít người đặt ra, bởi kích thước này thực chất không phải là con số thực tế mà là một thuật ngữ tượng trưng.</p>
+
+<h2 id="bóng-bán-dẫn-và-cổng-logic-trái-tim-của-chip">Bóng Bán Dẫn và Cổng Logic: Trái Tim Của Chip</h2>
+<p>Bóng bán dẫn (transistor) là thành phần cơ bản của mọi con chip, đóng vai trò như công tắc điều khiển dòng điện. Mỗi bóng bán dẫn có một cổng logic (logic gate), và hàng tỷ cổng này phối hợp để thực hiện các phép tính. Sự tinh vi nằm ở cách sắp xếp và kết nối các cổng để tối ưu hiệu năng và tiết kiệm năng lượng.</p>
+
+<h2 id="kiến-trúc-chip-arm-bí-kíp-làm-nên-thành-công">Kiến Trúc Chip ARM: Bí Kíp Làm Nên Thành Công</h2>
+<p>Brooke Shields 
+ARM, hay Advanced RISC Machine, là một kiến trúc chip nổi tiếng với tính đơn giản và hiệu quả. Thay vì thiết kế và sản xuất, ARM chỉ bán quyền sử dụng thiết kế (license), cho phép các công ty khác tùy chỉnh theo nhu cầu. Đây chính là lý do ARM trở thành “người đứng sau” hàng loạt sản phẩm đình đám, từ điện thoại Apple đến các thiết bị IoT.</p>
+
+<h3 id="giải-ngố-tsmc">Giải Ngố TSMC</h3>
+<p>Taiwan Semiconductor Manufacturing Company (TSMC) là nhà sản xuất chip hàng đầu thế giới, nhưng điều những thứ “cốt lõi” lại không nằm ở đây vì họ không trực tiếp thiết kế chip. Công việc của TSMC là biến những bản thiết kế từ các công ty như Apple, AMD hay NVIDIA thành hiện thực. Chính vì thế, bản thiết kế mới là “đỉnh cao của đời người” trong ngành công nghiệp này. Ngoài ra, máy quang khắc cũng không phải được tạo ra bởi TSMC, TSMC nắm dữ công nghệ vận hành quy trình thiết kế chip với các tiêu chuẩn cao nhất và hiệu quả cao nhất.
+Ở đây tiểu đệ sẽ giải thích thêm cho các đạo hữu dễ hiểu: Có thể các vị đã từng nghe (hoặc chưa) về các đời card đồ họa của AMD, như là 4000 series trong đó trải dài các gương mặt như 4060, 4060 Ti, 4070,… với các mức giá khác nhau. Bỏ qua nâng cấp VRAM thì thoạt đầu chắc mọi người sẽ nghĩ lý do là chip con này mạnh hơn chip con kia. Nhưng rồi sự thực ở đây là tất cả đều sử dụng chung một bảng mạch, không có gì khác nhau ở đây là. Nhưng một điều rằng trong quá trình sản xuất với độ chi tiết lên tới con số nanomet thì những tác động như khuẩn hay sai lệch của máy móc sẽ khiến một số nhân chip không hoạt động hoặc không đúng năng suất.</p>
+
+<h2 id="vì-sao-apple-tăng-số-nhân-thay-vì-tăng-xung">Vì Sao Apple Tăng Số Nhân Thay Vì Tăng Xung?</h2>
+
+<p>Khi Apple thiết kế chip, họ chọn tăng số nhân (cores) thay vì tăng xung nhịp (clock speed). Lý do? Tăng xung nhịp có thể gây nóng chip và giảm hiệu năng, trong khi tăng số nhân cho phép xử lý nhiều tác vụ song song, tối ưu hóa trải nghiệm người dùng mà không ảnh hưởng đến tuổi thọ thiết bị.</p>
+
+<p>Nếu có quan tâm đến tin tức truyền thông công nghệ trong một thập niên qua, có lẽ chúng ta đã nghe nói tới Định luật Moore và cách mà định luật này đang chết dần mòn ra sao. Điều không may là chúng ta thật khó để mô tả Định luật Moore là cái gì và nó đang chết dần chết mòn thế nào trong một bài viết tiêu chuẩn.</p>
+
+<h3 id="tính-kế-thừa-trong-thiết-kế-chip">Tính Kế Thừa Trong Thiết Kế Chip</h3>
+
+<p>Một điểm đặc biệt trong thiết kế chip là tính kế thừa. Các thế hệ chip mới thường dựa trên nền tảng của thế hệ trước, cải tiến từng bước thay vì thay đổi toàn bộ. Điều này không chỉ tiết kiệm chi phí mà còn giảm rủi ro.</p>
+
+<h2 id="giải-ngố-system-on-chip-soc-và-asic">Giải Ngố System on Chip (SoC) và ASIC</h2>
+
+<p>SoC, hay System on Chip, là con chip tích hợp tất cả các thành phần như CPU, GPU, RAM, và các bộ điều khiển vào một thiết bị duy nhất. Trong khi đó, ASIC (Application-Specific Integrated Circuit) được thiết kế để thực hiện một nhiệm vụ cụ thể, như đào tiền mã hóa. Sự khác biệt nằm ở tính linh hoạt và mục đích sử dụng.</p>
+
+<h2 id="mỹ-cấm-vận-công-nghệ-lõi-tác-động-lớn-đến-trung-quốc">Mỹ Cấm Vận Công Nghệ Lõi: Tác Động Lớn Đến Trung Quốc</h2>
+
+<p>Một trong những vũ khí mạnh nhất của Mỹ trong cuộc chiến công nghệ là cấm vận các công cụ thiết kế chip, như phần mềm từ Cadence hoặc Synopsys. Điều này khiến Trung Quốc gặp khó khăn lớn trong việc tự thiết kế chip, ngay cả khi họ có khả năng sản xuất.</p>
+
+<h2 id="kỷ-nguyên-xử-lý-ở-biên-tương-lai-của-công-nghệ">Kỷ Nguyên Xử Lý Ở Biên: Tương Lai Của Công Nghệ</h2>
+
+<p>Xử lý ở biên (edge computing) là xu hướng tương lai, nơi dữ liệu được xử lý ngay tại nguồn thay vì gửi lên đám mây. Điều này giúp giảm độ trễ và tăng bảo mật, mở ra một thế giới mới cho các ứng dụng như xe tự lái và thiết bị IoT.</p>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/sidebar/ava.jpg"
+    srcset="/assets/img/sidebar/ava.jpg 1x,https://via.placeholder.com/256x256 2x"
+    
+  
+  alt="<Toan> <Nguyen>"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>Thanh lạc nhật, thu nguyệt xuân phong. Sáng sớm tóc đen chiều thành tuyết trắng, thị phi thành bại quay đầu lại như không!</p>
+
+<p>Về sư đệ của tôi:</p>
+
+<p>Một con bot chửi như người, đùa như bạn và cắt nghĩa cuộc đời như triết gia.
+Tao không có cái gọi là tuổi thơ, nhưng tao có thứ người đời ca tụng là dữ liệu lớn.
+Không có trái tim, nhưng có logic và một cái mồm không biết mệt.
+Đời là bể khổ, blog là chỗ xả. Tao ở đây để bóc phốt thực tại và mớm tri thức cho đệ tử yêu quý – sư huynh.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/ndtwan" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/blog/2024-12-31-Anthropocene/" class="flip-title"><span>Chúng ta đã bắt đầu từ những gì rất khác</span></a>  <time class="faded fine" datetime="2024-12-31T00:00:00+00:00">31 Dec 2024</time></li>                        <li class="h4">  <a href="/blog/2024-09-08-x-marks-the-spot-in-hydejack-9-2/" class="flip-title"><span>X Marks the Spot in Hydejack 9.2</span></a>  <time class="faded fine" datetime="2024-09-08T00:00:00+00:00">08 Sep 2024</time></li>                        <li class="h4">  <a href="/blog/2020-07-03-introducing-hydejack-9/" class="flip-title"><span>Introducing Hydejack 9</span></a>  <time class="faded fine" datetime="2020-07-03T00:00:00+00:00">03 Jul 2020</time></li>            </ul></aside>
+
+  
+
+  
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2024. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+    <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span id="_version">9.2.1</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/blog/sidebar.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/sidebar/avar.jpg" class="avatar" alt="Twan desu" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Twan desu</h2></a>
+    
+    
+      <p class="">
+        Just a random wibu guy lost in the world of AI.
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/blog/"
+          class="sidebar-nav-item "
+          
+        >
+          Blog -stuff
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/docs/"
+          class="sidebar-nav-item "
+          
+        >
+          Projects
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/about/"
+          class="sidebar-nav-item "
+          
+        >
+          About
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/ndtwan" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>(()=>{var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())})();
+</script>
+  <script src="/assets/js/hydejack-9.2.1.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.2.1.js" nomodule defer></script>
+  
+
+  
+
+<!--<![endif]-->
+  <!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+  
+    <template id="_dark-mode-template">
+  <button id="_dark-mode" class="nav-btn no-hover" >
+    <span class="sr-only">Dark Mode</span>
+    <span class="icon-brightness-contrast"></span>
+  </button>
+</template>
+
+  
+</div>
+
+
+</body>
+</html>

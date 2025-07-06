@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="vi, en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://ndtwan.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ndtwan.github.io/" rel="alternate" type="text/html" hreflang="vi, en" /><updated>2025-07-06T03:03:08+00:00</updated><id>https://ndtwan.github.io/feed.xml</id><title type="html">Twan desu</title><subtitle>Được truyền cảm hứng từ 2 người bạn Q và V, có bạn K nữa thì ta lại có công thức Attention khuấy đảo giang hồ 10 năm qua :&gt;&gt;. Không như những người bạn kia thì tôi không quá tự tin về kỹ năng chuyên môn sâu của mình, nên tôi sẽ viết đơn giản về những chủ đề tôi quan tâm. Những thứ đời thường hơn một chút. Hì
+</subtitle><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><entry><title type="html">Giải ngố thiết kế chip (from basic - blog)</title><link href="https://ndtwan.github.io/blog/2025-01-03-SoC/" rel="alternate" type="text/html" title="Giải ngố thiết kế chip (from basic - blog)" /><published>2025-01-03T00:00:00+00:00</published><updated>2025-07-06T02:59:36+00:00</updated><id>https://ndtwan.github.io/blog/SoC</id><content type="html" xml:base="https://ndtwan.github.io/blog/2025-01-03-SoC/"><![CDATA[<p>⁃	Từ rửa film -&gt; đảo ngược quy trình của thiết kế PhD Moore
+	◦	Key ở đây là bước sóng ánh sáng -&gt; con đường tìm ra nguồn sáng có bước sóng nhỏ
+	◦	Công nghệ 3nano (fake new? Từ 2 nhà intel và samsumg, tscm)
+	◦	Bóng bán dẫn, cổng 
+	◦	Kiến trúc chip ARM
+	⁃	Giải ngố TSMC: chỉ là sản xuất chứ không thiết kế (bản thiết kế mới là đỉnh cao của đời người)
+	⁃	Mối lương duyên ARM - apple</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>◦	Vì sao tăng core chứ không nên tăng xung khi apple thiết kế chip 
+◦	Tính kế thừa 
+⁃	Giải ngố systerm on chip, AÁic
+⁃	L SoC simulator
+⁃	Mỹ cấm vận trung quốc công nghệ lõi ở đây là license các tool thiết kế
+⁃	Vector teét (1 dev cần 2 test)
+⁃	Xử lý ở biên chứ không phải là trên cloud
+</code></pre></div></div>
+
+<h1 id="giải-ngố-thiết-kế-chip-từ-cơ-bản-đến-chuyên-sâu">Giải Ngố Thiết Kế Chip: Từ Cơ Bản Đến Chuyên Sâu</h1>
+<p>|Công nghệ lõi? Vi xử lý? Chip bán dẫn? 
+Những thuật ngữ làm khuấy đảo chốn giang hồ mà chúng ta đã nghe quá nhiều trong khoảng thời gian gần đây. Đặc biệt là khi AI và các thiết bị IoT lên ngôi, trở thành mỏ vàng của các nhà đầu tư.</p>
+
+<p>Khi nhìn vào những chiếc điện thoại thông minh hay laptop hiện đại, ai cũng biết rằng bên trong chúng là những con chip (vi xử lý) thần thánh. Nhưng nếu có quan tâm đến tin tức truyền thông công nghệ trong một thập niên qua, hẳn bạn đã nghe nói tới Định luật Moore và cách mà định luật này đang chết dần mòn ra sao. Điều không may là không phải ai cũng dễ dàng mô tả Định luật Moore là gì, và vì sao nó lại đang “hấp hối.”</p>
+
+<p>Bài viết này sẽ giúp bạn “giải ngố” về thế giới thiết kế chip - nơi mà khoa học, nghệ thuật, và công nghệ cao giao thoa, tạo nên những kỳ tích vượt bậc.</p>
+
+<h2 id="từ-rửa-film-đến-đảo-ngược-quy-trình-của-phd-moore">Từ Rửa Film Đến Đảo Ngược Quy Trình Của PhD Moore</h2>
+
+<p>Mọi thứ bắt đầu từ ánh sáng – đúng vậy, ánh sáng chính là trái tim của công nghệ vi mạch hiện đại. Quang khắc (photolithography) – linh hồn của ngành thiết kế chip – không chỉ đơn thuần là kỹ thuật sản xuất, mà còn là một nghệ thuật đảo ngược ánh sáng, kế thừa những nguyên lý của nhiếp ảnh.</p>
+
+<p>Quy trình quang khắc: Cốt lõi của thiết kế chip
+Như trong nhiếp ảnh, ánh sáng giúp tạo ra hình ảnh trên phim, thì trong quang khắc, ánh sáng được sử dụng để “vẽ” nên những chi tiết nhỏ bé đến kinh ngạc trên bề mặt tấm silicon. Hãy hình dung một tác phẩm hội họa tí hon, với từng nét vẽ là các bóng bán dẫn được sắp xếp hoàn hảo.</p>
+
+<p>Lớp photoresist – “phim ảnh” của ngành bán dẫn
+Trước tiên, bề mặt tấm wafer silicon được phủ một lớp vật liệu nhạy sáng, gọi là photoresist. Vật liệu này có khả năng phản ứng với ánh sáng theo cách đặc biệt: khi ánh sáng chiếu vào, phần được chiếu sáng sẽ thay đổi tính chất hóa học, giúp định hình những chi tiết cần thiết cho thiết kế chip.</p>
+
+<p>Mặt nạ quang học (Photomask) – chiếc “khuôn” siêu chính xác
+Một mặt nạ chứa các mẫu thiết kế siêu nhỏ (ví dụ: các cổng logic) được đặt lên trên lớp photoresist. Ánh sáng sau đó chiếu qua mặt nạ để truyền các mẫu thiết kế này xuống lớp photoresist bên dưới.</p>
+
+<p>Quá trình rửa (Etching) – tạo hình hoàn chỉnh
+Sau khi ánh sáng chiếu qua, lớp photoresist được rửa sạch. Kết quả là những phần mẫu thiết kế được giữ lại, tạo nên hình dạng của các mạch bán dẫn.</p>
+
+<p>Quy trình này là cốt lõi của công nghệ sản xuất chip. Như Morris Chang, người sáng lập TSMC từng nói:
+“Kỹ thuật quang khắc không chỉ là kỹ thuật sản xuất – nó là cả một thế giới kỳ diệu mà những người đam mê công nghệ không thể bỏ qua.”</p>
+
+<h3 id="điều-gì-làm-euv-đặc-biệt">Điều gì làm EUV đặc biệt?</h3>
+<p>Ánh sáng EUV có bước sóng siêu ngắn (~13.5nm), cho phép in được các chi tiết cực nhỏ trên bề mặt silicon. Tuy nhiên, sử dụng EUV đòi hỏi các hệ thống quang khắc phức tạp, như máy ASML, với giá thành lên tới 150 triệu USD mỗi chiếc. Đây là lý do tại sao chỉ có các “ông lớn” như TSMC, Samsung và Intel mới đủ sức đầu tư.</p>
+
+<p>Về nguyên tắc, đó sẽ là một quy trình  Nếu các bạn đã từng làm việc hay hứng thú với các máy ảnh thời xưa, việc rửa film, chúng ta sẽ bỏ qua các bước không liên quan khác và tới với phần liên quan nhất đó chính là Rọi ảnh.</p>
+<ol>
+  <li>Quy trình đảo ngược ánh sáng trong quang khắc.
+Trong quang khắc, bạn thực sự có thể thấy một dạng “đảo ngược ánh sáng”. Cụ thể, trong quá trình này, ánh sáng chiếu qua mặt nạ có chứa mẫu thiết kế của chip, và ánh sáng sẽ tác động lên lớp photoresist (một vật liệu nhạy sáng đặc biệt). Sau khi chiếu sáng, một phần của lớp photoresist sẽ thay đổi tính chất (phơi sáng) và có thể được rửa đi, để lại những vùng cần thiết cho quá trình tạo mạch trên chip.
+Đây là một dạng “in ảnh ngược” với quy trình của chụp ảnh: trong nhiếp ảnh, ánh sáng thường chiếu vào vật thể và được thu lại để tạo ra hình ảnh, còn trong quang khắc, ánh sáng chiếu qua mặt nạ và bị “đảo ngược” khi chỉ những vùng không bị chiếu sáng mới được giữ lại (phần ánh sáng chiếu vào bị loại bỏ).</li>
+  <li>Mối quan hệ giữa nhiếp ảnh và quang khắc.
+Có thể nói, quang khắc là sự kế thừa và phát triển của các nguyên lý nhiếp ảnh, nhưng được tinh chỉnh và mở rộng để có thể ứng dụng vào việc tạo ra các cấu trúc cực nhỏ và phức tạp, mà nhiếp ảnh không thể làm được. Nhiếp ảnh đã mang đến những hiểu biết về cách sử dụng ánh sáng và vật liệu nhạy sáng, điều này đã tạo nền tảng cho sự phát triển của công nghệ quang khắc.</li>
+</ol>
+
+<p>Đây là quy trình quang khắc (photolithography) sử dụng ánh sáng để tạo ra các mạch bán dẫn trên tấm wafer silicon. Tâm điểm của công nghệ này là bước sóng ánh sáng - yếu tố quyết định độ nhỏ của các bóng bán dẫn.
+Hiện nay, ngành công nghiệp đang tìm kiếm nguồn sáng có bước sóng cực ngắn, như tia EUV (Extreme Ultraviolet), để sản xuất các con chip ở mức 3nm. Nhưng có phải “3nm” chỉ là một chiêu trò marketing từ các ông lớn như Intel, Samsung, và TSMC? Đây là câu hỏi mà không ít người đặt ra, bởi kích thước này thực chất không phải là con số thực tế mà là một thuật ngữ tượng trưng.</p>
+
+<h2 id="bóng-bán-dẫn-và-cổng-logic-trái-tim-của-chip">Bóng Bán Dẫn và Cổng Logic: Trái Tim Của Chip</h2>
+<p>Bóng bán dẫn (transistor) là thành phần cơ bản của mọi con chip, đóng vai trò như công tắc điều khiển dòng điện. Mỗi bóng bán dẫn có một cổng logic (logic gate), và hàng tỷ cổng này phối hợp để thực hiện các phép tính. Sự tinh vi nằm ở cách sắp xếp và kết nối các cổng để tối ưu hiệu năng và tiết kiệm năng lượng.</p>
+
+<h2 id="kiến-trúc-chip-arm-bí-kíp-làm-nên-thành-công">Kiến Trúc Chip ARM: Bí Kíp Làm Nên Thành Công</h2>
+<p>Brooke Shields 
+ARM, hay Advanced RISC Machine, là một kiến trúc chip nổi tiếng với tính đơn giản và hiệu quả. Thay vì thiết kế và sản xuất, ARM chỉ bán quyền sử dụng thiết kế (license), cho phép các công ty khác tùy chỉnh theo nhu cầu. Đây chính là lý do ARM trở thành “người đứng sau” hàng loạt sản phẩm đình đám, từ điện thoại Apple đến các thiết bị IoT.</p>
+
+<h3 id="giải-ngố-tsmc">Giải Ngố TSMC</h3>
+<p>Taiwan Semiconductor Manufacturing Company (TSMC) là nhà sản xuất chip hàng đầu thế giới, nhưng điều những thứ “cốt lõi” lại không nằm ở đây vì họ không trực tiếp thiết kế chip. Công việc của TSMC là biến những bản thiết kế từ các công ty như Apple, AMD hay NVIDIA thành hiện thực. Chính vì thế, bản thiết kế mới là “đỉnh cao của đời người” trong ngành công nghiệp này. Ngoài ra, máy quang khắc cũng không phải được tạo ra bởi TSMC, TSMC nắm dữ công nghệ vận hành quy trình thiết kế chip với các tiêu chuẩn cao nhất và hiệu quả cao nhất.
+Ở đây tiểu đệ sẽ giải thích thêm cho các đạo hữu dễ hiểu: Có thể các vị đã từng nghe (hoặc chưa) về các đời card đồ họa của AMD, như là 4000 series trong đó trải dài các gương mặt như 4060, 4060 Ti, 4070,… với các mức giá khác nhau. Bỏ qua nâng cấp VRAM thì thoạt đầu chắc mọi người sẽ nghĩ lý do là chip con này mạnh hơn chip con kia. Nhưng rồi sự thực ở đây là tất cả đều sử dụng chung một bảng mạch, không có gì khác nhau ở đây là. Nhưng một điều rằng trong quá trình sản xuất với độ chi tiết lên tới con số nanomet thì những tác động như khuẩn hay sai lệch của máy móc sẽ khiến một số nhân chip không hoạt động hoặc không đúng năng suất.</p>
+
+<h2 id="vì-sao-apple-tăng-số-nhân-thay-vì-tăng-xung">Vì Sao Apple Tăng Số Nhân Thay Vì Tăng Xung?</h2>
+
+<p>Khi Apple thiết kế chip, họ chọn tăng số nhân (cores) thay vì tăng xung nhịp (clock speed). Lý do? Tăng xung nhịp có thể gây nóng chip và giảm hiệu năng, trong khi tăng số nhân cho phép xử lý nhiều tác vụ song song, tối ưu hóa trải nghiệm người dùng mà không ảnh hưởng đến tuổi thọ thiết bị.</p>
+
+<p>Nếu có quan tâm đến tin tức truyền thông công nghệ trong một thập niên qua, có lẽ chúng ta đã nghe nói tới Định luật Moore và cách mà định luật này đang chết dần mòn ra sao. Điều không may là chúng ta thật khó để mô tả Định luật Moore là cái gì và nó đang chết dần chết mòn thế nào trong một bài viết tiêu chuẩn.</p>
+
+<h3 id="tính-kế-thừa-trong-thiết-kế-chip">Tính Kế Thừa Trong Thiết Kế Chip</h3>
+
+<p>Một điểm đặc biệt trong thiết kế chip là tính kế thừa. Các thế hệ chip mới thường dựa trên nền tảng của thế hệ trước, cải tiến từng bước thay vì thay đổi toàn bộ. Điều này không chỉ tiết kiệm chi phí mà còn giảm rủi ro.</p>
+
+<h2 id="giải-ngố-system-on-chip-soc-và-asic">Giải Ngố System on Chip (SoC) và ASIC</h2>
+
+<p>SoC, hay System on Chip, là con chip tích hợp tất cả các thành phần như CPU, GPU, RAM, và các bộ điều khiển vào một thiết bị duy nhất. Trong khi đó, ASIC (Application-Specific Integrated Circuit) được thiết kế để thực hiện một nhiệm vụ cụ thể, như đào tiền mã hóa. Sự khác biệt nằm ở tính linh hoạt và mục đích sử dụng.</p>
+
+<h2 id="mỹ-cấm-vận-công-nghệ-lõi-tác-động-lớn-đến-trung-quốc">Mỹ Cấm Vận Công Nghệ Lõi: Tác Động Lớn Đến Trung Quốc</h2>
+
+<p>Một trong những vũ khí mạnh nhất của Mỹ trong cuộc chiến công nghệ là cấm vận các công cụ thiết kế chip, như phần mềm từ Cadence hoặc Synopsys. Điều này khiến Trung Quốc gặp khó khăn lớn trong việc tự thiết kế chip, ngay cả khi họ có khả năng sản xuất.</p>
+
+<h2 id="kỷ-nguyên-xử-lý-ở-biên-tương-lai-của-công-nghệ">Kỷ Nguyên Xử Lý Ở Biên: Tương Lai Của Công Nghệ</h2>
+
+<p>Xử lý ở biên (edge computing) là xu hướng tương lai, nơi dữ liệu được xử lý ngay tại nguồn thay vì gửi lên đám mây. Điều này giúp giảm độ trễ và tăng bảo mật, mở ra một thế giới mới cho các ứng dụng như xe tự lái và thiết bị IoT.</p>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Chúng ta đã bắt đầu từ những gì rất khác</title><link href="https://ndtwan.github.io/blog/2024-12-31-Anthropocene/" rel="alternate" type="text/html" title="Chúng ta đã bắt đầu từ những gì rất khác" /><published>2024-12-31T00:00:00+00:00</published><updated>2025-07-06T02:59:36+00:00</updated><id>https://ndtwan.github.io/blog/Anthropocene</id><content type="html" xml:base="https://ndtwan.github.io/blog/2024-12-31-Anthropocene/"><![CDATA[<blockquote>
+  <p>Thanh niên kia từ đâu tới?</p>
+</blockquote>
+
+<blockquote>
+  <p>Tại sao họ lại hành động như vậy?</p>
+</blockquote>
+
+<blockquote>
+  <p>Họ là ai, nếu không phải chính chúng ta?</p>
+</blockquote>
+
+<blockquote>
+  <p>Oh, vậy ra họ là, như kiểu, đồng loại mình ấy hả?</p>
+</blockquote>
+
+<p>Chúng ta đã bắt đầu từ những gì đó rất khác. Trong vòng 13.000 năm sau Kỷ Băng hà, nhân loại đã bước đi trên những con đường khác nhau. Một số vùng phát triển được chữ viết, công cụ kim loại, và xã hội công nghiệp. Ngược lại, nhiều nơi chỉ dừng lại ở xã hội chăn nuôi hoặc săn bắt hái lượm, để rồi cuối cùng bị chinh phục bởi những kẻ mạnh hơn.</p>
+
+<p>Hình như lịch sử thế giới là một mớ hỗn độn gồm toàn những biến cố bất ngờ; mọi sự thấy nằm ngổn ngang như trong những cơn lốc của một trận lụt. Hết hỗn loạn này lại tiếp hỗn loạn khác, hết tai họa này lại đến tai họa khác. Thỉnh thoảng thấy trời quang mây tạnh và thanh bình chớp nhoáng, hay còn sót lại những hòn đảo nhấp nhô chưa bị làn sóng cồn cuốn đi, nhưng sau cùng cũng bị chôn vùi hết.</p>
+
+<p>Câu chuyện dưới đây như một bản tóm lược nhỏ gọn về lịch sử thế giới. Hy vọng nó sẽ giúp mọi người nắm bắt được những gì đã xảy ra trong quá khứ, những câu hỏi đang bỏ ngỏ ở hiện tại, và có thể là những ván cược trong tương lai.</p>
+
+<h2 id="rời-khỏi-châu-phi-và-vương-ra-thế-giới">Rời khỏi Châu Phi và vương ra thế giới</h2>
+
+<p>Vào khoảng 50.000 năm trước Công Nguyên, ở những thảo nguyên Đông Phi, chúng ta — tổ tiên của loài người hiện đại — sống bằng cách săn bắn những loài thú hoang và hái lượm những quả mọng rải rác khắp vùng. Diện mạo của chúng ta khi ấy có lẽ không khác mấy so với những loài vượn người đi bằng hai chân từng phổ biến ở châu Phi. Nhưng có điều gì đó khác biệt.</p>
+
+<p>Chúng ta không chỉ săn bắn để no bụng, mà còn biết lên kế hoạch tỉ mỉ cho từng chuyến săn. Không chỉ mặc trang phục để chống chọi thời tiết, mà còn biết tô điểm cơ thể bằng những hình vẽ và trang sức. Và quan trọng hơn cả, chúng ta biết truyền đạt kinh nghiệm qua các thế hệ, hy vọng con cháu sẽ có cuộc sống tốt đẹp hơn. Điều này — kết hợp với khả năng tưởng tượng, theo đuổi ý tưởng mới và truyền tải chúng qua hệ thống ngôn ngữ — đã làm nên sự khác biệt. Nó không chỉ biến chúng ta thành Homo sapiens, mà còn đặt nền móng cho câu chuyện vĩ đại của loài người.</p>
+
+<p>Chỉ có khoảng vài ngàn cá thể loài người chúng ta khi ấy. Toàn bộ nhân loại có thể bỏ vừa vặn vào một sân bóng. Nhưng điều đặc biệt là con người, chúng ta bao giờ chịu đứng yên ở một chỗ, chúng ta luôn đuổi theo những điều mới mẻ và tôi nghĩ là cả một khát khao danh vọng - tôi hay trêu đùa rằng từ ngày xưa các cụ đã muốn trải nghiệm đinh tháp Maslow. Không quá lâu sau, một số nhóm người rời bỏ các đồng cỏ Đông Phi, tiến về phía bắc. Qua mỗi thế kỷ, dấu chân của họ lại xuất hiện ở những vùng đất mới. Họ tiến đến Lưỡi liềm Màu mỡ (Fertile Crescent), nơi những cánh đồng lúa mì đầu tiên mọc lên dưới ánh mặt trời, rồi theo dòng Sao Bắc Đẩu đến vùng đất châu Âu lạnh giá. Về phía Đông, họ đi đến các thảo nguyên Á-Âu, nơi những đồng cỏ mênh mông trải dài dưới bầu trời rộng lớn. Và không dừng lại ở đó, họ chế tạo những con thuyền thô sơ để vượt biển đến New Guinea và châu Úc. Trong vài thiên niên kỷ, nhân loại đã phủ sóng ba phần tư lục địa trên Trái Đất. Và … hóa ra thế giới rốt cuộc lại nhỏ bé như vậy đấy.</p>
+
+<blockquote>
+  <p>Chờ một chút, vậy là trong khi một nền văn minh nào đó ở Ai Cập đã biết đến ướp xác và xây kim tự tháp thì ở vùng đất khác con người vẫn đang hú hú kẹc kẹc lùa bắt voi Mammoth à =)))
+→  Well, không chỉ vùng đất khác mà là phần lớn thế giời lúc 🫨
+Từ những buổi đầu của Kỷ Holocene, loài người đã bước vào một hành trình không hồi kết. Mỗi tộc người, mỗi vùng đất lại viết nên những chương khác biệt của lịch sử. Có nơi, những cánh đồng lúa mì đầu tiên trải dài dưới ánh mặt trời, mang đến những làng mạc nhỏ bé nơi con người sống quây quần bên nhau. Ở một nơi khác, những bộ tộc săn bắt hái lượm lang thang trên thảo nguyên bao la, sống ngày qua ngày dựa vào thiên nhiên ban tặng. Nhưng không phải ai cũng chọn cùng một con đường.</p>
+</blockquote>
+
+<h2 id="hữu-sản-và-vô-sản">Hữu sản và vô sản</h2>
+<p>Vào khoảng 10.000 năm trước Công Nguyên, con người bắt đầu bước vào một kỷ nguyên mới. Từ những vùng đất phì nhiêu như Lưỡi liềm Màu mỡ, con người không còn sống hoàn toàn nhờ vào săn bắt và hái lượm nữa. Thay vào đó, họ phát hiện ra rằng, bằng cách trồng trọt cây trồng và thuần hóa động vật, họ có thể tạo ra nguồn lương thực ổn định, không phải phụ thuộc hoàn toàn vào thiên nhiên.</p>
+
+<p>Trồng trọt là một phát minh mang tính cách mạng. Nó mở ra khái niệm “hữu sản” – những người sở hữu đất đai, mùa màng, và tài sản. Nhưng đồng thời, điều này cũng tạo ra khái niệm “vô sản” – những người không sở hữu gì ngoài sức lao động. Dù lúc đó khái niệm này chưa được đặt tên, sự phân chia tầng lớp trong xã hội sơ khai đã bắt đầu manh nha.</p>
+
+<p>Trồng trọt không chỉ giúp con người có nguồn lương thực dư thừa, mà còn khuyến khích sự phát triển của những ngôi làng đầu tiên, những hệ thống xã hội phức tạp hơn. Nhưng nó cũng đặt nền móng cho những bất công đầu tiên trong lịch sử loài người, khi sự giàu có được tích lũy vào tay một số ít người.</p>
+
+<h2 id="dấu-mốc-đầu-tiên-của-loài-vật-bậc-cao">Dấu mốc đầu tiên của loài vật bậc cao</h2>
+<p>Con người không phải loài duy nhất trên Trái Đất có tổ chức xã hội hay biết dùng công cụ. Nhưng chúng ta là loài đầu tiên tiến tới những bước đột phá mà không loài vật nào đạt được. Từ việc chế tạo công cụ bằng đá cách đây 2,5 triệu năm, đến việc biết tạo ra lửa khoảng 1 triệu năm trước, những dấu mốc này đã nâng Homo sapiens lên vị trí độc tôn trong tự nhiên.</p>
+
+<p>Lửa là một trong những công cụ đầu tiên biến đổi cả thể chất lẫn văn hóa con người. Nó giúp nấu chín thức ăn, tiêu diệt vi khuẩn, và tạo ra nguồn năng lượng dễ tiêu hóa, thúc đẩy sự phát triển của bộ não lớn hơn. Cùng lúc đó, lửa cũng trở thành biểu tượng của quyền lực và văn hóa, là trung tâm của những buổi tụ họp trong đêm tối.</p>
+
+<p>Chúng ta cũng phát minh ra ngôn ngữ, thứ đã trở thành dấu ấn đỉnh cao của loài vật bậc cao. Với ngôn ngữ, con người có thể truyền tải thông tin vượt thời gian và không gian, ghi lại ký ức, và sáng tạo ra những câu chuyện đầu tiên. Điều này không chỉ làm nên sự khác biệt của chúng ta, mà còn tạo ra nền tảng cho mọi phát minh sau này.
+Thuở ban đầu, trồng trọt là một trong những phát minh vĩ đại nhất của con người. Nó không chỉ đơn thuần là cách kiếm ăn mới, mà còn là “đứa con đầu lòng” của một chủng loài luôn khao khát khám phá và chinh phục thế giới. Khi con người tìm ra cách kiểm soát cây cối, họ đã ghìm bước chân của mình lại, chấm dứt cuộc sống lang bạt của những người săn bắt hái lượm. Đây chính là khởi đầu cho một thời đại hoàn toàn mới: thời đại của định cư, tích trữ, và phân hóa xã hội.</p>
+
+<p>Những hạt giống đầu tiên được gieo xuống đất mang theo niềm hy vọng của loài người về một cuộc sống ổn định và bền vững hơn. Nhưng đồng thời, chúng cũng gieo mầm cho những bất bình đẳng đầu tiên trong lịch sử. Khi một số người tích lũy được của cải từ mùa màng dư thừa, trong khi những người khác chỉ đủ ăn qua ngày, khoảng cách giữa hữu sản (những kẻ sở hữu đất đai, công cụ, và tài nguyên) và vô sản (những kẻ không có gì ngoài sức lao động) bắt đầu hình thành.</p>
+
+<p>Ban đầu, sự bất bình đẳng này còn mờ nhạt. Các làng mạc nhỏ bé vẫn sống dựa trên sự hợp tác, chia sẻ, và giúp đỡ lẫn nhau. Nhưng khi con người bắt đầu canh tác quy mô lớn, trồng trọt thặng dư và tích lũy tài sản, xã hội dần thay đổi. Đất đai trở thành thứ có giá trị; quyền sở hữu trở thành sức mạnh; và sức lao động của con người trở thành hàng hóa. Từ đây, khái niệm quyền lực và sự áp bức dần xuất hiện.</p>
+
+<p>Những nhà cai trị đầu tiên, dù là các tù trưởng, pháp sư, hay các nhà lãnh đạo tôn giáo, đều hiểu rằng việc kiểm soát đất đai và lương thực đồng nghĩa với việc kiểm soát con người. Họ xây dựng các cấu trúc xã hội để duy trì trật tự, nhưng đồng thời cũng củng cố quyền lực của riêng mình. Lần đầu tiên trong lịch sử, con người không còn đứng ngang hàng với nhau, mà bị chia cắt bởi của cải và quyền lực.</p>
+
+<p>Điều này không chỉ xảy ra trong các làng mạc nhỏ bé, mà còn ở quy mô lớn hơn khi các nền văn minh đầu tiên xuất hiện. Từ các cánh đồng lúa mì của vùng Lưỡng Hà đến các thung lũng lúa nước của Trung Hoa, những kẻ nắm giữ quyền lực kinh tế dần trở thành tầng lớp thống trị. Đó là tầng lớp hữu sản, trong khi tầng lớp vô sản bị buộc phải làm việc quần quật để đổi lấy sự sinh tồn.</p>
+
+<p>Trồng trọt, vốn là biểu tượng của sự sáng tạo và tiến bộ, giờ đây mang cả hai mặt: vừa là công cụ cho sự phát triển, vừa là nguồn gốc của bất công và xung đột xã hội. Và như vậy, cuộc xung đột giữa hữu sản và vô sản đã âm ỉ từ buổi bình minh của lịch sử loài người, kéo dài qua hàng nghìn năm, và vẫn còn để lại dấu ấn đến tận ngày nay.</p>
+
+<h2 id="tân-thần-mới-của-loài-người---tiền-chiến-tranh-và-quyền-lực">Tân thần mới của loài người - Tiền, chiến tranh và quyền lực</h2>
+<p>Với sự phát triển của xã hội, con người không còn chỉ sống dựa vào những nhu cầu cơ bản như ăn uống và trú ngụ. Thay vào đó, họ tạo ra những “tân thần” mới để kiểm soát và tổ chức xã hội: tiền, chiến tranh, và quyền lực.</p>
+
+<p>Tiền – một công cụ đơn giản ban đầu dùng để trao đổi – đã trở thành biểu tượng tối cao của giá trị. Nó cho phép con người trao đổi không chỉ hàng hóa mà còn cả công sức, quyền lợi, và thời gian. Nhưng tiền cũng mang đến lòng tham và sự bất bình đẳng chưa từng có, khiến nhiều xã hội bị xé nát bởi khoảng cách giữa giàu và nghèo.</p>
+
+<p>Chiến tranh, từ những cuộc xung đột bộ lạc nhỏ lẻ, đã trở thành một công cụ chính trị, một phương tiện để chiếm đoạt tài nguyên và bảo vệ lợi ích. Nó mang đến sự tàn phá nhưng đồng thời cũng thúc đẩy những phát minh vĩ đại: từ bánh xe đến kim loại, từ chiến lược đến tổ chức xã hội phức tạp hơn.</p>
+
+<p>Quyền lực, cuối cùng, là mục tiêu mà cả tiền lẫn chiến tranh đều hướng tới. Trong suốt lịch sử, các nhà lãnh đạo và tầng lớp cầm quyền đã sử dụng tiền và chiến tranh để củng cố vị trí của mình. Nhưng quyền lực cũng chính là thứ khiến lịch sử trở nên sống động, bởi những sự kiện vĩ đại nhất đều xoay quanh tham vọng và tranh chấp quyền lực.</p>
+
+<p>Những “tân thần” này, dù đáng sợ, đã định hình nên thế giới mà chúng ta đang sống – một thế giới đầy những câu chuyện về thành tựu và bi kịch, tham vọng và thất bại.</p>
+
+<h2 id="thế-nhân-sinh">Thế Nhân sinh</h2>
+<p>Chúng ta đã từng bắt đầu từ những gì đó rất khác. Trong vòng 13.000 năm sau Kỷ Băng hà, nhân loại đã bước đi trên những con đường khác nhau. Một số vùng phát triển được chữ viết, công cụ kim loại, và xã hội công nghiệp. Ngược lại, nhiều nơi chỉ dừng lại ở xã hội chăn nuôi hoặc săn bắt hái lượm, để rồi cuối cùng bị chinh phục bởi những kẻ mạnh hơn.</p>
+
+<p>Từ sự trù phú của thảo nguyên châu Phi cho đến cuộc cách mạng công nghiệp, lịch sử loài người là một hành trình bất tận của đấu tranh, cải biến, và khát vọng. Bên dưới những ánh sáng của công nghệ hiện đại, chúng ta giờ đây không mấy thoải mái cho lắm trong xã hội cơ giới và công nghệ, và rồi đôi khi lại thấy nhớ cái “thiên đường đã mất” của tự nhiên và cân bằng. Nhưng dù đối mặt với khó khăn và sự bất quân bình lịch sử, loài người chưa bao giờ ngừng tìm kiếm một đáp án cho hành trình của chính mình.</p>
+
+<p>Một thế địa chất đã gần bắt đầu trong lược sử của hành tinh xanh, một thế địa chất đánh dấu sự tàn lụi chóng vánh của thế Tàn tân - Holocene. Một thế địa chất mang trong mình một loài sinh vật có thể định đoạt tương lai của toàn bộ sinh quyển, một sinh vật mà từ trước đến nay chưa từng có, và, chào mừng đến với thời đại mang tên giống loài Sapheien: <strong>Thế Nhân sinh (Anthropocene)</strong>.
+ <em>(Disclaimer: Thế Anthropocene được nhiều học giả xem là đã hiện hữu nhưng chưa được công nhận chính thức trong thang thời gian địa chất - Btw: Đó là sự thực không thể tránh khỏi</em>🍵<em>)</em>
+Cùng nhìn lại, chúng ta kỳ thực là một loài cực kỳ non trẻ so với tuổi đời bốn tỷ năm rưỡi năm của Hành Tinh Xanh. Loài người chúng ta chỉ mới bắt đầu tiến hóa trong khoảng 2000000 năm gần đây.</p>
+
+<h2 id="thảo-luận-thêm">Thảo luận thêm</h2>
+<p>Well, bắt đầu thế nào nhỉ, blog đầu tiên trong tưởng tượng của tôi là dành cho một nhân vật hay bộ phim anime nào đấy, chí ít không là Anime thì về kiếm hiệp, Kim Dung hay lại thao thao bất tuyệt về Tam Quốc. Nhưng có lẽ bắt đầu với một chủ đề lịch sử theo góc nhìn học giả cũng không tệ đến thế. Vậy điều gì đã đưa tôi tới chủ đề này, đó là muôn vàn câu hỏi trong đầu về từ cỏ cây và sông suối, làm sao một sinh vật có thể biến nó thành các giao động tần sóng và phát minh ra thứ kiệt tác gọi là mạng wifi. Liệu nhân loại có đủ khôn ngoan để tự cứu lấy mình? Hay chúng ta sẽ trở thành một ghi chú ngắn ngủi trong lược sử của hành tinh xanh?</p>
+
+<p>🍻🍻🍻 !!! Cheers !!! 🍻🍻🍻</p>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Lược sử loài người là một bản trường ca sử thi bất tận của đấu tranh, cải biến, và khát vọng – liệu hồi kết đã sắp hạ màn?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/history.png" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/history.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">X Marks the Spot in Hydejack 9.2</title><link href="https://ndtwan.github.io/blog/2024-09-08-x-marks-the-spot-in-hydejack-9-2/" rel="alternate" type="text/html" title="X Marks the Spot in Hydejack 9.2" /><published>2024-09-08T00:00:00+00:00</published><updated>2025-07-06T02:59:36+00:00</updated><id>https://ndtwan.github.io/blog/x-marks-the-spot-in-hydejack-9-2</id><content type="html" xml:base="https://ndtwan.github.io/blog/2024-09-08-x-marks-the-spot-in-hydejack-9-2/"><![CDATA[<h2 id="new-social-media-icons">New Social Media Icons</h2>
+
+<p>Lots of things have changed in the world of social media since the last release. To bring Hydejack up to date, the default logo for Twitter has changed:</p>
+
+<p class="larger"><span class="icon-twitter-old"></span> → <span class="icon-twitter"></span></p>
+
+<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#new-social-media-icons" id="markdown-toc-new-social-media-icons">New Social Media Icons</a></li>
+  <li><a href="#dark-mode-is-now-free" id="markdown-toc-dark-mode-is-now-free">Dark Mode is Now Free</a></li>
+  <li><a href="#updated-docs" id="markdown-toc-updated-docs">Updated Docs</a></li>
+  <li><a href="#google-fonts-off-by-default" id="markdown-toc-google-fonts-off-by-default">Google Fonts Off by Default</a></li>
+</ul>
+
+<p class="note smaller">If you prefer the old Twitter logo, you can use it through <code class="language-plaintext highlighter-rouge">twitter-old</code>.</p>
+
+<p>There are also many new social media networks, some of which are now included by default:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th>Icon</th>
+      <th style="text-align: left">Name</th>
+      <th>Icon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">signal</td>
+      <td><span class="larger icon-signal"></span></td>
+      <td style="text-align: left">threads</td>
+      <td><span class="larger icon-threads"></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">playstation</td>
+      <td><span class="larger icon-playstation"></span></td>
+      <td style="text-align: left">messenger</td>
+      <td><span class="larger icon-messenger"></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">stripe</td>
+      <td><span class="larger icon-stripe"></span></td>
+      <td style="text-align: left">slack</td>
+      <td><span class="larger icon-slack"></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">gitlab</td>
+      <td><span class="larger icon-gitlab"></span></td>
+      <td style="text-align: left">line</td>
+      <td><span class="larger icon-line"></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">medium</td>
+      <td><span class="larger icon-medium"></span></td>
+      <td style="text-align: left">xbox</td>
+      <td><span class="larger icon-xbox"></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">wechat</td>
+      <td><span class="larger icon-wechat"></span></td>
+      <td style="text-align: left">discord</td>
+      <td><span class="larger icon-discord"></span></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mastodon</td>
+      <td><span class="larger icon-mastodon"></span></td>
+      <td style="text-align: left">twitter</td>
+      <td><span class="larger icon-twitter"></span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If your perferred network is missing, note that you can always <a href="/docs/advanced/#adding-a-custom-social-media-icon">follow the steps to add custom icons</a> from the docs, which is what I did for this release.</p>
+
+<h2 id="dark-mode-is-now-free">Dark Mode is Now Free</h2>
+<p>When I first added dark mode to Hydejack it was still considered a novelty. 
+Unity, a popular game engine, was limiting dark mode to its paid version at the time — a model that I’ve adopted for Hydejack. 
+Today, dark mode is considered a minimal requirement for any new theme and to reflect that reality, 
+starting with Hydejack 9.2, dark mode is included in all versions of Hydejack.</p>
+
+<h2 id="updated-docs">Updated Docs</h2>
+<p>The documentation has been updated with a focus on deployment via GitHub Actions and CI pipelines. 
+I’ve added a chapter on how to <a href="/docs/deploy/" class="heading flip-title">Deploy</a> and updated many of the existing chapters.</p>
+
+<p>The deployment experience for <strong>PRO customers</strong> has also been improved. You are now automatically added to a “PRO Customers” team on GitHub if you provide a GitHub username during checkout (existing customers can request an invite through <a href="mailto:mail@hydejack.com">mail@hydejack.com</a>).
+Members of this team have read access to the pro repository, which allows the theme to be fetched during a CI run. 
+For detail, check out the new <a href="/docs/deploy/" class="heading flip-title">Deploy</a> chapter.</p>
+
+<h2 id="google-fonts-off-by-default">Google Fonts Off by Default</h2>
+<p>Google Fonts are now turned off by default in the starter kits, but remain in use on hydejack.com for visual continuity. All associated options continue to work as they did before. Only new users have to enable them in the config file if they want to match the look of hydejack.com.</p>
+
+<p>The reason for this change is that sensibilities around privacy have changed in recent years. 
+No Google product feels appropriate as a default option for an ownership and self-hosting oriented product like Hydejack.</p>
+
+<p>To restore the old look that matches hydejack.com, add the following to your <code class="language-plaintext highlighter-rouge">_config.yml</code> file:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">google_fonts</span><span class="pi">:</span>          <span class="s">Roboto+Slab:700|Noto+Sans:400,400i,700,700i</span>
+<span class="na">font</span><span class="pi">:</span>                  <span class="s">Noto Sans, Helvetica, Arial, sans-serif</span>
+<span class="na">font_heading</span><span class="pi">:</span>          <span class="s">Roboto Slab, Helvetica, Arial, sans-serif</span>
+</code></pre></div></div>
+
+<p>On a related note, I’ve also decided against updating the included Google Analytics script, in part because the upgrade path is incomprehensible, but also due the the same privacy concerns that make Google Fonts a bad default option. I recommend independent analytics services like 
+<a href="https://plausible.io">Plausible</a>, <a href="https://matomo.org/">Matomo</a> or maybe even <a href="https://counterscale.dev">Counterscale</a> (if you are a Cloudflare customer).
+You can include the tracking scripts by <a href="/docs/basics/#adding-custom-html-to-the-head">adding them as custom HTML</a>.</p>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[This feature release adds new social media icons for 2024 and makes dark mode available to everyone.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="https://ndtwan.github.io/blog/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+00:00</published><updated>2025-07-06T02:59:36+00:00</updated><id>https://ndtwan.github.io/blog/introducing-hydejack-9</id><content type="html" xml:base="https://ndtwan.github.io/blog/2020-07-03-introducing-hydejack-9/"><![CDATA[<p class="lead">Version 9 is the most complete version of Hydejack yet.</p>
+
+<p><a href="#linking-in-style">Modernized</a> <a href="#whats-in-the-cards">design</a>, <a href="#ready-for-the-big-screen">big headlines</a>, big new features: <a href="#built-in-search">Built-In Search</a>, <a href="#sticky-table-of-contents">Sticky Table of Contents</a>, and <a href="#auto-hiding-navbar">Auto-Hiding Navbar</a>. That <a href="#and-much-more">and more</a> is Hydejack 9.</p>
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#linking-in-style" id="markdown-toc-linking-in-style">Linking in Style</a></li>
+  <li><a href="#ready-for-the-big-screen" id="markdown-toc-ready-for-the-big-screen">Ready for the Big Screen</a></li>
+  <li><a href="#whats-in-the-cards" id="markdown-toc-whats-in-the-cards">What’s in the Cards?</a></li>
+  <li><a href="#built-in-search" id="markdown-toc-built-in-search">Built-In Search</a></li>
+  <li><a href="#auto-hiding-navbar" id="markdown-toc-auto-hiding-navbar">Auto-Hiding Navbar</a></li>
+  <li><a href="#sticky-table-of-contents" id="markdown-toc-sticky-table-of-contents">Sticky Table of Contents</a></li>
+  <li><a href="#and-much-more" id="markdown-toc-and-much-more">…and much more</a></li>
+  <li><a href="#even-more-to-come" id="markdown-toc-even-more-to-come">Even More to Come</a></li>
+  <li><a href="#get-it-now" id="markdown-toc-get-it-now">Get It Now</a></li>
+</ul>
+
+<h2 id="linking-in-style">Linking in Style</h2>
+
+<p>Ever since the introduction of Dark Mode, link styles have been a bit of an issue. Specifically, finding an accent color that worked on both light and dark backgrounds was the problem. With Hydejack 9, the <a href="#linking-in-style">link style</a> has been revamped so that legibility is no longer tied to the choice of accent_color, giving you much more freedom in creating a unique design flavor for your site.</p>
+
+<h2 id="ready-for-the-big-screen">Ready for the Big Screen</h2>
+
+<p>The theme on which Hydejack is based was designed for a different era of the web. Hydejack has inherited many of its limitations, but over time I’ve made adjustments, such as centering the content column for better reading ergonomics.</p>
+
+<p>With version 9, Hydejack takes full advantage of large displays. Whether it’s design indulgences such as oversized headlines, or quality of life improvements such as a floating table of contents, Hydejack now finds use for all that extra screen real estate<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>.</p>
+
+<h2 id="whats-in-the-cards">What’s in the Cards?</h2>
+
+<p>Hydejack 9 now lets you use content cards for both projects and posts. 
+The cards have been redesigned with a new hover style and drop shadows and they retain their unique transition-to-next-page animations, which now also work on the <code class="language-plaintext highlighter-rouge">blog</code> layout. The new <code class="language-plaintext highlighter-rouge">grid</code> layout lets you do that.</p>
+
+<p>Good images are key to making the most out of content cards. For that reason, a <a href="/docs/basics/#adding-images">chapter on images</a> has been added to the documentation.</p>
+
+<h2 id="built-in-search">Built-In Search</h2>
+
+<p>Hydejack now has Built-In Search. It even works offline. I’ve been prototyping many approaches and eventually settled on a fully client-side, off-the-main thread solution that perfectly fits the use case of personal sites and shows surprisingly good results<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</p>
+
+<p>The new search UI is custom made for Hydejack and shows beautiful previews of your posts and pages, right on top of your regular content.</p>
+
+<p>Together with the Auto-Hiding Navbar, your entire content library is now only a couple of keystrokes away.</p>
+
+<h2 id="auto-hiding-navbar">Auto-Hiding Navbar</h2>
+
+<p>A navbar that’s there when you need it, and disappears when you don’t. Simple as that.</p>
+
+<h2 id="sticky-table-of-contents">Sticky Table of Contents</h2>
+
+<p>Already a staple on so many sites on the web, this pattern is now also available in Hydejack. 
+What’s unique about it is that it simply picks up the table of contents already created by kramdown’s <code class="language-plaintext highlighter-rouge">{:toc}</code> tag and transparently upgrades it to a fully dynamic version.</p>
+
+<h2 id="and-much-more">…and much more</h2>
+
+<p>Other noteworthy changes include:</p>
+<ul>
+  <li>Support for Jekyll 4</li>
+  <li>Choice between MathJax and KaTeX for math rendering</li>
+  <li>Use of <code class="language-plaintext highlighter-rouge">jekyll-include-cache</code> for drastically improved page building speeds</li>
+  <li>New variables configuration file — adjust content width, sidebar width, font size, etc…</li>
+  <li>…and the option to disable grouping projects by year.</li>
+</ul>
+
+<p>Read the the <a href="/CHANGELOG/" class="heading flip-title">CHANGELOG</a> for the full scope of features and improvements made in Hydejack 9.
+Maybe just glance at it to confirm that it is indeed a pretty long list.</p>
+
+<h2 id="even-more-to-come">Even More to Come</h2>
+
+<p>New features for 9.1 are already lined up. Code block headers and code line highlights for even better technical blogging, as well as download buttons on the resume page for PDF, vCard, and Resume JSON are just around the corner.</p>
+
+<h2 id="get-it-now">Get It Now</h2>
+<p>The Free Version of Hydejack is now availabe on <a href="https://rubygems.org/gems/jekyll-theme-hydejack">RubyGems</a>
+and for the first time also on <a href="https://github.com/hydecorp/hydejack/packages">GitHub Packages</a>. 
+The source code is available on <a href="https://github.com/hydecorp/hydejack">GitHub</a> as always.</p>
+
+<p>The PRO Version is scheduled to release on July 7th on Gumroad. Pre-Orders are open now:</p>
+
+<div class="gumroad-product-embed" data-gumroad-product-id="nuOluY"><a href="https://gumroad.com/l/nuOluY">Loading…</a></div>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>If you are a fan of the old two-column layout, or don’t like modern design tropes such as mega headlines, Hydejack lets you revert these changes on a case-by-case basis via configuration options. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+    </li>
+    <li id="fn:2">
+
+      <p>Search was mainly tested for English and German. Please let me know about issues in other languages. 
+  While I’ve tried to find a multi-language solution, most showed drastically worse  results for the English base case.
+  If you’re technically inclined, you can adopt the code located in <code class="language-plaintext highlighter-rouge">_includes/js/search-worker.js</code> to your needs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content III</title><link href="https://ndtwan.github.io/blog/2018-06-01-example-content-iii/" rel="alternate" type="text/html" title="Example Content III" /><published>2018-06-01T00:00:00+00:00</published><updated>2025-07-06T02:59:36+00:00</updated><id>https://ndtwan.github.io/blog/example-content-iii</id><content type="html" xml:base="https://ndtwan.github.io/blog/2018-06-01-example-content-iii/"><![CDATA[<p>Hydejack offers a few additional features to markup your markdown.
+Don’t worry, these are merely CSS classes added with kramdown’s <code class="language-plaintext highlighter-rouge">{:...}</code> syntax,
+so that your content remains compatible with other Jekyll themes.</p>
+
+<h2 id="large-tables">Large Tables</h2>
+
+<table class="scroll-table">
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+    <tr>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+    </tr>
+    <tr>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="code-blocks">Code blocks</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example can be run directly in your JavaScript console</span>
+
+<span class="c1">// Create a function that takes two arguments and returns the sum of those</span>
+<span class="c1">// arguments</span>
+<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return a + b</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="c1">// Call the function</span>
+<span class="nf">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+<span class="c1">// &gt; 8</span>
+</code></pre></div></div>
+
+<h2 id="math">Math</h2>
+<p>Lorem ipsum <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f(x) = x^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mi>ϕ</mi><mrow><mo fence="true">(</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mi>i</mi></msub><msub><mi>e</mi><mi>i</mi></msub><mo separator="true">,</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>y</mi><mi>j</mi></msub><msub><mi>e</mi><mi>j</mi></msub><mo fence="true">)</mo></mrow></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mi>i</mi></msub><msub><mi>y</mi><mi>j</mi></msub><mi>ϕ</mi><mo stretchy="false">(</mo><msub><mi>e</mi><mi>i</mi></msub><mo separator="true">,</mo><msub><mi>e</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo lspace="0em" rspace="0em">⋯</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi><mi mathvariant="normal">⋮</mi><mpadded height="0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded></mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo lspace="0em" rspace="0em">⋱</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi><mi mathvariant="normal">⋮</mi><mpadded height="0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded></mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><msub><mi>e</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo lspace="0em" rspace="0em">⋯</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><msub><mi>e</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>y</mi><mn>1</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi><mi mathvariant="normal">⋮</mi><mpadded height="0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded></mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>y</mi><mi>n</mi></msub></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+  \phi(x,y) &amp;= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
+            &amp;= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
+            &amp;= (x_1, \ldots, x_n)
+               \left(\begin{array}{ccc}
+                 \phi(e_1, e_1)  &amp; \cdots &amp; \phi(e_1, e_n) \\
+                 \vdots          &amp; \ddots &amp; \vdots         \\
+                 \phi(e_n, e_1)  &amp; \cdots &amp; \phi(e_n, e_n)
+               \end{array}\right)
+               \left(\begin{array}{c}
+                 y_1    \\
+                 \vdots \\
+                 y_n
+               \end{array}\right)
+\end{aligned}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:13.2814em;vertical-align:-6.3907em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:6.8907em;"><span style="top:-9.5207em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span><span style="top:-5.2093em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"></span></span><span style="top:-0.1693em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:6.3907em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:6.8907em;"><span style="top:-9.5207em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal">ϕ</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4138em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size4">)</span></span></span></span></span><span style="top:-5.2093em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4138em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-0.1693em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35em;"><span style="top:-4.35em;"><span class="pstrut" style="height:6.2em;"></span><span style="width:0.875em;height:4.200em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.875em' height='4.200em' viewBox='0 0 875 4200'><path d='M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
+c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
+-36,557 l0,684c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
+949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
+c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
+-544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
+l0,-692c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
+-210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.85em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.38em;"><span style="top:-5.2275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-3.3675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span></span></span><span style="top:-2.1675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.88em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.38em;"><span style="top:-5.04em;"><span class="pstrut" style="height:3.5em;"></span><span class="mord"><span class="minner">⋯</span></span></span><span style="top:-3.18em;"><span class="pstrut" style="height:3.5em;"></span><span class="mord"><span class="minner">⋱</span></span></span><span style="top:-1.98em;"><span class="pstrut" style="height:3.5em;"></span><span class="mord"><span class="minner">⋯</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.88em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.38em;"><span style="top:-5.2275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-3.3675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span></span></span><span style="top:-2.1675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.88em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35em;"><span style="top:-4.35em;"><span class="pstrut" style="height:6.2em;"></span><span style="width:0.875em;height:4.200em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.875em' height='4.200em' viewBox='0 0 875 4200'><path d='M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
+63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
+c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,609
+c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
+c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
+c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
+c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
+l0,-744c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
+-470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.85em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35em;"><span style="top:-4.35em;"><span class="pstrut" style="height:6.2em;"></span><span style="width:0.875em;height:4.200em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.875em' height='4.200em' viewBox='0 0 875 4200'><path d='M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
+c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
+-36,557 l0,684c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
+949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
+c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
+-544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
+l0,-692c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
+-210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.85em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.38em;"><span style="top:-5.2275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.3675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span></span></span><span style="top:-2.1675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.88em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35em;"><span style="top:-4.35em;"><span class="pstrut" style="height:6.2em;"></span><span style="width:0.875em;height:4.200em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.875em' height='4.200em' viewBox='0 0 875 4200'><path d='M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
+63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
+c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,609
+c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
+c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
+c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
+c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
+l0,-744c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
+-470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.85em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:6.3907em;"><span></span></span></span></span></span></span></span></span></span></span></span>
+
+<h2 id="message-boxes">Message boxes</h2>
+<p class="message"><strong>NOTE</strong>: You can add a message box.</p>
+
+<h2 id="large-text">Large text</h2>
+<p class="lead">You can add large text.</p>
+
+<h2 id="large-images">Large images</h2>
+<p><img src="https://via.placeholder.com/800x100" alt="Full-width image" class="lead" width="800" height="100" /></p>
+
+<h2 id="captions-to-images">Captions to images</h2>
+<p class="figure"><img src="https://via.placeholder.com/800x100" alt="Full-width image" class="lead" width="800" height="100" />
+A caption to an image.</p>
+
+<h2 id="large-quotes">Large quotes</h2>
+<blockquote class="lead">
+  <p>You can make a quote “pop out”.</p>
+</blockquote>
+
+<h2 id="faded-text">Faded text</h2>
+<p class="faded">I’m faded, faded, faded.</p>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[A page showing Hydejack-specific markdown content.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/example-content-iii.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/example-content-iii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content II</title><link href="https://ndtwan.github.io/blog/2017-11-23-example-content-ii/" rel="alternate" type="text/html" title="Example Content II" /><published>2017-11-23T00:00:00+00:00</published><updated>2025-07-06T02:59:36+00:00</updated><id>https://ndtwan.github.io/blog/example-content-ii</id><content type="html" xml:base="https://ndtwan.github.io/blog/2017-11-23-example-content-ii/"><![CDATA[<p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
+
+<p>There should be whitespace between paragraphs.</p>
+
+<p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
+
+<p><a href="another-page">Link to another page</a>.</p>
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#header-2" id="markdown-toc-header-2">Header 2</a>    <ul>
+      <li><a href="#header-3" id="markdown-toc-header-3">Header 3</a>        <ul>
+          <li><a href="#header-4" id="markdown-toc-header-4">Header 4</a>            <ul>
+              <li><a href="#header-5" id="markdown-toc-header-5">Header 5</a>                <ul>
+                  <li><a href="#header-6" id="markdown-toc-header-6">Header 6</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#theres-a-horizontal-rule-below-this" id="markdown-toc-theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</a></li>
+      <li><a href="#here-is-an-unordered-list" id="markdown-toc-here-is-an-unordered-list">Here is an unordered list:</a></li>
+      <li><a href="#and-an-ordered-list" id="markdown-toc-and-an-ordered-list">And an ordered list:</a></li>
+      <li><a href="#and-a-nested-list" id="markdown-toc-and-a-nested-list">And a nested list:</a></li>
+      <li><a href="#small-image" id="markdown-toc-small-image">Small image</a></li>
+      <li><a href="#large-image" id="markdown-toc-large-image">Large image</a></li>
+      <li><a href="#definition-lists" id="markdown-toc-definition-lists">Definition lists</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="header-2">Header 2</h2>
+
+<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
+
+<h3 id="header-3">Header 3</h3>
+
+<blockquote>
+  <p>This is a blockquote following a header.</p>
+
+  <p>When something is important enough, you do it even if the odds are not in your favor.</p>
+</blockquote>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
+<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nf">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lang/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
+<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
+  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h4 id="header-4">Header 4</h4>
+
+<ul>
+  <li>This is an unordered list following a header.</li>
+  <li>This is an unordered list following a header.</li>
+  <li>This is an unordered list following a header.</li>
+</ul>
+
+<h5 id="header-5">Header 5</h5>
+
+<ol>
+  <li>This is an ordered list following a header.</li>
+  <li>This is an ordered list following a header.</li>
+  <li>This is an ordered list following a header.</li>
+</ol>
+
+<h6 id="header-6">Header 6</h6>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">head1</th>
+      <th style="text-align: left">head two</th>
+      <th style="text-align: left">three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good swedish fish</td>
+      <td style="text-align: left">nice</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">out of stock</td>
+      <td style="text-align: left">good and plenty</td>
+      <td style="text-align: left">nice</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">oreos</code></td>
+      <td style="text-align: left">hmm</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">zoute</code> drop</td>
+      <td style="text-align: left">yumm</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
+
+<hr />
+
+<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
+
+<ul>
+  <li>Item foo</li>
+  <li>Item bar</li>
+  <li>Item baz</li>
+  <li>Item zip</li>
+</ul>
+
+<h3 id="and-an-ordered-list">And an ordered list:</h3>
+
+<ol>
+  <li>Item one</li>
+  <li>Item two</li>
+  <li>Item three</li>
+  <li>Item four</li>
+</ol>
+
+<h3 id="and-a-nested-list">And a nested list:</h3>
+
+<ul>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item
+        <ul>
+          <li>level 3 item</li>
+          <li>level 3 item</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+    </ul>
+  </li>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+    </ul>
+  </li>
+  <li>level 1 item</li>
+</ul>
+
+<h3 id="small-image">Small image</h3>
+
+<p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt="" /></p>
+
+<h3 id="large-image">Large image</h3>
+
+<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt="" /></p>
+
+<h3 id="definition-lists">Definition lists</h3>
+
+<dl>
+  <dt>Name</dt>
+  <dd>Godzilla</dd>
+  <dt>Born</dt>
+  <dd>1952</dd>
+  <dt>Birthplace</dt>
+  <dd>Japan</dd>
+  <dt>Color</dt>
+  <dd>Green</dd>
+</dl>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this. Or is it?
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
+</code></pre></div></div>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[A page showing how regular markdown content is styled in Hydejack.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/example-content-ii.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/example-content-ii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content</title><link href="https://ndtwan.github.io/blog/2012-02-07-example-content/" rel="alternate" type="text/html" title="Example Content" /><published>2012-02-07T00:00:00+00:00</published><updated>2025-07-06T02:59:36+00:00</updated><id>https://ndtwan.github.io/blog/example-content</id><content type="html" xml:base="https://ndtwan.github.io/blog/2012-02-07-example-content/"><![CDATA[<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. <em>Aenean eu leo quam.</em> Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+
+<blockquote>
+  <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+</blockquote>
+
+<p>Etiam porta <strong>sem malesuada magna</strong> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+<h2 id="inline-html-elements">Inline <abbr title="HyperText Markup Language">HTML</abbr> elements</h2>
+
+<p><abbr title="HyperText Markup Language">HTML</abbr> defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+
+<ul>
+  <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">**To bold text**</code>.</li>
+  <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">*To italicize text*</code>.</li>
+  <li>Abbreviations, like <abbr title="HyperText Markup Language">HTML</abbr> should be defined like this <code class="language-plaintext highlighter-rouge">*[HTML]: HyperText Markup Language</code>.</li>
+  <li>Citations, like <cite>— Mark otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+  <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">~~deleted~~</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+  <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+</ul>
+
+<p>Most of these elements are styled by browsers with few modifications on our part.</p>
+
+<h2 id="heading-2">Heading 2</h2>
+<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+<h3 id="heading-3">Heading 3</h3>
+<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
+
+<h4 id="heading-4">Heading 4</h4>
+<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
+
+<h5 id="heading-5">Heading 5</h5>
+<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
+
+<h6 id="heading-6">Heading 6</h6>
+<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
+
+<h2 id="code">Code</h2>
+
+<p>Cum sociis natoque penatibus et magnis dis <code class="language-plaintext highlighter-rouge">code element</code> montes, nascetur ridiculus mus.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example can be run directly in your JavaScript console</span>
+
+<span class="c1">// Create a function that takes two arguments and returns the sum of those</span>
+<span class="c1">// arguments</span>
+<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return a + b</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="c1">// Call the function</span>
+<span class="nf">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+<span class="c1">// &gt; 8</span>
+</code></pre></div></div>
+
+<h2 id="lists">Lists</h2>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+<ul>
+  <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+  <li>Donec id elit non mi porta gravida at eget metus.</li>
+  <li>Nulla vitae elit libero, a pharetra augue.</li>
+</ul>
+
+<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+
+<ol>
+  <li>Vestibulum id ligula porta felis euismod semper.</li>
+  <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+  <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+</ol>
+
+<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+
+<dl>
+  <dt>HyperText Markup Language (<abbr title="HyperText Markup Language">HTML</abbr>)</dt>
+  <dd>The language used to describe and define the content of a Web page</dd>
+  <dt>Cascading Style Sheets (<abbr title="Cascading Style Sheets">CSS</abbr>)</dt>
+  <dd>Used to describe the appearance of Web content</dd>
+  <dt>JavaScript (<abbr title="JavaScript">JS</abbr>)</dt>
+  <dd>The programming language used to build advanced Web sites and applications</dd>
+</dl>
+
+<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+
+<h2 id="images">Images</h2>
+
+<p>Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.</p>
+
+<p><img src="https://via.placeholder.com/800x400" alt="800x400" title="Large example image" /></p>
+
+<p><img src="https://via.placeholder.com/400x200" alt="400x200" title="Medium example image" /></p>
+
+<p><img src="https://via.placeholder.com/200x200" alt="200x200" title="Small example image" /></p>
+
+<h2 id="tables">Tables</h2>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Upvotes</th>
+      <th style="text-align: left">Downvotes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Alice</td>
+      <td style="text-align: left">10</td>
+      <td style="text-align: left">11</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Bob</td>
+      <td style="text-align: left">4</td>
+      <td style="text-align: left">3</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Charlie</td>
+      <td style="text-align: left">7</td>
+      <td style="text-align: left">9</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td style="text-align: left">Totals</td>
+      <td style="text-align: left">21</td>
+      <td style="text-align: left">23</td>
+    </tr>
+  </tfoot>
+</table>
+
+<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Howdy! This is an example blog post that shows several types of HTML content supported in this theme.]]></summary></entry></feed>
