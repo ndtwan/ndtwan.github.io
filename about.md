@@ -1,16 +1,19 @@
 ---
 layout: about
-image: /assets/icons/favicon-32x32.png
+# image: /assets/img/sidebar/ava.jpg
+author: author1
 description: >
   Tay ôm mộng mơ, chân đạp bụi trần
-hide_description: true
+hide_description: True
 redirect_from:
   - /download/
 ---
+<!--author-->
+
 
 ---
 
-Thân gửi các vị bằng hữu ghé qua chốn này,
+### Thân gửi các vị bằng hữu ghé qua chốn này,
 
 Đời người, nói sao đây, chẳng qua là một ván cờ, lúc tung hoành ngang dọc, lúc lại thua đau chỉ vì một nước đi lầm. Nếu có ai hỏi: Gã nào trên đời này ngầu nhất? Tiểu đệ xin cười khẩy: Là kẻ biết mình đang chơi ván cờ gì, dù cả thiên hạ bảo hắn điên.
 
