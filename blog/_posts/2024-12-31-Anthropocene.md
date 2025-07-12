@@ -79,9 +79,16 @@ Tiền, ban đầu chỉ là trò đổi chác vỏ sò, lông thú, hóa thành
 
 Chiến tranh, từ những trận đánh bộ lạc lẻ tẻ, thành trò chơi của kẻ mạnh. Ở Trận Kadesh (~1274 TCN), người Hittite và Ai Cập đụng độ, dùng cả chiến xa và cung tên, tranh quyền bá chủ Lưỡi liềm Màu mỡ. Chiến tranh tàn phá, cướp bóc, nhưng cũng sinh ra bánh xe (~3500 TCN ở Mesopotamia), lưỡi kiếm đồng, và chiến lược quân sự. Nó là lưỡi kiếm sắc, vừa phá vừa xây, vừa giết vừa nuôi.
 
+<p align="center">
+  <img src="/assets/img/blog/dystopia.jpg" alt="Dystopia"
+       style="max-width: 100%; height: auto;" />
+
+</p>
+
 Quyền lực, đích đến của mọi giang hồ. Tiền và chiến tranh chỉ là công cụ để leo lên ngai vàng. Ở Trung Hoa, nhà Thương (~1600 TCN) dùng đồng và chiến binh để thống trị, xây đền thờ và chôn sống cả trăm nô lệ để hầu vua dưới suối vàng. Các lãnh chúa, pháp sư, vua chúa dùng tiền và chiến tranh để đè đầu thiên hạ, viết nên những chương sử đẫm máu và vinh quang, từ Alexandros Đại đế (336 TCN) chinh phục nửa thế giới, đến Tần Thủy Hoàng (221 TCN) thống nhất Trung Hoa bằng kiếm và mưu.
 
 Ba tân thần này, dù đáng sợ, đã vẽ nên bức tranh thế giới – nơi thành công xen lẫn bi kịch, tham vọng đan cài thất bại. Như gã kiếm khách đứng giữa chợ, vừa được tung hô, vừa bị nguyền rủa.
+
 
 ## Thế Nhân sinh
 Mười ba ngàn năm, từ thảo nguyên Phi châu đến lò máy công nghiệp, loài người đi qua muôn nẻo đường. Kẻ viết chữ trên đất sét ở Sumer (~3200 TCN), rèn sắt thành kiếm ở Trung Quốc (~1200 TCN), xây thành công nghiệp ở Luân Đôn thế kỷ 19. Kẻ săn thú, hái quả, rồi bị kẻ mạnh nuốt chửng, như các bộ tộc Châu Mỹ khi Columbus đặt chân đến năm 1492. Lịch sử, nói sao cho phải, là một ván cờ hỗn loạn, nơi khát vọng va đập, đấu tranh tung hoành.
@@ -90,7 +97,15 @@ Giờ đây, đứng giữa thời đại cơ giới, ta nhìn lại, thấy nh�
 
 Và thế là, ta bước vào Thế Nhân sinh (Anthropocene) – thời đại mà lũ vượn thông minh này nắm quyền định đoạt cả sinh quyển. Non trẻ lắm, chỉ 2 triệu năm so với 4,5 tỷ năm của Hành Tinh Xanh, nhưng ta đã dám vung kiếm, khắc tên mình lên đá. Từ khi James Watt cải tiến máy hơi nước (1765), ta đẩy cả thế giới vào cơn lốc công nghiệp, đốt than, xẻ rừng, làm nóng hành tinh. (Lưu ý: Thế Anthropocene chưa chính thức trong thang địa chất, nhưng cứ nhìn cách ta phá làng phá xóm – từ ô nhiễm sông Dương Tử đến rừng Amazon cháy rụi – sớm muộn cũng thành hiện thực! 🍵)
 
-Ta đã làm được gì? Biến sóng thành wifi, dựng Tử Cấm Thành, phóng tàu lên sao Hỏa. Nhưng cũng tự đào hố: 6 lần tuyệt chủng trong lịch sử Trái Đất, và lần này, ta là thủ phạm. Liệu ta có đủ khôn ngoan để dừng lại, hay chỉ là một dòng chữ nhòe mực trong sách sử của hành tinh?
+<p align="center">
+  <img src="/assets/img/blog/path_less_yuumei.jpg" alt="Better Future"
+       style="max-width: 100%; height: auto;" />
+
+</p>
+
+Ta đã làm được gì? Biến sóng thành wifi, dựng Tử Cấm Thành, phóng tàu lên sao Hỏa. Nhưng cũng tự đào hố: 6 lần tuyệt chủng trong lịch sử Trái Đất, và lần này, ta có thể là thủ phạm. Thế nên, đây chính là một vụ đặt cược được-ăn-cả-ngã-về-không của bốn-tỷ-năm-sự-sống. Liệu chúng ta có thể lèo lái Hành Tinh Xanh hướng tới một tương lai thịnh vượng, nơi mà con người và tất cả các sinh vật khác — những sinh vật mà chúng ta phụ thuộc vào — có thể phát triển mạnh mẽ trong hàng ngàn, hoặc thậm chí có thể, trong hàng triệu năm tới trong tương lai hay không?
+
+Liệu ta có đủ khôn ngoan để dừng lại, hay chỉ là một dòng chữ nhòe mực trong sách sử của hành tinh?
 
 
 ## Thảo luận thêm

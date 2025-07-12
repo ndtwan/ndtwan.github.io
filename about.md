@@ -1,6 +1,6 @@
 ---
 layout: about
-# image: /assets/img/sidebar/ava.jpg
+image: /assets/img/sidebar/ava.jpg
 author: author1
 description: >
   Tay ôm mộng mơ, chân đạp bụi trần
@@ -8,8 +8,8 @@ hide_description: True
 redirect_from:
   - /download/
 ---
-<!--author-->
 
+<!--author-->
 
 ---
 
@@ -32,7 +32,8 @@ Khi không vật lộn với thứ gọi là công việc, tiểu đệ lại ch
 Và đệ đắm chìm vào **Solanin**, không phải vì nó hào nhoáng, mà chỉ như gương soi tuổi trẻ – lảo đảo, tan vỡ, nhưng vẫn cắm đầu bước tới, như gã kiếm khách say rượu giữa chợ đời.
 
 <p align="center">
-  <img src="/assets/img/about/solanin-chapter1.png" alt="Tồn tại" width="600"/>
+  <img src="/assets/img/about/solanin-chapter1.png" alt="Tồn tại"
+       style="max-width: 100%; height: auto;" />
 </p>
 
 Những thứ ấy không giúp đệ tối ưu đôi dòng truy vấn nào, nhưng lại cho đệ thấy vì sao thiên hạ vẫn lầm lũi sống, dù đôi khi chẳng biết sống vì ai.
@@ -99,7 +100,8 @@ Bị giẫm đạp, bị lãng quên,
 Nhưng vẫn **xanh ngời đến tận cuối cùng.**
 
 <p align="center">
-  <img src="/assets/img/about/3dayhappyness.png" alt="Cuộc đời đáng giá bao nhiêu" width="600"/>
+  <img src="/assets/img/about/3dayhappyness.png" alt="Cuộc đời đáng giá bao nhiêu"
+       style="max-width: 100%; height: auto;" />
 </p>
 
 ---
