@@ -49,7 +49,7 @@ Powered by Hydejack v9.2.1 <https://hydejack.com/>
 <meta property="twitter:image" content="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" />
 <meta property="twitter:title" content="Giải ngố thiết kế chip (from basic - blog)" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Twan Nguyen"},"dateModified":"2025-07-12T08:44:11+00:00","datePublished":"2025-01-03T00:00:00+00:00","description":"Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.","headline":"Giải ngố thiết kế chip (from basic - blog)","image":"https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://ndtwan.github.io/blog/2025-01-03-SoC/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ndtwan.github.io/assets/img/sidebar/ava.jpg"},"name":"Twan Nguyen"},"url":"https://ndtwan.github.io/blog/2025-01-03-SoC/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Twan Nguyen"},"dateModified":"2025-07-21T15:04:45+00:00","datePublished":"2025-01-03T00:00:00+00:00","description":"Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.","headline":"Giải ngố thiết kế chip (from basic - blog)","image":"https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://ndtwan.github.io/blog/2025-01-03-SoC/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ndtwan.github.io/assets/img/sidebar/page_icon.jpg"},"name":"Twan Nguyen"},"url":"https://ndtwan.github.io/blog/2025-01-03-SoC/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -120,7 +120,7 @@ Powered by Hydejack v9.2.1 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2025-07-12T08:44:54+00:00',
+    INDEX_KEY: 'index--2025-07-21T15:05:34+00:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -290,10 +290,10 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
           
             
             
-            <span class="ellipsis" data-tippy-content="Last modified at: 12 Jul 2025">
+            <span class="ellipsis" data-tippy-content="Last modified at: 21 Jul 2025">
               <span class="sr-only">Last modified at:</span>
               <span class="icon-history"></span>
-              <time datetime="2025-07-12T08:44:11+00:00">2025-07-12</time>
+              <time datetime="2025-07-21T15:04:45+00:00">2025-07-21</time>
             </span>
           
         
@@ -341,16 +341,18 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
   </header>
 
   
-    <p>⁃	Từ rửa film -&gt; đảo ngược quy trình của thiết kế PhD Moore
-	◦	Key ở đây là bước sóng ánh sáng -&gt; con đường tìm ra nguồn sáng có bước sóng nhỏ
-	◦	Công nghệ 3nano (fake new? Từ 2 nhà intel và samsumg, tscm)
-	◦	Bóng bán dẫn, cổng 
-	◦	Kiến trúc chip ARM
-	⁃	Giải ngố TSMC: chỉ là sản xuất chứ không thiết kế (bản thiết kế mới là đỉnh cao của đời người)
-	⁃	Mối lương duyên ARM - apple</p>
+    <blockquote>
+  <p>Từ rửa film -&gt; đảo ngược quy trình của thiết kế PhD Moore
+Key ở đây là bước sóng ánh sáng -&gt; con đường tìm ra nguồn sáng có bước sóng nhỏ
+Công nghệ 3nano (fake new? Từ 2 nhà intel và samsumg, tscm)
+Bóng bán dẫn, cổng
+Kiến trúc chip ARM
+Giải ngố TSMC: chỉ là sản xuất chứ không thiết kế (bản thiết kế mới là đỉnh cao của đời người)
+Mối lương duyên ARM - apple</p>
+</blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>◦	Vì sao tăng core chứ không nên tăng xung khi apple thiết kế chip 
-◦	Tính kế thừa 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>◦	Vì sao tăng core chứ không nên tăng xung khi apple thiết kế chip
+◦	Tính kế thừa
 ⁃	Giải ngố systerm on chip, AÁic
 ⁃	L SoC simulator
 ⁃	Mỹ cấm vận trung quốc công nghệ lõi ở đây là license các tool thiết kế
@@ -359,7 +361,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 </code></pre></div></div>
 
 <h1 id="giải-ngố-thiết-kế-chip-từ-cơ-bản-đến-chuyên-sâu">Giải Ngố Thiết Kế Chip: Từ Cơ Bản Đến Chuyên Sâu</h1>
-<p>|Công nghệ lõi? Vi xử lý? Chip bán dẫn? 
+<p>|Công nghệ lõi? Vi xử lý? Chip bán dẫn?
 Những thuật ngữ làm khuấy đảo chốn giang hồ mà chúng ta đã nghe quá nhiều trong khoảng thời gian gần đây. Đặc biệt là khi AI và các thiết bị IoT lên ngôi, trở thành mỏ vàng của các nhà đầu tư.</p>
 
 <p>Khi nhìn vào những chiếc điện thoại thông minh hay laptop hiện đại, ai cũng biết rằng bên trong chúng là những con chip (vi xử lý) thần thánh. Nhưng nếu có quan tâm đến tin tức truyền thông công nghệ trong một thập niên qua, hẳn bạn đã nghe nói tới Định luật Moore và cách mà định luật này đang chết dần mòn ra sao. Điều không may là không phải ai cũng dễ dàng mô tả Định luật Moore là gì, và vì sao nó lại đang “hấp hối.”</p>
@@ -404,7 +406,7 @@ Hiện nay, ngành công nghiệp đang tìm kiếm nguồn sáng có bước s�
 <p>Bóng bán dẫn (transistor) là thành phần cơ bản của mọi con chip, đóng vai trò như công tắc điều khiển dòng điện. Mỗi bóng bán dẫn có một cổng logic (logic gate), và hàng tỷ cổng này phối hợp để thực hiện các phép tính. Sự tinh vi nằm ở cách sắp xếp và kết nối các cổng để tối ưu hiệu năng và tiết kiệm năng lượng.</p>
 
 <h2 id="kiến-trúc-chip-arm-bí-kíp-làm-nên-thành-công">Kiến Trúc Chip ARM: Bí Kíp Làm Nên Thành Công</h2>
-<p>Brooke Shields 
+<p>Brooke Shields
 ARM, hay Advanced RISC Machine, là một kiến trúc chip nổi tiếng với tính đơn giản và hiệu quả. Thay vì thiết kế và sản xuất, ARM chỉ bán quyền sử dụng thiết kế (license), cho phép các công ty khác tùy chỉnh theo nhu cầu. Đây chính là lý do ARM trở thành “người đứng sau” hàng loạt sản phẩm đình đám, từ điện thoại Apple đến các thiết bị IoT.</p>
 
 <h3 id="giải-ngố-tsmc">Giải Ngố TSMC</h3>
@@ -462,7 +464,7 @@ ARM, hay Advanced RISC Machine, là một kiến trúc chip nổi tiếng với 
 
 <img
   
-    src="/assets/img/sidebar/ava.jpg"
+    src="/assets/img/sidebar/page_icon.jpg"
     srcset="/assets/img/sidebar/ava.jpg 1x,/assets/img/sidebar/ava.jpg 2x"
     
   
@@ -598,7 +600,7 @@ ARM, hay Advanced RISC Machine, là một kiến trúc chip nổi tiếng với 
   <div class="sidebar-about">
     
       <a class="no-hover" href="/" tabindex="-1">
-        <img src="/assets/img/sidebar/ava.jpg" class="avatar" alt="Twan desu" width="120" height="120" loading="lazy" />
+        <img src="/assets/img/sidebar/page_icon.jpg" class="avatar" alt="Twan desu" width="120" height="120" loading="lazy" />
       </a>
     
     <a class="sidebar-title" href="/"><h2 class="h1">Twan desu</h2></a>

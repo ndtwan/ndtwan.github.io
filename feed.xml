@@ -1,12 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="vi, en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://ndtwan.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ndtwan.github.io/" rel="alternate" type="text/html" hreflang="vi, en" /><updated>2025-07-12T08:44:54+00:00</updated><id>https://ndtwan.github.io/feed.xml</id><title type="html">Twan desu</title><subtitle>Được truyền cảm hứng từ 2 người bạn Q và V, có bạn K nữa thì ta lại có công thức Attention khuấy đảo giang hồ 10 năm qua :&gt;&gt;. Không như những người bạn kia thì tôi không quá tự tin về kỹ năng chuyên môn sâu của mình, nên tôi sẽ viết đơn giản về những chủ đề tôi quan tâm. Những thứ đời thường hơn một chút. Hì
-</subtitle><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><entry><title type="html">Tản mạn về một câu chuyện xa xưa</title><link href="https://ndtwan.github.io/blog/2025-07-11-Oyasumi-punpun/" rel="alternate" type="text/html" title="Tản mạn về một câu chuyện xa xưa" /><published>2025-07-11T00:00:00+00:00</published><updated>2025-07-12T08:44:11+00:00</updated><id>https://ndtwan.github.io/blog/Oyasumi-punpun</id><content type="html" xml:base="https://ndtwan.github.io/blog/2025-07-11-Oyasumi-punpun/"><![CDATA[<hr />
-
-<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="vi, en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://ndtwan.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ndtwan.github.io/" rel="alternate" type="text/html" hreflang="vi, en" /><updated>2025-07-21T15:05:34+00:00</updated><id>https://ndtwan.github.io/feed.xml</id><title type="html">Twan desu</title><subtitle>Được truyền cảm hứng từ 2 người bạn Q và V, có bạn K nữa thì ta lại có công thức Attention khuấy đảo giang hồ 10 năm qua :&gt;&gt;. Không như những người bạn kia thì tôi không quá tự tin về kỹ năng chuyên môn sâu của mình, nên tôi sẽ viết đơn giản về những chủ đề tôi quan tâm. Những thứ đời thường hơn một chút. Hì
+</subtitle><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><entry><title type="html">Tản mạn về một câu chuyện xa xưa</title><link href="https://ndtwan.github.io/blog/2025-07-11-Oyasumi-punpun/" rel="alternate" type="text/html" title="Tản mạn về một câu chuyện xa xưa" /><published>2025-07-11T00:00:00+00:00</published><updated>2025-07-21T15:04:45+00:00</updated><id>https://ndtwan.github.io/blog/Oyasumi-punpun</id><content type="html" xml:base="https://ndtwan.github.io/blog/2025-07-11-Oyasumi-punpun/"><![CDATA[<blockquote>
   <p><em>“Oyasumi, Punpun.”</em>
 Một câu chúc ngủ ngon, lặp đi lặp lại như lời ru tử thần, dịu dàng như lưỡi dao cắm từ từ vào tim.</p>
 </blockquote>
-
-<hr />
 
 <h3 id="punpun-không-phải-là-một-nhân-vật">Punpun không phải là một nhân vật.</h3>
 
@@ -38,6 +34,10 @@ Cô là người – vỡ nát, rối tung, hoang mang, khốn khổ.
 Yêu Aiko giống như ôm một lưỡi dao.
 Máu chảy là điều chắc chắn.
 Nhưng đau là đặc quyền của kẻ còn cảm xúc.</p>
+<p align="center">
+  <img src="/assets/img/blog/oyasumi_galaxi.jpg" alt="Dystopia" style="max-width: 100%; height: auto;" />
+
+</p>
 
 <hr />
 
@@ -70,6 +70,11 @@ Cho đến khi… hắn <em>không còn là chính mình nữa.</em></p>
 <p>Vì nó thật.
 Thật đến mức tôi không muốn nó tồn tại – nhưng cũng không thể rời mắt.</p>
 
+<p align="center">
+  <img src="/assets/img/blog/oyasumi_reborn.jpg" alt="Reborn" style="max-width: 100%; height: auto;" />
+
+</p>
+
 <p>Nó nói với tôi rằng:</p>
 
 <blockquote>
@@ -100,16 +105,28 @@ Nó chỉ thì thầm:</p>
 Chúc ngủ ngon, tôi.
 Chúc ngủ ngon… tất cả những ai chưa từng được yên giấc.</p>
 
-<hr />]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Punpun – Giấc mơ chết trong lòng mỗi chúng ta]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Giải ngố thiết kế chip (from basic - blog)</title><link href="https://ndtwan.github.io/blog/2025-01-03-SoC/" rel="alternate" type="text/html" title="Giải ngố thiết kế chip (from basic - blog)" /><published>2025-01-03T00:00:00+00:00</published><updated>2025-07-12T08:44:11+00:00</updated><id>https://ndtwan.github.io/blog/SoC</id><content type="html" xml:base="https://ndtwan.github.io/blog/2025-01-03-SoC/"><![CDATA[<p>⁃	Từ rửa film -&gt; đảo ngược quy trình của thiết kế PhD Moore
-	◦	Key ở đây là bước sóng ánh sáng -&gt; con đường tìm ra nguồn sáng có bước sóng nhỏ
-	◦	Công nghệ 3nano (fake new? Từ 2 nhà intel và samsumg, tscm)
-	◦	Bóng bán dẫn, cổng 
-	◦	Kiến trúc chip ARM
-	⁃	Giải ngố TSMC: chỉ là sản xuất chứ không thiết kế (bản thiết kế mới là đỉnh cao của đời người)
-	⁃	Mối lương duyên ARM - apple</p>
+<p align="center">
+  <img src="/assets/img/blog/oyasumi_punpun1.jpg" alt="Dystopia" style="max-width: 100%; height: auto;" />
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>◦	Vì sao tăng core chứ không nên tăng xung khi apple thiết kế chip 
-◦	Tính kế thừa 
+</p>
+
+<p align="center">
+  <img src="/assets/img/blog/oyasumi_punpun_2.jpg" alt="Dystopia" style="max-width: 100%; height: auto;" />
+
+</p>
+
+<hr />]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Punpun – Giấc mơ chết trong lòng mỗi chúng ta]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/pyasumi.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/pyasumi.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Giải ngố thiết kế chip (from basic - blog)</title><link href="https://ndtwan.github.io/blog/2025-01-03-SoC/" rel="alternate" type="text/html" title="Giải ngố thiết kế chip (from basic - blog)" /><published>2025-01-03T00:00:00+00:00</published><updated>2025-07-21T15:04:45+00:00</updated><id>https://ndtwan.github.io/blog/SoC</id><content type="html" xml:base="https://ndtwan.github.io/blog/2025-01-03-SoC/"><![CDATA[<blockquote>
+  <p>Từ rửa film -&gt; đảo ngược quy trình của thiết kế PhD Moore
+Key ở đây là bước sóng ánh sáng -&gt; con đường tìm ra nguồn sáng có bước sóng nhỏ
+Công nghệ 3nano (fake new? Từ 2 nhà intel và samsumg, tscm)
+Bóng bán dẫn, cổng
+Kiến trúc chip ARM
+Giải ngố TSMC: chỉ là sản xuất chứ không thiết kế (bản thiết kế mới là đỉnh cao của đời người)
+Mối lương duyên ARM - apple</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>◦	Vì sao tăng core chứ không nên tăng xung khi apple thiết kế chip
+◦	Tính kế thừa
 ⁃	Giải ngố systerm on chip, AÁic
 ⁃	L SoC simulator
 ⁃	Mỹ cấm vận trung quốc công nghệ lõi ở đây là license các tool thiết kế
@@ -118,7 +135,7 @@ Chúc ngủ ngon… tất cả những ai chưa từng được yên giấc.</p>
 </code></pre></div></div>
 
 <h1 id="giải-ngố-thiết-kế-chip-từ-cơ-bản-đến-chuyên-sâu">Giải Ngố Thiết Kế Chip: Từ Cơ Bản Đến Chuyên Sâu</h1>
-<p>|Công nghệ lõi? Vi xử lý? Chip bán dẫn? 
+<p>|Công nghệ lõi? Vi xử lý? Chip bán dẫn?
 Những thuật ngữ làm khuấy đảo chốn giang hồ mà chúng ta đã nghe quá nhiều trong khoảng thời gian gần đây. Đặc biệt là khi AI và các thiết bị IoT lên ngôi, trở thành mỏ vàng của các nhà đầu tư.</p>
 
 <p>Khi nhìn vào những chiếc điện thoại thông minh hay laptop hiện đại, ai cũng biết rằng bên trong chúng là những con chip (vi xử lý) thần thánh. Nhưng nếu có quan tâm đến tin tức truyền thông công nghệ trong một thập niên qua, hẳn bạn đã nghe nói tới Định luật Moore và cách mà định luật này đang chết dần mòn ra sao. Điều không may là không phải ai cũng dễ dàng mô tả Định luật Moore là gì, và vì sao nó lại đang “hấp hối.”</p>
@@ -163,7 +180,7 @@ Hiện nay, ngành công nghiệp đang tìm kiếm nguồn sáng có bước s�
 <p>Bóng bán dẫn (transistor) là thành phần cơ bản của mọi con chip, đóng vai trò như công tắc điều khiển dòng điện. Mỗi bóng bán dẫn có một cổng logic (logic gate), và hàng tỷ cổng này phối hợp để thực hiện các phép tính. Sự tinh vi nằm ở cách sắp xếp và kết nối các cổng để tối ưu hiệu năng và tiết kiệm năng lượng.</p>
 
 <h2 id="kiến-trúc-chip-arm-bí-kíp-làm-nên-thành-công">Kiến Trúc Chip ARM: Bí Kíp Làm Nên Thành Công</h2>
-<p>Brooke Shields 
+<p>Brooke Shields
 ARM, hay Advanced RISC Machine, là một kiến trúc chip nổi tiếng với tính đơn giản và hiệu quả. Thay vì thiết kế và sản xuất, ARM chỉ bán quyền sử dụng thiết kế (license), cho phép các công ty khác tùy chỉnh theo nhu cầu. Đây chính là lý do ARM trở thành “người đứng sau” hàng loạt sản phẩm đình đám, từ điện thoại Apple đến các thiết bị IoT.</p>
 
 <h3 id="giải-ngố-tsmc">Giải Ngố TSMC</h3>
@@ -190,20 +207,11 @@ ARM, hay Advanced RISC Machine, là một kiến trúc chip nổi tiếng với 
 
 <h2 id="kỷ-nguyên-xử-lý-ở-biên-tương-lai-của-công-nghệ">Kỷ Nguyên Xử Lý Ở Biên: Tương Lai Của Công Nghệ</h2>
 
-<p>Xử lý ở biên (edge computing) là xu hướng tương lai, nơi dữ liệu được xử lý ngay tại nguồn thay vì gửi lên đám mây. Điều này giúp giảm độ trễ và tăng bảo mật, mở ra một thế giới mới cho các ứng dụng như xe tự lái và thiết bị IoT.</p>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Chúng ta đã bắt đầu từ những gì rất khác</title><link href="https://ndtwan.github.io/blog/2024-12-31-Anthropocene/" rel="alternate" type="text/html" title="Chúng ta đã bắt đầu từ những gì rất khác" /><published>2024-12-31T00:00:00+00:00</published><updated>2025-07-12T08:44:11+00:00</updated><id>https://ndtwan.github.io/blog/Anthropocene</id><content type="html" xml:base="https://ndtwan.github.io/blog/2024-12-31-Anthropocene/"><![CDATA[<blockquote>
-  <p>Thanh niên kia từ đâu tới?</p>
-</blockquote>
-
-<blockquote>
-  <p>Tại sao họ lại hành động như vậy?</p>
-</blockquote>
-
-<blockquote>
-  <p>Họ là ai, nếu không phải chính chúng ta?</p>
-</blockquote>
-
-<blockquote>
-  <p>Oh, vậy ra họ là, như kiểu, đồng loại mình ấy hả?</p>
+<p>Xử lý ở biên (edge computing) là xu hướng tương lai, nơi dữ liệu được xử lý ngay tại nguồn thay vì gửi lên đám mây. Điều này giúp giảm độ trễ và tăng bảo mật, mở ra một thế giới mới cho các ứng dụng như xe tự lái và thiết bị IoT.</p>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Chúng ta đã bắt đầu từ những gì rất khác</title><link href="https://ndtwan.github.io/blog/2024-12-31-Anthropocene/" rel="alternate" type="text/html" title="Chúng ta đã bắt đầu từ những gì rất khác" /><published>2024-12-31T00:00:00+00:00</published><updated>2025-07-21T15:04:45+00:00</updated><id>https://ndtwan.github.io/blog/Anthropocene</id><content type="html" xml:base="https://ndtwan.github.io/blog/2024-12-31-Anthropocene/"><![CDATA[<blockquote>
+  <p>Thanh niên kia từ đâu tới?
+Tại sao họ lại hành động như vậy?
+Họ là ai, nếu không phải chính chúng ta?
+Oh, vậy ra họ là, như kiểu, đồng loại mình ấy hả?</p>
 </blockquote>
 
 <p>Chúng ta, ôi chao, khởi đầu từ những ngày thật khác. Mười ba ngàn năm sau khi băng tan, loài người lảo đảo bước trên muôn nẻo đường. Kẻ thì vung bút viết chữ, rèn sắt thành dao, dựng nên thành quách công nghiệp. Kẻ khác vẫn lững lờ săn thú, hái quả, sống đời du mục, để rồi cuối cùng bị những gã mạnh hơn đạp xuống, cuốn vào cơn lốc lịch sử.</p>
@@ -291,7 +299,7 @@ Thuở ban đầu, trồng trọt là một trong những phát minh vĩ đại 
 <h2 id="thảo-luận-thêm">Thảo luận thêm</h2>
 <p>Well, bắt đầu thế nào nhỉ, blog đầu tiên trong tưởng tượng của tôi là dành cho một nhân vật hay bộ phim anime nào đấy, chí ít không là Anime thì về kiếm hiệp, Kim Dung hay lại thao thao bất tuyệt về Tam Quốc. Nhưng có lẽ bắt đầu với một chủ đề lịch sử theo góc nhìn học giả cũng không tệ đến thế. Vậy điều gì đã đưa tôi tới chủ đề này, đó là muôn vàn câu hỏi trong đầu về từ cỏ cây và sông suối, làm sao một sinh vật có thể biến nó thành các giao động tần sóng và phát minh ra thứ kiệt tác gọi là mạng wifi. Liệu nhân loại có đủ khôn ngoan để tự cứu lấy mình? Hay chúng ta sẽ trở thành một ghi chú ngắn ngủi trong lược sử của hành tinh xanh?</p>
 
-<p>🍻🍻🍻 !!! Cheers !!! 🍻🍻🍻</p>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Lược sử loài người là một bản trường ca sử thi bất tận của đấu tranh, cải biến, và khát vọng – liệu hồi kết đã sắp hạ màn?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/history.png" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/history.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="https://ndtwan.github.io/blog/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+00:00</published><updated>2025-07-12T08:44:11+00:00</updated><id>https://ndtwan.github.io/blog/introducing-hydejack-9</id><content type="html" xml:base="https://ndtwan.github.io/blog/2020-07-03-introducing-hydejack-9/"><![CDATA[<p class="lead">Version 9 is the most complete version of Hydejack yet.</p>
+<p>🍻🍻🍻 !!! Cheers !!! 🍻🍻🍻</p>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Lược sử loài người là một bản trường ca sử thi bất tận của đấu tranh, cải biến, và khát vọng – liệu hồi kết đã sắp hạ màn?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/history.png" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/history.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="https://ndtwan.github.io/blog/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+00:00</published><updated>2025-07-21T15:04:45+00:00</updated><id>https://ndtwan.github.io/blog/introducing-hydejack-9</id><content type="html" xml:base="https://ndtwan.github.io/blog/2020-07-03-introducing-hydejack-9/"><![CDATA[<p class="lead">Version 9 is the most complete version of Hydejack yet.</p>
 
 <p><a href="#linking-in-style">Modernized</a> <a href="#whats-in-the-cards">design</a>, <a href="#ready-for-the-big-screen">big headlines</a>, big new features: <a href="#built-in-search">Built-In Search</a>, <a href="#sticky-table-of-contents">Sticky Table of Contents</a>, and <a href="#auto-hiding-navbar">Auto-Hiding Navbar</a>. That <a href="#and-much-more">and more</a> is Hydejack 9.</p>
 
@@ -380,7 +388,7 @@ The source code is available on <a href="https://github.com/hydecorp/hydejack">G
   If you’re technically inclined, you can adopt the code located in <code class="language-plaintext highlighter-rouge">_includes/js/search-worker.js</code> to your needs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content III</title><link href="https://ndtwan.github.io/blog/2018-06-01-example-content-iii/" rel="alternate" type="text/html" title="Example Content III" /><published>2018-06-01T00:00:00+00:00</published><updated>2025-07-12T08:44:11+00:00</updated><id>https://ndtwan.github.io/blog/example-content-iii</id><content type="html" xml:base="https://ndtwan.github.io/blog/2018-06-01-example-content-iii/"><![CDATA[<p>Hydejack offers a few additional features to markup your markdown.
+</div>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content III</title><link href="https://ndtwan.github.io/blog/2018-06-01-example-content-iii/" rel="alternate" type="text/html" title="Example Content III" /><published>2018-06-01T00:00:00+00:00</published><updated>2025-07-21T15:04:45+00:00</updated><id>https://ndtwan.github.io/blog/example-content-iii</id><content type="html" xml:base="https://ndtwan.github.io/blog/2018-06-01-example-content-iii/"><![CDATA[<p>Hydejack offers a few additional features to markup your markdown.
 Don’t worry, these are merely CSS classes added with kramdown’s <code class="language-plaintext highlighter-rouge">{:...}</code> syntax,
 so that your content remains compatible with other Jekyll themes.</p>
 
@@ -600,7 +608,7 @@ A caption to an image.</p>
 </blockquote>
 
 <h2 id="faded-text">Faded text</h2>
-<p class="faded">I’m faded, faded, faded.</p>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[A page showing Hydejack-specific markdown content.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/example-content-iii.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/example-content-iii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content II</title><link href="https://ndtwan.github.io/blog/2017-11-23-example-content-ii/" rel="alternate" type="text/html" title="Example Content II" /><published>2017-11-23T00:00:00+00:00</published><updated>2025-07-12T08:44:11+00:00</updated><id>https://ndtwan.github.io/blog/example-content-ii</id><content type="html" xml:base="https://ndtwan.github.io/blog/2017-11-23-example-content-ii/"><![CDATA[<p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
+<p class="faded">I’m faded, faded, faded.</p>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[A page showing Hydejack-specific markdown content.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/example-content-iii.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/example-content-iii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content II</title><link href="https://ndtwan.github.io/blog/2017-11-23-example-content-ii/" rel="alternate" type="text/html" title="Example Content II" /><published>2017-11-23T00:00:00+00:00</published><updated>2025-07-21T15:04:45+00:00</updated><id>https://ndtwan.github.io/blog/example-content-ii</id><content type="html" xml:base="https://ndtwan.github.io/blog/2017-11-23-example-content-ii/"><![CDATA[<p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
 
 <p>There should be whitespace between paragraphs.</p>
 
@@ -783,7 +791,7 @@ A caption to an image.</p>
 </code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
-</code></pre></div></div>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[A page showing how regular markdown content is styled in Hydejack.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/example-content-ii.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/example-content-ii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content</title><link href="https://ndtwan.github.io/blog/2012-02-07-example-content/" rel="alternate" type="text/html" title="Example Content" /><published>2012-02-07T00:00:00+00:00</published><updated>2025-07-12T08:44:11+00:00</updated><id>https://ndtwan.github.io/blog/example-content</id><content type="html" xml:base="https://ndtwan.github.io/blog/2012-02-07-example-content/"><![CDATA[<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. <em>Aenean eu leo quam.</em> Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+</code></pre></div></div>]]></content><author><name>Twan Nguyen</name><email>nddt1810@gmail.com</email></author><category term="blog" /><summary type="html"><![CDATA[A page showing how regular markdown content is styled in Hydejack.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://ndtwan.github.io/assets/img/blog/example-content-ii.jpg" /><media:content medium="image" url="https://ndtwan.github.io/assets/img/blog/example-content-ii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content</title><link href="https://ndtwan.github.io/blog/2012-02-07-example-content/" rel="alternate" type="text/html" title="Example Content" /><published>2012-02-07T00:00:00+00:00</published><updated>2025-07-21T15:04:45+00:00</updated><id>https://ndtwan.github.io/blog/example-content</id><content type="html" xml:base="https://ndtwan.github.io/blog/2012-02-07-example-content/"><![CDATA[<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. <em>Aenean eu leo quam.</em> Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
 
 <blockquote>
   <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
