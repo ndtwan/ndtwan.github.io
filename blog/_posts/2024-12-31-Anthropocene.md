@@ -10,18 +10,14 @@ image:
     960w:  /assets/img/blog/history.png
     480w:  /assets/img/blog/history.png
 accent_image: /assets/img/blog/history.png
-excerpt_separator: <!--more-->
+# excerpt_separator: <!--more-->
 sitemap: false
 ---
 
 # Chúng ta đã bắt đầu từ những gì rất khác
-
 > Thanh niên kia từ đâu tới?
-
 > Tại sao họ lại hành động như vậy?
-
 > Họ là ai, nếu không phải chính chúng ta?
-
 > Oh, vậy ra họ là, như kiểu, đồng loại mình ấy hả?
 
 Chúng ta, ôi chao, khởi đầu từ những ngày thật khác. Mười ba ngàn năm sau khi băng tan, loài người lảo đảo bước trên muôn nẻo đường. Kẻ thì vung bút viết chữ, rèn sắt thành dao, dựng nên thành quách công nghiệp. Kẻ khác vẫn lững lờ săn thú, hái quả, sống đời du mục, để rồi cuối cùng bị những gã mạnh hơn đạp xuống, cuốn vào cơn lốc lịch sử.

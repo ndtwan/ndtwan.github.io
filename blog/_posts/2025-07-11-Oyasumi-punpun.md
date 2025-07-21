@@ -3,23 +3,19 @@ layout: post
 description: >
   Punpun – Giấc mơ chết trong lòng mỗi chúng ta
 image:
-  path: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
+  path: /assets/img/blog/pyasumi.jpg
   srcset:
-    1920w: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
-    960w:  /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash@0,5x.jpg
-    480w:  /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash@0,25x.jpg
-accent_image: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
-excerpt_separator: <!--more-->
+    1920w: /assets/img/blog/oyasumi_wallpaper.jpg
+    960w:  /assets/img/blog/oyasumi_wallpaper.jpg
+    480w:  /assets/img/blog/oyasumi_wallpaper.jpg
+accent_image: /assets/img/blog/pyasumi.jpg
+# excerpt_separator: <!--more-->
 sitemap: false
 ---
 
 # Tản mạn về một câu chuyện xa xưa
----
-
 > *“Oyasumi, Punpun.”*
 > Một câu chúc ngủ ngon, lặp đi lặp lại như lời ru tử thần, dịu dàng như lưỡi dao cắm từ từ vào tim.
-
----
 
 ### Punpun không phải là một nhân vật.
 
@@ -51,6 +47,11 @@ Cô là người – vỡ nát, rối tung, hoang mang, khốn khổ.
 Yêu Aiko giống như ôm một lưỡi dao.
 Máu chảy là điều chắc chắn.
 Nhưng đau là đặc quyền của kẻ còn cảm xúc.
+<p align="center">
+  <img src="/assets/img/blog/oyasumi_galaxi.jpg" alt="Dystopia"
+       style="max-width: 100%; height: auto;" />
+
+</p>
 
 ---
 
@@ -83,6 +84,12 @@ Cho đến khi… hắn *không còn là chính mình nữa.*
 Vì nó thật.
 Thật đến mức tôi không muốn nó tồn tại – nhưng cũng không thể rời mắt.
 
+<p align="center">
+  <img src="/assets/img/blog/oyasumi_reborn.jpg" alt="Reborn"
+       style="max-width: 100%; height: auto;" />
+
+</p>
+
 Nó nói với tôi rằng:
 
 > “Không sao cả khi mày không ổn.
@@ -108,6 +115,18 @@ Và đôi khi, chỉ cần thế thôi, đã đủ để một người không n
 Chúc ngủ ngon, Punpun.
 Chúc ngủ ngon, tôi.
 Chúc ngủ ngon… tất cả những ai chưa từng được yên giấc.
+
+<p align="center">
+  <img src="/assets/img/blog/oyasumi_punpun1.jpg" alt="Dystopia"
+       style="max-width: 100%; height: auto;" />
+
+</p>
+
+<p align="center">
+  <img src="/assets/img/blog/oyasumi_punpun_2.jpg" alt="Dystopia"
+       style="max-width: 100%; height: auto;" />
+
+</p>
 
 ---
 
