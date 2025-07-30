@@ -37,8 +37,8 @@ Powered by Hydejack v9.2.1 <https://hydejack.com/>
 <meta property="og:title" content="Documentation" />
 <meta name="author" content="Twan Nguyen" />
 <meta property="og:locale" content="vi, en" />
-<meta name="description" content="Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack." />
-<meta property="og:description" content="Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack." />
+<meta name="description" content="Đây là nơi Tiểu đệ ghi chú lại vài project mà Đại Ka đang làm, từ mấy cái nhỏ nhỏ tới mấy con hàng phức tạp hơn." />
+<meta property="og:description" content="Đây là nơi Tiểu đệ ghi chú lại vài project mà Đại Ka đang làm, từ mấy cái nhỏ nhỏ tới mấy con hàng phức tạp hơn." />
 <link rel="canonical" href="https://ndtwan.github.io/docs/" />
 <meta property="og:url" content="https://ndtwan.github.io/docs/" />
 <meta property="og:site_name" content="Twan desu" />
@@ -46,7 +46,7 @@ Powered by Hydejack v9.2.1 <https://hydejack.com/>
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Documentation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Twan Nguyen"},"dateModified":"2025-07-21T15:04:45+00:00","description":"Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.","headline":"Documentation","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ndtwan.github.io/assets/img/sidebar/page_icon.jpg"},"name":"Twan Nguyen"},"url":"https://ndtwan.github.io/docs/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Twan Nguyen"},"dateModified":"2025-07-30T16:14:28+00:00","description":"Đây là nơi Tiểu đệ ghi chú lại vài project mà Đại Ka đang làm, từ mấy cái nhỏ nhỏ tới mấy con hàng phức tạp hơn.","headline":"Documentation","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ndtwan.github.io/assets/img/sidebar/page_icon.jpg"},"name":"Twan Nguyen"},"url":"https://ndtwan.github.io/docs/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -117,7 +117,7 @@ Powered by Hydejack v9.2.1 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2025-07-21T15:05:34+00:00',
+    INDEX_KEY: 'index--2025-07-30T16:15:21+00:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -261,32 +261,30 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
   </header>
 
-  <p>Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.</p>
+  <p>Đây là nơi Tiểu đệ ghi chú lại các project của Đại Ka – để sau này có quên thì còn có cái mà lôi ra đọc, đỡ phải chửi cái đầu mình ngu.</p>
 
-<p class="note">While this manual tries to be beginner-friendly, as a user of Jekyll it is assumed that you are comfortable running shell commands and editing text files.</p>
+<blockquote class="note">
+  <p>Lưu ý: Có thể phần lớn mấy dòng ghi chú dưới đây là theo kiểu “nhớ sao viết vậy”, miễn là hiểu được là đủ.</p>
+</blockquote>
 
-<h2 id="getting-started">Getting started</h2>
+<h2 id="project-frameworks">Project Frameworks</h2>
 <ul class="related-posts faded">
-  <li><a href="/docs/install/" class="heading flip-title">Install</a> — How to install and run Hydejack.</li>
-  <li><a href="/docs/upgrade/" class="heading flip-title">Upgrade</a> — You can skip this if you haven’t used Hydejack before.</li>
-  <li><a href="/docs/config/" class="heading flip-title">Config</a> — Once Jekyll is running you can start editing your config file.</li>
+  <li><a href="/docs/automationmpersona/" class="heading flip-title">Automation Persona Framework</a> — Ghi chú về hệ thống tạo persona tự động dùng LLM, Random Walk.</li>
+  <li><a href="marketing_graph.md" class="heading flip-title">Marketing Graph Search</a> — Tìm nhóm khách hàng tiềm năng bằng walk graph, xài Node2Vec hoặc PageRank.</li>
+  <li><a href="vector_db.md" class="heading flip-title">Vector DB Integration</a> — Ghi chú về Milvus, Weaviate và cách tích hợp với hệ thống.</li>
 </ul>
 
-<h2 id="using-hydejack">Using Hydejack</h2>
+<h2 id="devops--infra">DevOps / Infra</h2>
 <ul class="related-posts faded">
-  <li><a href="/docs/basics/" class="heading flip-title">Basics</a> — How to add different types of content.</li>
-  <li><a href="/docs/writing/" class="heading flip-title">Writing</a> — Producing markdown content for Hydejack.</li>
-  <li><a href="/docs/scripts/" class="heading flip-title">Scripts</a> — How to include 3rd party scripts on your site.</li>
-  <li><a href="/docs/build/" class="heading flip-title">Build</a> — How to build the static files for deployment.</li>
-  <li><a href="/docs/deploy/" class="heading flip-title">Deploy</a> — 🆕 How to deploy to a variety of popular providers.</li>
-  <li><a href="/docs/advanced/" class="heading flip-title">Advanced</a> — Guides for more advanced tasks.</li>
+  <li><a href="docker_setup.md" class="heading flip-title">Docker Compose Setup</a> — Hướng dẫn dựng container cho Milvus, FastAPI, LLM models,…</li>
+  <li><a href="s3_airflow.md" class="heading flip-title">S3 + Airflow Integration</a> — Cách detect file mới, update metadata cho LLM tự học dần.</li>
+  <li><a href="ui_notes.md" class="heading flip-title">Frontend UI Workflow</a> — Cấu trúc UI nội bộ để nhập campaign → ra nhóm khách hàng + persona.</li>
 </ul>
 
-<h2 id="other">Other</h2>
+<h2 id="miscellaneous">Miscellaneous</h2>
 <ul class="related-posts faded">
-  <li><a href="/LICENSE/" class="heading flip-title">LICENSE</a> — The license of this project.</li>
-  <li><a href="/NOTICE/" class="heading flip-title">NOTICE</a> — Parts of this program are provided under separate licenses.</li>
-  <li><a href="/CHANGELOG/" class="heading flip-title">CHANGELOG</a> — Version history of Hydejack.</li>
+  <li><a href="/LICENSE/" class="heading flip-title">LICENSE</a> — Cấp phép cho mấy project open-source Đại Ka có định chia sẻ.</li>
+  <li><a href="/CHANGELOG/" class="heading flip-title">CHANGELOG</a> — Lịch sử thay đổi nếu Tiểu đệ có làm version hóa gì đó.</li>
 </ul>
 
 
