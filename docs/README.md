@@ -2,48 +2,39 @@
 layout: page
 title: Documentation
 description: >
-  Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.
+  Đây là nơi Tiểu đệ ghi chú lại vài project mà Đại Ka đang làm, từ mấy cái nhỏ nhỏ tới mấy con hàng phức tạp hơn.
 hide_description: true
 sitemap: false
 permalink: /docs/
 ---
 
-Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.
+Đây là nơi Tiểu đệ ghi chú lại các project của Đại Ka – để sau này có quên thì còn có cái mà lôi ra đọc, đỡ phải chửi cái đầu mình ngu.
 
-While this manual tries to be beginner-friendly, as a user of Jekyll it is assumed that you are comfortable running shell commands and editing text files.
+> Lưu ý: Có thể phần lớn mấy dòng ghi chú dưới đây là theo kiểu “nhớ sao viết vậy”, miễn là hiểu được là đủ.
 {:.note}
 
-
-## Getting started
-* [Install]{:.heading.flip-title} --- How to install and run Hydejack.
-* [Upgrade]{:.heading.flip-title} --- You can skip this if you haven't used Hydejack before.
-* [Config]{:.heading.flip-title} --- Once Jekyll is running you can start editing your config file.
+## Project Frameworks
+* [Automation Persona Framework]{:.heading.flip-title} — Ghi chú về hệ thống tạo persona tự động dùng LLM, Random Walk.
+* [Marketing Graph Search]{:.heading.flip-title} — Tìm nhóm khách hàng tiềm năng bằng walk graph, xài Node2Vec hoặc PageRank.
+* [Vector DB Integration]{:.heading.flip-title} — Ghi chú về Milvus, Weaviate và cách tích hợp với hệ thống.
 {:.related-posts.faded}
 
-## Using Hydejack
-* [Basics]{:.heading.flip-title} --- How to add different types of content.
-* [Writing]{:.heading.flip-title} --- Producing markdown content for Hydejack.
-* [Scripts]{:.heading.flip-title} --- How to include 3rd party scripts on your site.
-* [Build]{:.heading.flip-title} --- How to build the static files for deployment.
-* [Deploy]{:.heading.flip-title} --- 🆕 How to deploy to a variety of popular providers.
-* [Advanced]{:.heading.flip-title} --- Guides for more advanced tasks.
+## DevOps / Infra
+* [Docker Compose Setup]{:.heading.flip-title} — Hướng dẫn dựng container cho Milvus, FastAPI, LLM models,...
+* [S3 + Airflow Integration]{:.heading.flip-title} — Cách detect file mới, update metadata cho LLM tự học dần.
+* [Frontend UI Workflow]{:.heading.flip-title} — Cấu trúc UI nội bộ để nhập campaign → ra nhóm khách hàng + persona.
 {:.related-posts.faded}
 
-## Other
-* [LICENSE]{:.heading.flip-title} --- The license of this project.
-* [NOTICE]{:.heading.flip-title} --- Parts of this program are provided under separate licenses.
-* [CHANGELOG]{:.heading.flip-title} --- Version history of Hydejack.
+## Miscellaneous
+* [LICENSE]{:.heading.flip-title} — Cấp phép cho mấy project open-source Đại Ka có định chia sẻ.
+* [CHANGELOG]{:.heading.flip-title} — Lịch sử thay đổi nếu Tiểu đệ có làm version hóa gì đó.
 {:.related-posts.faded}
 
-[install]: install.md
-[upgrade]: upgrade.md
-[config]: config.md
-[basics]: basics.md
-[writing]: writing.md
-[scripts]: scripts.md
-[build]: build.md
-[deploy]: deploy.md
-[advanced]: advanced.md
+[Automation Persona Framework]: automationmpersona.md
+[marketing graph search]: marketing_graph.md
+[vector db integration]: vector_db.md
+[docker compose setup]: docker_setup.md
+[s3 + airflow integration]: s3_airflow.md
+[frontend ui workflow]: ui_notes.md
 [LICENSE]: ../LICENSE.md
-[NOTICE]: ../NOTICE.md
 [CHANGELOG]: ../CHANGELOG.md
