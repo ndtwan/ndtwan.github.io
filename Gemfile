@@ -9,24 +9,24 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "~> 4.3"
-
+gem 'jekyll-toc'
 gem "jekyll-theme-hydejack", "~> 9.1"
 
-# If you are part of the ["Customers" team](https://github.com/orgs/hydecorp/teams/pro-customers), 
-# you can fetch the theme from a private repository. 
+# If you are part of the ["Customers" team](https://github.com/orgs/hydecorp/teams/pro-customers),
+# you can fetch the theme from a private repository.
 # See [Deploy in the Hydejack Docs](https://hydejack.com/docs/deploy) for details.
 
 # gem "jekyll-theme-hydejack", git: "https://github.com/hydecorp/hydejack-pro", tag: "pro/v9.2.0"
 
-# IMPORTANT: The followign gem is used to compile math formulas to 
+# IMPORTANT: The followign gem is used to compile math formulas to
 # KaTeX during site building.
 #
 # There are a couple of things to know about this gem:
-# *  It is not supported on GitHub Pages. 
+# *  It is not supported on GitHub Pages.
 #    You have to build the site on your machine before uploading to GitHub,
 #    or use a more permissive cloud building tool such as Netlify.
 # *  You need some kind of JavaScript runtime on your machine.
-#    Usually installing NodeJS will suffice. 
+#    Usually installing NodeJS will suffice.
 #    For details, see <https://github.com/kramdown/math-katex#documentation>
 #
 # If you're using the MathJax math engine instead, free to remove the line below:
@@ -53,6 +53,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-titles-from-headings"
   gem "jekyll-include-cache"
+  gem "jekyll-toc"      # 👈 thêm dòng này
 
   # Non-Github Pages plugins:
   gem "jekyll-last-modified-at"

@@ -1,0 +1,15 @@
+.toc {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #eee;
+  z-index: 999;
+}
+.toc a {
+  color: #000;
+  text-decoration: none;
+}

@@ -8,11 +8,8 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about: |
-    Tay ôm mộng mơ, chân đạp bụi trần
-
-
-    Kể chuyện nhân thế qua vài dòng chữ nhếch nhác.
-
+    Rồi sẽ có ngày tâm bạn bình lặng như nước, nhìn lại câu chuyện của chính mình như một người ngoài cuộc.
+    Sau đó mỉm cười lắc đầu.
 
   # This photo will be used in the about section
   picture:
