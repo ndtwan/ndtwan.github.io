@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inio-Asano on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/inio-asano/</link>
+    <description>Recent Posts in Inio-Asano on My New Hugo Site</description>
+    <generator>Hugo 0.159.1</generator>
+    <language>en-us</language>
+    <managingEditor>Twan</managingEditor>
+    
+      <webMaster>Twan</webMaster>
+    <lastBuildDate>Thu, 26 Mar 2026 22:47:31 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/inio-asano/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solanin - Chén Rượu Đắng Của Phù Hoa Tửu</title>
+      <link>http://localhost:1313/posts/solanin-chen-ruou-tuoi-tre/</link>
+      <pubDate>Thu, 26 Mar 2026 12:00:00 +0700</pubDate>
+      <author>Twan</author>
+      <guid>http://localhost:1313/posts/solanin-chen-ruou-tuoi-tre/</guid>
+      <description></description>
+      <enclosure url="/images/posts/solanin/cover.jpg" length="0" type="image/jpeg" />
+    </item>
+  </channel>
+</rss>

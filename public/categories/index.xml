@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on My New Hugo Site</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent Posts in Categories on My New Hugo Site</description>
+    <generator>Hugo 0.159.1</generator>
+    <language>en-us</language>
+    <managingEditor>Twan</managingEditor>
+    
+      <webMaster>Twan</webMaster>
+    <lastBuildDate>Thu, 26 Mar 2026 22:47:31 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anime</title>
+      <link>http://localhost:1313/categories/anime/</link>
+      <pubDate>Thu, 26 Mar 2026 12:00:00 +0700</pubDate>
+      <author>Twan</author>
+      <guid>http://localhost:1313/categories/anime/</guid>
+      <description></description>
+      
+    </item>
+    <item>
+      <title>Đời Sống</title>
+      <link>http://localhost:1313/categories/%C4%91%E1%BB%9Di-s%E1%BB%91ng/</link>
+      <pubDate>Thu, 26 Mar 2026 12:00:00 +0700</pubDate>
+      <author>Twan</author>
+      <guid>http://localhost:1313/categories/%C4%91%E1%BB%9Di-s%E1%BB%91ng/</guid>
+      <description></description>
+      
+    </item>
+  </channel>
+</rss>

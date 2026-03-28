@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent Posts in Tags on My New Hugo Site</description>
+    <generator>Hugo 0.159.1</generator>
+    <language>en-us</language>
+    <managingEditor>Twan</managingEditor>
+    
+      <webMaster>Twan</webMaster>
+    <lastBuildDate>Thu, 26 Mar 2026 22:47:31 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anime</title>
+      <link>http://localhost:1313/tags/anime/</link>
+      <pubDate>Thu, 26 Mar 2026 12:00:00 +0700</pubDate>
+      <author>Twan</author>
+      <guid>http://localhost:1313/tags/anime/</guid>
+      <description></description>
+      
+    </item>
+    <item>
+      <title>Inio-Asano</title>
+      <link>http://localhost:1313/tags/inio-asano/</link>
+      <pubDate>Thu, 26 Mar 2026 12:00:00 +0700</pubDate>
+      <author>Twan</author>
+      <guid>http://localhost:1313/tags/inio-asano/</guid>
+      <description></description>
+      
+    </item>
+    <item>
+      <title>Manga</title>
+      <link>http://localhost:1313/tags/manga/</link>
+      <pubDate>Thu, 26 Mar 2026 12:00:00 +0700</pubDate>
+      <author>Twan</author>
+      <guid>http://localhost:1313/tags/manga/</guid>
+      <description></description>
+      
+    </item>
+    <item>
+      <title>Review</title>
+      <link>http://localhost:1313/tags/review/</link>
+      <pubDate>Thu, 26 Mar 2026 12:00:00 +0700</pubDate>
+      <author>Twan</author>
+      <guid>http://localhost:1313/tags/review/</guid>
+      <description></description>
+      
+    </item>
+    <item>
+      <title>Slice-of-Life</title>
+      <link>http://localhost:1313/tags/slice-of-life/</link>
+      <pubDate>Thu, 26 Mar 2026 12:00:00 +0700</pubDate>
+      <author>Twan</author>
+      <guid>http://localhost:1313/tags/slice-of-life/</guid>
+      <description></description>
+      
+    </item>
+  </channel>
+</rss>
