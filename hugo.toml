@@ -1,4 +1,4 @@
-baseURL = 'https://ndtwan.github.io/'
+baseURL = 'https://ndtwan.github.io/anime-blog/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'hugo-brewm'
