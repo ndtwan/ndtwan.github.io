@@ -1,9 +1,104 @@
 baseURL = 'https://ndtwan.github.io/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'hugo-brewm'
+languageCode = 'vi'
+defaultContentLanguage = 'vi'
+title = 'Quan Đông Dã Khách'
+theme = 'hugo-theme-stack'
+hasCJKLanguage = false
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 6
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  series = 'series'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3
 
 [params]
+  mainSections = ['posts', 'post']
+  description = 'Một chén chuyện đời, đôi trang manga, chút tò mò về thế giới.'
+  favicon = '/images/twandesu-icon.jpg'
   [params.author]
     name = 'Twan'
-    email = 'twan@example.com'
+  [params.sidebar]
+    subtitle = 'Just a random wibu guy lost in the world of AI.'
+    avatar = '/images/twandesu-avatar.jpg'
+  [params.footer]
+    since = 2024
+    customText = 'Viết giữa đường đời. Đọc lúc thong dong.'
+  [params.article]
+    toc = true
+    readingTime = true
+    [params.article.list]
+      showTags = true
+  [params.comments]
+    enabled = false
+  [params.colorScheme]
+    toggle = true
+    default = 'light'
+  [params.dateFormat]
+    published = '02.01.2006'
+    lastUpdated = '02.01.2006'
+  [[params.widgets.homepage]]
+    type = 'search'
+  [[params.widgets.homepage]]
+    type = 'categories'
+    [params.widgets.homepage.params]
+      title = 'Ngăn sách'
+  [[params.widgets.homepage]]
+    type = 'tag-cloud'
+    [params.widgets.homepage.params]
+      title = 'Dấu mực'
+      limit = 16
+  [[params.widgets.page]]
+    type = 'toc'
+
+[[menus.main]]
+  name = 'Hiên nhà'
+  pageRef = '/'
+  weight = 10
+  [menus.main.params]
+    icon = 'home'
+[[menus.main]]
+  name = 'Ngăn sách'
+  pageRef = '/categories'
+  weight = 20
+  [menus.main.params]
+    icon = 'categories'
+[[menus.main]]
+  name = 'Sơn hà còn đó'
+  pageRef = '/page/son-ha-con-do'
+  weight = 25
+  [menus.main.params]
+    icon = 'infinity'
+[[menus.main]]
+  name = 'Dấu mực'
+  pageRef = '/tags'
+  weight = 30
+  [menus.main.params]
+    icon = 'hash'
+[[menus.main]]
+  name = 'Lưu bút'
+  pageRef = '/page/archives'
+  weight = 40
+  [menus.main.params]
+    icon = 'archives'
+[[menus.main]]
+  name = 'Người viết'
+  pageRef = '/page/about'
+  weight = 50
+  [menus.main.params]
+    icon = 'user'
+[[menus.main]]
+  name = 'Tìm bài'
+  pageRef = '/page/search'
+  weight = 60
+  [menus.main.params]
+    icon = 'search'

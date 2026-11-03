@@ -1,0 +1,41 @@
+{{ define "main" }}
+    <header class="journal-heading">
+        <span class="journal-kicker">TWAN DESU / CHUYỆN DỌC ĐƯỜNG</span>
+        <h1>Đôi dòng giữa nhân gian.</h1>
+        <p>Manga, khoa học và những chuyện đời thường muốn kể.</p>
+    </header>
+    <nav class="journal-topics" aria-label="Đọc theo chuyên mục">
+        {{ range site.Taxonomies.categories.Alphabetical }}
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <small>{{ .Count }}</small></a>
+        {{ end }}
+    </nav>
+    {{ with site.GetPage "/page/son-ha-con-do" }}
+    <a class="collection-feature" href="{{ .RelPermalink }}">
+        <span class="journal-kicker">TUYỂN TẬP TẢN VĂN / 2026</span>
+        <h2>Sơn hà còn đó,<br>người đã qua.</h2>
+        <p>Mộng cố lý · Tỉnh nhân gian · Thương một đời hữu hạn</p>
+        <span class="collection-cta">Mở tuyển tập · {{ len (where site.RegularPages "Params.collection" "Sơn hà còn đó, người đã qua") }} tác phẩm <span aria-hidden="true">→</span></span>
+    </a>
+    {{ end }}
+    <div class="journal-section-heading"><h2>Những trang viết</h2><a href="{{ "archives/" | relURL }}">Xem lưu bút →</a></div>
+    {{ $paginator := partial "helper/paginator.html" . }}
+    <section class="journal-list">
+        {{ range $paginator.Pages }}
+            {{ $post := . }}
+            <article class="journal-entry">
+                {{ with .Params.image }}<a class="journal-thumbnail" href="{{ $post.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}
+                <div class="journal-entry-body">
+                    <div class="journal-entry-meta">{{ range .GetTerms "categories" }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ if not .Date.IsZero }}<span>{{ .Date.Format "02.01.2006" }}</span>{{ else }}<span>Tuyển tập 2026</span>{{ end }}</div>
+                    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                    <p>{{ .Summary | plainify | truncate 180 }}</p>
+                    <a class="journal-read" href="{{ .RelPermalink }}">Đọc tiếp →</a>
+                </div>
+            </article>
+        {{ end }}
+    </section>
+    {{ partial "pagination.html" . }}
+    {{ partial "footer/footer" . }}
+{{ end }}
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

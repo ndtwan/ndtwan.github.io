@@ -3,14 +3,13 @@ title = "Solanin - Chén Rượu Đắng Của Phù Hoa Tửu"
 date = 2026-03-26T12:00:00+07:00
 draft = false
 type = "post"
-tags = ["anime", "manga", "review", "slice-of-life", "inio-asano"]
-categories = ["anime", "đời sống"]
+tags = ["manga", "review", "tuổi trẻ", "Inio Asano"]
+categories = ["Manga", "Tản văn"]
 summary = "Solanin của Inio Asano là một khúc ca trầm mặc về tuổi trẻ, nơi những giấc mơ dang dở va chạm với hiện thực khốc liệt của nhân gian."
-cover = "/images/posts/solanin/cover.jpg"
+image = "/images/posts/solanin/cover.png"
 alt = "Bìa bài viết Solanin"
 +++
 
-![Solanin cover](/images/posts/solanin/cover.jpg)
 
 Ta, kẻ lữ hành đơn độc qua những nẻo đường Quan Đông, từng dừng chân dưới gốc tùng già, nhấp chén rượu lạnh giữa buổi chiều tà bảng lảng. Hôm nay, xin mạn phép kể về *Solanin* – một chương truyện của Inio Asano. Nó không phải là một bài ca khải hoàn rực rỡ, mà là một khúc hoan ca khuyết thiếu, thấm đẫm bụi trần và dư vị của những ngày tuổi trẻ chênh vênh.
 
@@ -22,7 +21,6 @@ Ta, kẻ lữ hành đơn độc qua những nẻo đường Quan Đông, từng
 
 Meiko Inoue – cô gái vừa chạm ngưỡng đôi mươi, rời xa giảng đường để bước vào vòng xoáy công sở tẻ nhạt với một tâm hồn đầy rẫy những rạn nứt. Bên nàng là Taneda, gã trai trẻ ôm mộng cầm ca, nhưng đôi chân lại bị xiềng xích bởi những sợi dây vô hình của cơm áo gạo tiền, trách nhiệm và nỗi nghi hoặc chính bản thân mình.
 
-![Meiko và Taneda](/images/posts/solanin/meiko-taneda.jpg)
 *Meiko và Taneda, tựa hai kẻ bộ hành lạc lối, nỗ lực tìm kiếm đốm lửa nhỏ giữa màn đêm u tối.*
 
 Ta từng lang thang qua những ngõ nhỏ Tokyo, nơi ánh đèn neon chập chờn như đôi mắt kẻ say, nơi tiếng cười ha hả hòa lẫn vào tiếng thở dài của màn đêm. *Solanin* đã họa lại trọn vẹn những góc khuất ấy. Ở đó, một thế hệ trẻ tụ tập, hát ca và mơ mộng, nhưng sâu trong tâm khảm luôn mang một vết thương không tên, một nỗi sầu vạn cổ của những kẻ đứng giữa ngã ba đường.
@@ -51,7 +49,6 @@ Meiko không phải kiểu nữ trung hào kiệt. Nàng chỉ là một nữ t�
 
 Nàng là hiện thân của những lữ khách ta từng hội ngộ trên đường đời – những người chẳng hẳn là thất bại, nhưng cũng chưa chạm tới vinh quang. Họ chỉ đang "tồn tại", và trong sự tồn tại ấy, họ khát khao một điều gì đó vĩ đại hơn, dẫu chính họ cũng chẳng thể gọi tên.
 
-![Meiko](/images/posts/solanin/meiko.jpg)
 *Meiko – đóa hoa dại đứng giữa ngã ba, nơi mộng ảo và thực tại va chạm nảy lửa.*
 
 Ta từng ngồi bên dòng Sumida, nhìn nước chảy xuôi dòng mà lòng bàng khuàng về những ngã rẽ của chính mình. Meiko, với quyết định từ bỏ sự ổn định để dấn thân vào hành trình tìm lại bản ngã, chính là hình bóng của những kẻ dám rời bỏ lồng son, dù biết phía trước là bão tố và gió lạnh.
@@ -72,7 +69,6 @@ Nhắc về *Solanin* mà bỏ qua nét vẽ của Inio Asano thì chẳng khác
 
 Từ những viên gạch vỡ trên vỉa hè đến ánh đèn đô thị xa hoa, tất cả đều được khắc họa tỉ mỉ đến từng chi tiết. Nhưng ám ảnh nhất vẫn là ánh mắt nhan vật. Đôi mắt của Meiko, của Taneda luôn chứa đựng một nỗi sầu vạn dặm, nhưng sâu trong đó vẫn lấp lánh tia sáng của hy vọng, tựa như vì sao lẻ loi giữa bầu trời đêm Tokyo.
 
-![Tokyo về đêm](/images/posts/solanin/tokyo-skyline.jpg)
 
 Asano dùng những góc máy rộng để đặc tả sự cô độc nhân thế, dùng những khung hình cận để lột tả tâm can. Ông không chỉ vẽ truyện, ông vẽ cả linh hồn của một thế hệ – một thế hệ lạc lối nhưng chưa bao giờ ngừng tìm kiếm lối về.
 

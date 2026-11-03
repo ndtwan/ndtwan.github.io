@@ -1,0 +1,67 @@
+:root {
+    --body-background: #f1ecdf;
+    --card-background: #fffcf5;
+    --card-background-selected: #e9e2d3;
+    --accent-color: #87483c;
+    --accent-color-darker: #69352c;
+    --body-text-color: #605e55;
+    --card-text-color-main: #283b42;
+    --card-text-color-secondary: #6c6b60;
+    --card-text-color-tertiary: #777063;
+    --card-separator-color: #ded7c9;
+    --card-border-radius: 5px;
+    --base-font-family: 'Be Vietnam Pro', sans-serif;
+    --article-font-family: 'Lora', Georgia, serif;
+    --article-font-size: 1.85rem;
+    --article-line-height: 1.95;
+    --blockquote-background-color: #f3eddf;
+    --shadow-l1: 0 3px 18px rgba(57, 49, 35, .045);
+}
+:root[data-scheme='dark'] {
+    --body-background: #1e2526;
+    --card-background: #283132;
+    --card-background-selected: #354143;
+    --accent-color: #d4a08b;
+    --accent-color-darker: #e9bfab;
+    --card-text-color-main: #eee7d8;
+    --card-text-color-secondary: #c0baac;
+    --card-text-color-tertiary: #b4ae9f;
+    --body-text-color: #c0baac;
+    --card-separator-color: #44504f;
+    --blockquote-background-color: #323e3e;
+}
+body {
+    background-image: radial-gradient(rgba(117, 99, 68, .09) .65px, transparent .65px);
+    background-size: 5px 5px;
+}
+.site-name, .article-title, .ink-intro h1, .article-content h2, .article-content h3 {
+    font-family: 'Lora', Georgia, serif;
+}
+.left-sidebar .site-avatar .site-logo { border-radius: 6px; }
+.site-name { font-size: 2.6rem; line-height: 1.35; }
+.site-description { line-height: 1.8; }
+.ink-intro { margin: 0 0 34px; padding: 10px 0 28px; border-bottom: 1px solid var(--card-separator-color); }
+.ink-eyebrow { font-size: 1.05rem; letter-spacing: .19em; color: var(--accent-color); font-weight: 600; }
+.ink-intro h1 { font-size: clamp(3.2rem, 4vw, 4.9rem); font-weight: 500; line-height: 1.23; color: var(--card-text-color-main); margin: 23px 0 16px; }
+.ink-intro p { font-size: 1.4rem; line-height: 1.9; color: var(--body-text-color); }
+.ink-shelves { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.ink-shelves a { padding: 9px 13px; border: 1px solid var(--card-separator-color); border-radius: 3px; color: var(--card-text-color-main); font-size: 1.2rem; }
+.ink-shelves a:hover { background: var(--accent-color); color: var(--card-background); }
+.ink-shelves small { opacity: .65; margin-left: 5px; }
+.article-list > article { border: 1px solid var(--card-separator-color); }
+.article-list .article-image img { max-height: 300px; object-fit: cover; filter: saturate(.75); }
+.article-title { line-height: 1.4; }
+.article-content blockquote { border-inline-start: 3px solid var(--accent-color); font-style: italic; }
+.article-tags a::before, .tagCloud-tags a[href*='/tags/']::before { content: '#'; opacity: .55; margin-right: 3px; }
+.article-content { overflow-wrap: anywhere; }
+.article-content p { text-align: start; }
+@media (prefers-reduced-motion: no-preference) {
+    .ink-intro { animation: ink-arrive .55s ease-out both; }
+    @keyframes ink-arrive { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+}
+@media (max-width: 767px) {
+    .ink-intro { padding-top: 18px; }
+    .ink-intro h1 { font-size: 3.3rem; }
+    .article-content { font-size: 1.75rem; }
+}
+@import 'twandesu.scss';

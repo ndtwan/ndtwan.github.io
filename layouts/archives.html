@@ -1,0 +1,11 @@
+{{ define "main" }}
+    <header class="journal-heading"><span class="journal-kicker">QUAN ĐÔNG DÃ KHÁCH / LƯU BÚT</span><h1>Những trang đã viết.</h1></header>
+    {{ $pages := partial "helper/pages.html" site.Home }}
+    {{ $dated := slice }}
+    {{ range $pages }}{{ if not .Date.IsZero }}{{ $dated = $dated | append . }}{{ end }}{{ end }}
+    {{ range $dated.GroupByDate "2006" }}
+        <section><h2 class="section-title">{{ .Key }}</h2><div class="article-list--compact">{{ range .Pages }}{{ partial "article-list/compact" . }}{{ end }}</div></section>
+    {{ end }}
+    <section><h2 class="section-title">Sơn hà còn đó, người đã qua · Tuyển tập 2026</h2><p>Giữ thứ tự bản thảo; không gán ngày sáng tác khi tài liệu không ghi.</p><div class="article-list--compact">{{ range (where $pages "Params.collection" "Sơn hà còn đó, người đã qua").ByParam "sequence" }}{{ partial "article-list/compact" . }}{{ end }}</div></section>
+    {{ partial "footer/footer" . }}
+{{ end }}
