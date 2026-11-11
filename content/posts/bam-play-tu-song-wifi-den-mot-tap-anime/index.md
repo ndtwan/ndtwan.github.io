@@ -1,6 +1,7 @@
 ---
 title: 'Bấm Play: từ sóng Wi-Fi đến một tập anime'
-draft: true
+draft: false
+date: 2026-11-11
 categories: ['Khoa học']
 tags: ['Wi-Fi', 'mạng máy tính', 'streaming', 'giải ngố']
 description: 'Sóng thành bit ra sao, cục mạng trong nhà thực sự làm gì, và vì sao mất gói mà phim vẫn có thể chạy tiếp?'
