@@ -40,6 +40,12 @@ Trong bài dùng `![Mô tả ảnh](cover.jpg)`.
 - Màu giấy, mực, font nằm trong `assets/scss/custom.scss`.
 
 Các bài cũ được giữ nguyên nội dung khi chuyển từ Jekyll; bài chip để draft vì còn ghi chú cần biên tập. Các thông tin khoa học chưa được kiểm chứng lại trong lần chuyển giao diện này.
-Tuyển tập Word đã được chuyển thành các tác phẩm riêng trong `content/posts/son-ha-con-do/`, có mục lục ở `/son-ha-con-do/`. Nội dung giữ theo tài liệu, không tự gán ngày sáng tác. Trường `sequence` giữ thứ tự đọc, `collectionPart` chia phần và `series` gom tuyển tập.
+Những bài từ Word được giữ tại `content/posts/son-ha-con-do/` để các link cũ vẫn hoạt động. Chúng là các bài riêng, không đánh số hoặc giới thiệu như sách đã biên tập. Các bài chưa rõ ngày viết không tự gán ngày.
+
+## Wall tản văn
+
+Chọn `categories = ['Tản văn']` là bài tự xuất hiện trên wall của chuyên mục này. Bài dài có nút **Xem thêm / Thu gọn**, bài ngắn hiện trọn vẹn. Mục khác vẫn dùng cách đọc bài cũ. `date` là ngày đăng; để trống nếu không muốn ghi ngày. Đường dẫn cũ `/son-ha-con-do/` vẫn mở được wall.
+
+Bốn bài thêm từ `Tan_Van_Bon_Thien_Moi.md` lấy ngày đăng 11.11.2026, không coi đó là ngày sáng tác. Ý tưởng cho bài khoa học tiếp theo nằm ở `content/posts/ai-ngon-dien-o-dau/index.md`, đang là draft.
 
 Giao diện hiện tại lấy cảm hứng từ bố cục Hydejack của blog `twandesu`: ảnh nền và avatar cũ nằm ở `static/images/twandesu-*`, các chỉnh sửa bố cục nằm trong `assets/scss/twandesu.scss`. Site vẫn build bằng Hugo và Stack.

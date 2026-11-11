@@ -1,20 +1,9 @@
 <section class="article-content">
-    {{ if and (not .Params.collection) (ge (len .TableOfContents) 100) }}
+    {{ if ge (len .TableOfContents) 100 }}
     <details class="inline-toc"><summary>Mục lục bài viết</summary>{{ .TableOfContents }}</details>
     {{ end }}
-    {{ with .Params.collection }}
-    <aside class="anthology-note"><a href="{{ "son-ha-con-do/" | relURL }}">{{ . }}</a><br>{{ $.Params.collectionPart }} · Tác phẩm {{ $.Params.sequence }} / {{ len (where site.RegularPages "Params.collection" .) }}</aside>
-    {{ end }}
     {{ .Content }}
-    {{ if .Params.collection }}
-        {{ $works := (where site.RegularPages "Params.collection" .Params.collection).ByParam "sequence" }}
-        {{ $current := .Params.sequence | int }}
-        <nav class="anthology-nav" aria-label="Đọc tiếp trong tuyển tập">
-            {{ range $works }}
-                {{ if eq (.Params.sequence | int) (sub $current 1) }}<a href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}
-                {{ if eq (.Params.sequence | int) (add $current 1) }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
-            {{ end }}
-            <a href="{{ "son-ha-con-do/" | relURL }}">Mục lục tuyển tập</a>
-        </nav>
+    {{ if in .Params.categories "Tản văn" }}
+        {{ with site.GetPage "/categories/tản-văn" }}<nav class="prose-back"><a href="{{ .RelPermalink }}">← Về góc tản văn</a></nav>{{ end }}
     {{ end }}
 </section>

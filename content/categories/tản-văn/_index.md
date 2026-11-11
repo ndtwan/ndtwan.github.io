@@ -1,7 +1,8 @@
 ---
 title: Tản văn
 slug: tan-van
-description: Những trang viết về người, về mộng, về những điều khó giữ lại.
+description: Có hứng thì viết. Có chuyện thì kể. Không hẹn ngày nào.
+layout: wall
 style:
   background: '#87483c'
   color: '#fffaf0'

@@ -1,0 +1,4 @@
+{{ if or (eq .Layout "wall") (and (eq .Kind "term") (eq .Title "Tản văn")) }}
+    {{ $script := resources.Get "js/prose-wall.js" | js.Build | minify | fingerprint }}
+    <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+{{ end }}

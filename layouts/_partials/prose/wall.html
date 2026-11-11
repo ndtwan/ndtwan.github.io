@@ -1,0 +1,12 @@
+<header class="journal-heading wall-heading">
+    <span class="journal-kicker">QUAN ĐÔNG DÃ KHÁCH / TẢN VĂN</span>
+    <h1>Mấy dòng, lúc có hứng.</h1>
+    <p>Có hôm nghĩ nhiều thì viết dài. Có hôm chỉ vài câu.<br>Không đều đặn gì đâu, cứ để chúng nằm ở đây thôi.</p>
+</header>
+{{ $paginator := partial "helper/paginator.html" . }}
+<section class="prose-wall" aria-label="Các bài tản văn">
+    {{ range $paginator.Pages }}
+        {{ partial "prose/post.html" . }}
+    {{ end }}
+</section>
+{{ partial "pagination.html" . }}

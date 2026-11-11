@@ -3,14 +3,8 @@ title: 'Nhất kỳ nhất hội · Một lần dưới trời xanh'
 draft: false
 categories: ['Tản văn']
 tags: ['Đẹp vì chẳng vĩnh hằng']
-series: ['Sơn hà còn đó, người đã qua']
-collection: 'Sơn hà còn đó, người đã qua'
-collectionPart: 'Đẹp vì chẳng vĩnh hằng'
-sequence: 16
 toc: false
 ---
-
-*Bài bổ sung trong bản biên tập 2026.*
 
 Có một ngày, ta chợt nhận ra mình đã sống đủ lâu để bắt đầu nhớ về những điều từng cho là tầm thường.
 

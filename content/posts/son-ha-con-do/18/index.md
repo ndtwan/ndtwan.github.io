@@ -3,14 +3,8 @@ title: 'Nhân gian hữu vị · Một bát mì giữa đêm'
 draft: false
 categories: ['Tản văn']
 tags: ['Nhân gian hữu vị']
-series: ['Sơn hà còn đó, người đã qua']
-collection: 'Sơn hà còn đó, người đã qua'
-collectionPart: 'Nhân gian hữu vị'
-sequence: 18
 toc: false
 ---
-
-*Bài bổ sung trong bản biên tập 2026.*
 
 Chiều xuống, khói bếp từ những căn nhà nhỏ bắt đầu len qua từng mái ngói. Ngoài đầu ngõ, hàng quán đã lên đèn. Tiếng người gọi nhau í ới, tiếng bát đũa va chạm, tiếng xe cộ xuôi ngược giữa phố phường. Nhân gian vẫn náo nhiệt như thế, dẫu hôm nay có người tương phùng, có kẻ biệt ly.
 

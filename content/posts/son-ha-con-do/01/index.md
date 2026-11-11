@@ -3,10 +3,6 @@ title: 'Giang Nam · Thủy mặc chưa khô'
 draft: false
 categories: ['Tản văn']
 tags: ['Cố lý trong mưa bụi']
-series: ['Sơn hà còn đó, người đã qua']
-collection: 'Sơn hà còn đó, người đã qua'
-collectionPart: 'Cố lý trong mưa bụi'
-sequence: 1
 toc: false
 ---
 

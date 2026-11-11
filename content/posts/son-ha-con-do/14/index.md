@@ -3,10 +3,6 @@ title: 'Làm người, nghĩa là gì?'
 draft: false
 categories: ['Tản văn']
 tags: ['Đẹp vì chẳng vĩnh hằng']
-series: ['Sơn hà còn đó, người đã qua']
-collection: 'Sơn hà còn đó, người đã qua'
-collectionPart: 'Đẹp vì chẳng vĩnh hằng'
-sequence: 14
 toc: false
 ---
 

@@ -6,6 +6,6 @@
     {{ range $dated.GroupByDate "2006" }}
         <section><h2 class="section-title">{{ .Key }}</h2><div class="article-list--compact">{{ range .Pages }}{{ partial "article-list/compact" . }}{{ end }}</div></section>
     {{ end }}
-    <section><h2 class="section-title">Sơn hà còn đó, người đã qua · Tuyển tập 2026</h2><p>Giữ thứ tự bản thảo; không gán ngày sáng tác khi tài liệu không ghi.</p><div class="article-list--compact">{{ range (where $pages "Params.collection" "Sơn hà còn đó, người đã qua").ByParam "sequence" }}{{ partial "article-list/compact" . }}{{ end }}</div></section>
+    <section><h2 class="section-title">Mấy dòng không ghi ngày</h2><div class="article-list--compact">{{ range $pages }}{{ if .Date.IsZero }}{{ partial "article-list/compact" . }}{{ end }}{{ end }}</div></section>
     {{ partial "footer/footer" . }}
 {{ end }}

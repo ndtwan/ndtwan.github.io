@@ -3,10 +3,6 @@ title: 'Vũ tịch · Khi lòng người cũng ướt'
 draft: false
 categories: ['Tản văn']
 tags: ['Cố lý trong mưa bụi']
-series: ['Sơn hà còn đó, người đã qua']
-collection: 'Sơn hà còn đó, người đã qua'
-collectionPart: 'Cố lý trong mưa bụi'
-sequence: 3
 toc: false
 ---
 

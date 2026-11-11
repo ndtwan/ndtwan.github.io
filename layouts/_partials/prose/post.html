@@ -1,0 +1,13 @@
+{{ $id := printf "wall-%s" .File.UniqueID }}
+<article class="wall-post" aria-labelledby="{{ $id }}-title" data-wall-post>
+    <header class="wall-post-author">
+        <img class="wall-avatar" src="{{ site.Params.sidebar.avatar | relURL }}" alt="" width="42" height="42" loading="lazy">
+        <div><span class="wall-author-name">{{ site.Title }}</span><div class="wall-post-meta"><span>Tản văn</span>{{ if not .Date.IsZero }}<span aria-hidden="true"> · </span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02.01.2006" }}</time>{{ end }}</div></div>
+        <a class="wall-permalink" href="{{ .RelPermalink }}" aria-label="Mở riêng bài {{ .Title }}">Mở riêng ↗</a>
+    </header>
+    {{ with .Params.image }}<img class="wall-cover" src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+    <h2 id="{{ $id }}-title" class="wall-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <div class="wall-text article-content" id="{{ $id }}-body" data-wall-text>{{ .Content }}</div>
+    <button class="wall-expand" type="button" aria-expanded="false" aria-controls="{{ $id }}-body" data-wall-expand hidden>Xem thêm</button>
+    {{ with .GetTerms "tags" }}<footer class="wall-tags" aria-label="Chủ đề">{{ range . }}<a href="{{ .RelPermalink }}">#{{ .Title }}</a>{{ end }}</footer>{{ end }}
+</article>

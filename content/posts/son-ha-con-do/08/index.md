@@ -3,10 +3,6 @@ title: 'Mộng · Mưa trên phố thị'
 draft: false
 categories: ['Tản văn']
 tags: ['Người qua mùa hạ']
-series: ['Sơn hà còn đó, người đã qua']
-collection: 'Sơn hà còn đó, người đã qua'
-collectionPart: 'Người qua mùa hạ'
-sequence: 8
 toc: false
 ---
 

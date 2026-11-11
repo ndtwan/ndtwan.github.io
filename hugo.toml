@@ -12,7 +12,6 @@ enableRobotsTXT = true
 [taxonomies]
   category = 'categories'
   tag = 'tags'
-  series = 'series'
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -73,8 +72,8 @@ enableRobotsTXT = true
   [menus.main.params]
     icon = 'categories'
 [[menus.main]]
-  name = 'Sơn hà còn đó'
-  pageRef = '/page/son-ha-con-do'
+  name = 'Tản văn'
+  pageRef = '/categories/tản-văn'
   weight = 25
   [menus.main.params]
     icon = 'infinity'

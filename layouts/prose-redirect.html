@@ -1,0 +1,6 @@
+{{ define "head" }}
+    {{ with site.GetPage "/categories/tản-văn" }}<meta http-equiv="refresh" content="0;url={{ .RelPermalink }}">{{ end }}
+{{ end }}
+{{ define "main" }}
+    {{ with site.GetPage "/categories/tản-văn" }}<p><a href="{{ .RelPermalink }}">Ghé góc tản văn →</a></p>{{ end }}
+{{ end }}

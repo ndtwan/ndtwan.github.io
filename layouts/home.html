@@ -9,12 +9,12 @@
             <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <small>{{ .Count }}</small></a>
         {{ end }}
     </nav>
-    {{ with site.GetPage "/page/son-ha-con-do" }}
+    {{ with site.GetPage "/categories/tản-văn" }}
     <a class="collection-feature" href="{{ .RelPermalink }}">
-        <span class="journal-kicker">TUYỂN TẬP TẢN VĂN / 2026</span>
-        <h2>Sơn hà còn đó,<br>người đã qua.</h2>
-        <p>Mộng cố lý · Tỉnh nhân gian · Thương một đời hữu hạn</p>
-        <span class="collection-cta">Mở tuyển tập · {{ len (where site.RegularPages "Params.collection" "Sơn hà còn đó, người đã qua") }} tác phẩm <span aria-hidden="true">→</span></span>
+        <span class="journal-kicker">MỘT GÓC TẢN VĂN</span>
+        <h2>Hôm nào có hứng<br>thì viết.</h2>
+        <p>Một chuyện nhỏ, một ý nghĩ chợt ngang qua. Tôi để lại ở đây, lâu lâu thêm một bài.</p>
+        <span class="collection-cta">Ghé đọc mấy dòng <span aria-hidden="true">→</span></span>
     </a>
     {{ end }}
     <div class="journal-section-heading"><h2>Những trang viết</h2><a href="{{ "archives/" | relURL }}">Xem lưu bút →</a></div>
@@ -25,7 +25,7 @@
             <article class="journal-entry">
                 {{ with .Params.image }}<a class="journal-thumbnail" href="{{ $post.RelPermalink }}" tabindex="-1" aria-hidden="true"><img src="{{ . | relURL }}" alt="" loading="lazy"></a>{{ end }}
                 <div class="journal-entry-body">
-                    <div class="journal-entry-meta">{{ range .GetTerms "categories" }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ if not .Date.IsZero }}<span>{{ .Date.Format "02.01.2006" }}</span>{{ else }}<span>Tuyển tập 2026</span>{{ end }}</div>
+                    <div class="journal-entry-meta">{{ range .GetTerms "categories" }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ if not .Date.IsZero }}<span>{{ .Date.Format "02.01.2006" }}</span>{{ end }}</div>
                     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
                     <p>{{ .Summary | plainify | truncate 180 }}</p>
                     <a class="journal-read" href="{{ .RelPermalink }}">Đọc tiếp →</a>

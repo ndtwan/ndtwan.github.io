@@ -3,14 +3,8 @@ title: 'Nhân gian bất tương phùng'
 draft: false
 categories: ['Tản văn']
 tags: ['Người qua mùa hạ']
-series: ['Sơn hà còn đó, người đã qua']
-collection: 'Sơn hà còn đó, người đã qua'
-collectionPart: 'Người qua mùa hạ'
-sequence: 12
 toc: false
 ---
-
-*Bài bổ sung trong bản biên tập 2026.*
 
 Có những người, lần cuối cùng gặp mặt cũng chẳng có lấy một lời từ biệt.
 
