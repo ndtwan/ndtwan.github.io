@@ -1,6 +1,10 @@
 ---
 title: 'Tỉnh · Giấc mộng giang hồ'
 draft: false
+build:
+  list: never
+  render: always
+shortProseGroup: /posts/may-dong-vun/
 categories: ['Tản văn']
 tags: ['Người qua mùa hạ']
 toc: false

@@ -1,6 +1,10 @@
 ---
 title: 'Làm người, nghĩa là gì?'
 draft: false
+build:
+  list: never
+  render: always
+shortProseGroup: /posts/may-dong-vun/
 categories: ['Tản văn']
 tags: ['Đẹp vì chẳng vĩnh hằng']
 toc: false

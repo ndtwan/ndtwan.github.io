@@ -1,6 +1,10 @@
 ---
 title: 'Vĩ thanh · Thời khắc đẹp nhất'
 draft: false
+build:
+  list: never
+  render: always
+shortProseGroup: /posts/may-dong-vun/
 categories: ['Tản văn']
 tags: ['Nhân gian hữu vị']
 toc: false

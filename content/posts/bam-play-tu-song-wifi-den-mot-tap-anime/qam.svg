@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 570" role="img" aria-labelledby="title desc">
+<title id="title">Một symbol 16-QAM và ảnh hưởng của nhiễu</title><desc id="desc">Mười sáu vị trí trên mặt phẳng I Q. Điểm thu thực tế bị lệch khỏi vị trí lý tưởng do nhiễu.</desc>
+<rect width="640" height="570" rx="18" fill="#f0f6f7"/>
+<g font-family="sans-serif" fill="#203843"><text x="34" y="45" font-size="25" font-weight="700">16 vị trí, mỗi vị trí mang 4 bit</text><text x="34" y="77" font-size="19">Ví dụ minh họa 16-QAM, chưa tính mã sửa lỗi</text></g>
+<g stroke="#c6d7dc" stroke-width="1"><path d="M110 130V410M210 130V410M310 130V410M410 130V410M80 145H440M80 225H440M80 305H440M80 385H440"/></g>
+<g stroke="#5d7883" stroke-width="2"><path d="M65 265H470M260 435V110"/></g>
+<g fill="#247b88"><circle cx="110" cy="145" r="9"/><circle cx="210" cy="145" r="9"/><circle cx="310" cy="145" r="9"/><circle cx="410" cy="145" r="9"/><circle cx="110" cy="225" r="9"/><circle cx="210" cy="225" r="9"/><circle cx="310" cy="225" r="9"/><circle cx="410" cy="225" r="9"/><circle cx="110" cy="305" r="9"/><circle cx="210" cy="305" r="9"/><circle cx="310" cy="305" r="9"/><circle cx="410" cy="305" r="9"/><circle cx="110" cy="385" r="9"/><circle cx="210" cy="385" r="9"/><circle cx="310" cy="385" r="9"/><circle cx="410" cy="385" r="9"/></g>
+<path d="M410 145L448 174" stroke="#c26648" stroke-width="3" stroke-dasharray="5 5"/><circle cx="448" cy="174" r="8" fill="#c26648"/>
+<g font-family="sans-serif" font-size="20" fill="#203843"><text x="478" y="272">I</text><text x="269" y="116">Q</text><text x="462" y="163">Điểm thu</text><text x="462" y="190">bị lệch</text><text x="34" y="480">I và Q là hai thành phần của cùng tín hiệu.</text><text x="34" y="513">Lệch quá xa → có thể nhận nhầm symbol.</text><text x="34" y="546">Sửa lỗi và gửi lại giúp xử lý phần sai sót.</text></g>
+</svg>

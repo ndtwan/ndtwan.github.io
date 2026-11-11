@@ -1,0 +1,24 @@
+{{ $current := . }}
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ $others := $pages | complement (slice $current) }}
+{{ $related := $pages.Related . | complement (slice $current) | first 5 }}
+{{ $sameCategory := slice }}
+{{ if and .IsPage .Params.categories }}{{ $sameCategory = where $others "Params.categories" "intersect" .Params.categories }}{{ end }}
+{{ $priority := union $sameCategory $related }}
+{{ $related = first 5 (union $priority $others) }}
+<aside class="reading-rail" aria-label="Gợi ý đọc thêm">
+    <span class="rail-eyebrow">CÒN MẤY TRANG NỮA</span>
+    <section>
+        <h2>{{ if .IsPage }}Đọc tiếp nhé{{ else }}Lật thử một trang{{ end }}</h2>
+        <ol class="rail-posts">
+            {{ range $index, $post := $related }}
+            <li><span class="rail-number">{{ printf "%02d" (add $index 1) }}</span><div><a href="{{ .RelPermalink }}">{{ .Title }}</a><p>{{ range first 2 (.GetTerms "categories") }}<span>{{ .Title }}</span>{{ end }}</p></div></li>
+            {{ end }}
+        </ol>
+    </section>
+    <section class="rail-topics">
+        <h2>Đọc theo hứng</h2>
+        {{ range site.Taxonomies.categories.Alphabetical }}<a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span>{{ len (intersect .Pages site.RegularPages) }}</span></a>{{ end }}
+    </section>
+    {{ with site.GetPage "/categories/tản-văn" }}<a class="rail-note" href="{{ .RelPermalink }}">Không muốn đọc gì dài?<br>Ghé mấy dòng tản văn thôi. ↗</a>{{ end }}
+</aside>

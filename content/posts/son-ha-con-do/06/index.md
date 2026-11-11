@@ -1,6 +1,10 @@
 ---
 title: 'Lạc Dương · Trăng ngoài thành cũ'
 draft: false
+build:
+  list: never
+  render: always
+shortProseGroup: /posts/may-dong-vun/
 categories: ['Tản văn']
 tags: ['Cố lý trong mưa bụi']
 toc: false

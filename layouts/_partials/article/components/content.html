@@ -1,4 +1,5 @@
 <section class="article-content">
+    {{ with .Params.shortProseGroup }}<p class="prose-back"><a href="{{ . | relURL }}">Mẩu này nằm trong “Mấy dòng vụn” · Đọc các mẩu còn lại →</a></p>{{ end }}
     {{ if ge (len .TableOfContents) 100 }}
     <details class="inline-toc"><summary>Mục lục bài viết</summary>{{ .TableOfContents }}</details>
     {{ end }}

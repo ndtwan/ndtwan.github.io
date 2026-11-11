@@ -1,0 +1,31 @@
+.reading-rail { display: none; }
+.article-content .tech-diagram { display: block; width: 100%; max-width: 640px; height: auto; margin: 26px auto; border-radius: 10px; }
+@media (min-width: 1600px) {
+    .container.main-container > .left-sidebar { width: 26vw; max-width: 420px; padding: 60px 45px; }
+    .container.main-container {
+        display: grid; grid-template-columns: minmax(0, 1fr) clamp(240px, 17vw, 340px);
+        gap: 40px; margin-left: unquote('min(26vw, 420px)'); padding-right: clamp(30px, 3vw, 80px);
+    }
+    .container.main-container > main.main {
+        grid-column: 1; margin-left: 0; width: 100%; max-width: none; padding: 68px clamp(36px, 3vw, 70px) 35px;
+    }
+    .container.main-container > main.main > * { width: 100%; max-width: 1040px; margin-left: auto; margin-right: auto; }
+    .reading-rail {
+        display: flex; flex-direction: column; gap: 32px; grid-column: 2; grid-row: 1;
+        position: sticky; top: 65px; align-self: start; margin-top: 68px;
+        max-height: calc(100vh - 110px); overflow-y: auto; padding: 0 5px 20px 25px;
+        border-left: 1px solid var(--card-separator-color); font-family: var(--base-font-family);
+    }
+    .rail-eyebrow { font-size: 1rem; font-weight: 600; letter-spacing: .15em; color: var(--accent-color); }
+    .reading-rail h2 { font: 600 1.9rem/1.4 'Lora', Georgia, serif; color: var(--card-text-color-main); margin: 0 0 22px; }
+    .rail-posts { padding: 0; margin: 0; list-style: none; display: flex; flex-direction: column; gap: 24px; }
+    .rail-posts li { display: flex; gap: 12px; align-items: start; }
+    .rail-number { font: 400 1.2rem/1.8 'Lora', Georgia, serif; color: var(--body-text-color); opacity: .6; }
+    .rail-posts a { color: var(--card-text-color-main); font-size: 1.3rem; line-height: 1.7; }
+    .rail-posts a:hover { color: var(--accent-color); }
+    .rail-posts p { display: flex; flex-wrap: wrap; gap: 9px; margin: 7px 0 0; color: var(--body-text-color); font-size: 1rem; line-height: 1.6; }
+    .rail-topics { border-top: 1px solid var(--card-separator-color); padding-top: 25px; }
+    .rail-topics > a { display: flex; justify-content: space-between; gap: 15px; padding: 9px 0; color: var(--body-text-color); font-size: 1.2rem; }
+    .rail-topics > a span { font-size: 1rem; opacity: .6; }
+    .rail-note { font-size: 1.2rem; line-height: 1.9; color: var(--accent-color); }
+}

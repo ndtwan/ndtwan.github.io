@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 515" role="img" aria-labelledby="title desc">
+<title id="title">Bộ đệm video che được một khoảng gián đoạn ngắn</title><desc id="desc">Ví dụ có năm giây video chờ phát, mạng ngắt một giây thì còn bốn giây. Sau đó tốc độ tải phải phục hồi đủ để bộ đệm không cạn.</desc>
+<rect width="640" height="515" rx="18" fill="#f0f6f7"/>
+<g font-family="sans-serif" fill="#203843"><text x="34" y="45" font-size="25" font-weight="700">Mạng khựng, hình chưa chắc khựng</text><text x="34" y="78" font-size="19">Ví dụ giả định: các ô là giây video đã tải sẵn</text><text x="34" y="132" font-size="21">Trước khi mạng ngắt</text></g>
+<g fill="#247b88"><rect x="34" y="151" width="104" height="61" rx="5"/><rect x="150" y="151" width="104" height="61" rx="5"/><rect x="266" y="151" width="104" height="61" rx="5"/><rect x="382" y="151" width="104" height="61" rx="5"/><rect x="498" y="151" width="104" height="61" rx="5"/></g>
+<g font-family="sans-serif" fill="#fff" font-size="22" text-anchor="middle"><text x="86" y="190">1s</text><text x="202" y="190">1s</text><text x="318" y="190">1s</text><text x="434" y="190">1s</text><text x="550" y="190">1s</text></g>
+<g font-family="sans-serif" fill="#203843"><text x="34" y="263" font-size="21">Mạng ngắt 1s, máy vẫn phát 1s</text></g>
+<g fill="#247b88"><rect x="150" y="282" width="104" height="61" rx="5"/><rect x="266" y="282" width="104" height="61" rx="5"/><rect x="382" y="282" width="104" height="61" rx="5"/><rect x="498" y="282" width="104" height="61" rx="5"/></g>
+<rect x="34" y="282" width="104" height="61" rx="5" fill="#d7e0e3"/>
+<g font-family="sans-serif" font-size="20" text-anchor="middle"><text x="86" y="320" fill="#627680">Đã phát</text><text x="202" y="320" fill="#fff">1s</text><text x="318" y="320" fill="#fff">1s</text><text x="434" y="320" fill="#fff">1s</text><text x="550" y="320" fill="#fff">1s</text></g>
+<g font-family="sans-serif" fill="#203843" font-size="21"><text x="34" y="397">Còn 4s để chờ dữ liệu mới.</text><text x="34" y="434">Nếu thiếu dữ liệu quá lâu, buffer vẫn cạn.</text><text x="34" y="477" font-size="18">Buffer mua thời gian; không tạo ra dữ liệu đã mất.</text></g>
+</svg>

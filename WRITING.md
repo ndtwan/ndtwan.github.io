@@ -46,6 +46,12 @@ Những bài từ Word được giữ tại `content/posts/son-ha-con-do/` để
 
 Chọn `categories = ['Tản văn']` là bài tự xuất hiện trên wall của chuyên mục này. Bài dài có nút **Xem thêm / Thu gọn**, bài ngắn hiện trọn vẹn. Mục khác vẫn dùng cách đọc bài cũ. `date` là ngày đăng; để trống nếu không muốn ghi ngày. Đường dẫn cũ `/son-ha-con-do/` vẫn mở được wall.
 
-Bốn bài thêm từ `Tan_Van_Bon_Thien_Moi.md` lấy ngày đăng 11.11.2026, không coi đó là ngày sáng tác. Ý tưởng cho bài khoa học tiếp theo nằm ở `content/posts/ai-ngon-dien-o-dau/index.md`, đang là draft.
+Bốn bài thêm từ `Tan_Van_Bon_Thien_Moi.md` lấy ngày đăng 11.11.2026, không coi đó là ngày sáng tác. Ý tưởng cho bài khoa học tiếp theo nằm ở `content/posts/bam-play-tu-song-wifi-den-mot-tap-anime/index.md`, đang là draft: từ sóng Wi-Fi đến packet, rồi đến trải nghiệm streaming.
+
+Bài Wi-Fi hiện đã có bản viết đầy đủ và ba sơ đồ SVG cùng thư mục, vẫn giữ draft để đọc lại trước khi đăng. Dùng `hugo server -D` để xem.
+
+Các mẩu tản văn rất ngắn được gom vào `content/posts/may-dong-vun/index.md`. File gốc đặt `build.list: never` để không lặp lại trên wall, tìm kiếm và các danh sách, nhưng vẫn giữ trang ở link cũ. Nội dung từng mẩu không sửa.
+
+Màn rộng từ 1600px có cột gợi ý đọc bên phải. Bố cục nằm ở `assets/scss/reading-rail.scss`, danh sách bài do `layouts/_partials/reading-rail.html` tạo.
 
 Giao diện hiện tại lấy cảm hứng từ bố cục Hydejack của blog `twandesu`: ảnh nền và avatar cũ nằm ở `static/images/twandesu-*`, các chỉnh sửa bố cục nằm trong `assets/scss/twandesu.scss`. Site vẫn build bằng Hugo và Stack.

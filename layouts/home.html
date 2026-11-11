@@ -6,7 +6,7 @@
     </header>
     <nav class="journal-topics" aria-label="Đọc theo chuyên mục">
         {{ range site.Taxonomies.categories.Alphabetical }}
-            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <small>{{ .Count }}</small></a>
+            <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <small>{{ len (intersect .Pages site.RegularPages) }}</small></a>
         {{ end }}
     </nav>
     {{ with site.GetPage "/categories/tản-văn" }}

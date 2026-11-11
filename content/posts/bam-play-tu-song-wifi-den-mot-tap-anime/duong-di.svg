@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 740" role="img" aria-labelledby="title desc">
+<title id="title">Đường đi giản lược từ điện thoại đến máy chủ video</title><desc id="desc">Điện thoại qua Wi-Fi đến access point, router và ONT hoặc modem, rồi qua ISP đến máy chủ CDN. Video đi về theo chiều ngược lại.</desc>
+<rect width="640" height="740" rx="18" fill="#f0f6f7"/>
+<g font-family="sans-serif" fill="#203843"><text x="34" y="45" font-size="25" font-weight="700">Bấm Play: yêu cầu đi, video về</text><text x="34" y="78" font-size="19">Một ví dụ mạng gia đình; các vai trò có thể chung hộp</text></g>
+<g fill="#fff" stroke="#abc7cf" stroke-width="2"><rect x="65" y="112" width="510" height="82" rx="9"/><rect x="65" y="242" width="510" height="96" rx="9"/><rect x="65" y="386" width="510" height="82" rx="9"/><rect x="65" y="516" width="510" height="82" rx="9"/></g>
+<g font-family="sans-serif" fill="#203843" text-anchor="middle"><text x="320" y="146" font-size="24" font-weight="700">Điện thoại / laptop</text><text x="320" y="176" font-size="20">Gửi yêu cầu, nhận và phát video</text><text x="320" y="277" font-size="24" font-weight="700">Access point + router</text><text x="320" y="309" font-size="20">Nhận frame Wi-Fi, chuyển tiếp gói IP</text><text x="320" y="419" font-size="24" font-weight="700">ONT hoặc modem</text><text x="320" y="450" font-size="20">Kết nối đường truy nhập của nhà mạng</text><text x="320" y="550" font-size="24" font-weight="700">ISP → Internet → máy chủ CDN</text><text x="320" y="580" font-size="20">Máy chủ trả các đoạn video được yêu cầu</text></g>
+<g stroke="#247b88" stroke-width="3" fill="none"><path d="M280 199V234m-7-8 7 8 7-8M280 343V378m-7-8 7 8 7-8M280 473V508m-7-8 7 8 7-8"/></g>
+<g stroke="#c26648" stroke-width="3" fill="none"><path d="M360 234V199m-7 8 7-8 7 8M360 378V343m-7 8 7-8 7 8M360 508V473m-7 8 7-8 7 8"/></g>
+<g font-family="sans-serif" font-size="20" fill="#203843"><text x="34" y="648">↓ Xanh: yêu cầu từ thiết bị</text><text x="34" y="680">↑ Cam: dữ liệu video quay về</text><text x="34" y="715">Wi-Fi chỉ là một chặng, không kéo tới máy chủ.</text></g>
+</svg>
